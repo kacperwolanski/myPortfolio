@@ -1,26 +1,23 @@
 import React from "react";
+import TopMenu from "./components/topMenu/TopMenu";
 import styled from "styled-components";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import theme from "./theme/theme";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-
-  background-color: #f8f9fa;
+const MainContainer = styled.div`
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  background-color: ${theme.palette.custom.background};
 `;
-
-const Title = styled.h1`
-  color: #343a40;
-  font-weight: 400;
-`;
-
 const App: React.FC = () => {
   return (
-    <Container>
-      <Title>Kacper Wolański</Title>
-    </Container>
+    <MainContainer>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <TopMenu />
+      </ThemeProvider>
+    </MainContainer>
   );
 };
 
