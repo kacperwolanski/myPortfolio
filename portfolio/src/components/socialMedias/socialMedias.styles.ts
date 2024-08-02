@@ -9,4 +9,5 @@ export const SocialMediasContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 15px;
+  z-index: 1000;
 `;

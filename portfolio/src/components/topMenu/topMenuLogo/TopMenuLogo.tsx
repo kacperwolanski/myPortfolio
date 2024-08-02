@@ -2,7 +2,7 @@ import React from "react";
 import { TopMenuLogoContainer } from "./topMenuLogo.styles";
 
 const TopMenuLogo = () => {
-  return <TopMenuLogoContainer>{`Kacper Wolański `}</TopMenuLogoContainer>;
+  return <TopMenuLogoContainer>KW</TopMenuLogoContainer>;
 };
 
 export default TopMenuLogo;
