@@ -3,7 +3,7 @@ import TopMenu from "./components/topMenu/TopMenu";
 import styled from "styled-components";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme/theme";
-import SocialMedias from "./components/socialMedias/SocialMedias";
+
 import Content from "./components/content/Content";
 
 const MainContainer = styled.div`
@@ -20,7 +20,6 @@ const App: React.FC = () => {
         <CssBaseline />
         <TopMenu />
         <Content />
-        {/* <SocialMedias /> */}
       </ThemeProvider>
     </MainContainer>
   );
