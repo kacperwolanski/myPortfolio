@@ -5,7 +5,6 @@ import ExperienceButton from "./topMenuButtons/ExperienceButton";
 import ContactButton from "./topMenuButtons/ContactButton";
 import { TopMenuButtonsContainer, TopMenuContainer } from "./topMenu.styles";
 import TopMenuLogo from "./topMenuLogo/TopMenuLogo";
-import Resume from "./resume/Resume";
 
 const TopMenu = () => {
   return (
@@ -16,7 +15,6 @@ const TopMenu = () => {
         <EducationButton />
         <ExperienceButton />
         <ContactButton />
-        <Resume />
       </TopMenuButtonsContainer>
     </TopMenuContainer>
   );
