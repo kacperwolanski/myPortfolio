@@ -5,6 +5,7 @@ export const SkillsSetContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   gap: 15px;
+  margin-top: -11px;
 `;
 
 export const SkillSetTitle = styled.h3`
@@ -18,4 +19,8 @@ export const SkillsContainer = styled.div`
   max-width: 600px;
   align-items: center;
   gap: 15px;
+`;
+
+export const SkillContainer = styled.div`
+  font-weight: 200;
 `;
