@@ -1,10 +1,11 @@
 import React from "react";
+import { SkillContainer } from "./skills.styles";
 
 interface Props {
   skill: string;
 }
 const Skill = ({ skill }: Props) => {
-  return <div>{skill}</div>;
+  return <SkillContainer>{skill}</SkillContainer>;
 };
 
 export default Skill;
