@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const MainSkillSetsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
 export const SkillsSetContainer = styled.div`
   display: flex;
   flex-wrap: wrap;

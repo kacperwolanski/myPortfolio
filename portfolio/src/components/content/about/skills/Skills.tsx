@@ -11,11 +11,10 @@ import {
   os,
   otherSkills,
 } from "../../../shared/constants/skillSets";
-import { MainSkillSetsContainer } from "./skills.styles";
 
 const Skills = () => {
   return (
-    <MainSkillSetsContainer>
+    <div>
       <SkillsSet skillSet={programmingLanguages} />
       <SkillsSet skillSet={frontend} />
       <SkillsSet skillSet={backend} />
@@ -25,7 +24,7 @@ const Skills = () => {
       <SkillsSet skillSet={teamwork} />
       <SkillsSet skillSet={os} />
       <SkillsSet skillSet={otherSkills} />
-    </MainSkillSetsContainer>
+    </div>
   );
 };
 

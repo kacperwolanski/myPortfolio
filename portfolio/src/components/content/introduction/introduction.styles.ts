@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const IntroductionContainer = styled.div`
   margin-top: 300px;
   margin-right: 500px;
+  margin-left: 100px;
 `;
 
 export const MyNameIs = styled.span`
