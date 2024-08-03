@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContentWrapper = styled.div`
-  overflow: auto;
   color: white;
   position: relative;
   display: flex;
