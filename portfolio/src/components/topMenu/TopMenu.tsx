@@ -6,6 +6,7 @@ import ContactButton from "./topMenuButtons/ContactButton";
 import { TopMenuButtonsContainer, TopMenuContainer } from "./topMenu.styles";
 import TopMenuLogo from "./topMenuLogo/TopMenuLogo";
 import useIsTopMenuHidden from "./hooks/useIsTopMenuHidden";
+import ProjectsButton from "./topMenuButtons/ProjectsButton";
 
 const TopMenu = () => {
   const { isHidden } = useIsTopMenuHidden();
@@ -17,6 +18,7 @@ const TopMenu = () => {
         <AboutButton />
         <EducationButton />
         <ExperienceButton />
+        <ProjectsButton />
         <ContactButton />
       </TopMenuButtonsContainer>
     </TopMenuContainer>

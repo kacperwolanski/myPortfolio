@@ -4,6 +4,7 @@ import SocialMedias from "../socialMedias/SocialMedias";
 import About from "./about/About";
 import Introduction from "./introduction/Introduction";
 import Education from "./education/Education";
+import Experience from "./experience/Experience";
 
 const Content = () => {
   return (
@@ -11,6 +12,7 @@ const Content = () => {
       <Introduction />
       <About />
       <Education />
+      <Experience />
       <SocialMedias />
     </ContentWrapper>
   );
