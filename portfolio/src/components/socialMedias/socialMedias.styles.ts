@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SocialMediasContainer = styled.div`
   position: fixed;
   right: 50px;
-  top: 650px;
+  top: 550px;
   display: flex;
   justify-content: center;
   align-items: center;

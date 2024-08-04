@@ -1,6 +1,6 @@
 import React from "react";
 import { IconWrapper } from "./socialMediaIcon.styles";
-import { RawLink } from "../../shared/components/RawLink";
+import { RawLink } from "shared/components/RawLink";
 
 interface Props {
   children: JSX.Element;

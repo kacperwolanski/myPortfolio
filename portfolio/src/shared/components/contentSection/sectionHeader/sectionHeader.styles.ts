@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import theme from "../../../../../theme/theme";
+import theme from "theme/theme";
 
 export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
-
   width: 100%;
 `;
 

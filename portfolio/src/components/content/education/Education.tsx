@@ -1,5 +1,5 @@
 import React from "react";
-import ContentSection from "../../shared/components/contentSection/ContentSection";
+
 import {
   Timeline,
   TimelineItem,
@@ -9,6 +9,7 @@ import {
   TimelineConnector,
 } from "@mui/lab";
 import { Box } from "@mui/material";
+import ContentSection from "shared/components/contentSection/ContentSection";
 const Education = () => {
   const education = {
     startDate: "October 2019",

@@ -1,11 +1,12 @@
 import React from "react";
 import Skill from "./Skill";
-import { SkillSet } from "../../../shared/constants/types";
+
 import {
   SkillsContainer,
   SkillSetTitle,
   SkillsSetContainer,
 } from "./skills.styles";
+import { SkillSet } from "shared/constants/types";
 
 interface Props {
   skillSet: SkillSet;
