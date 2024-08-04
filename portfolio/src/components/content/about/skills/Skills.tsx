@@ -10,7 +10,7 @@ import {
   teamwork,
   os,
   otherSkills,
-} from "../../../shared/constants/skillSets";
+} from "shared/constants/skillSets";
 
 const Skills = () => {
   return (
