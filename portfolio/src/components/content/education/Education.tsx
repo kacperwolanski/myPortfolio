@@ -1,49 +1,21 @@
 import React from "react";
-
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineContent,
-  TimelineDot,
-  TimelineConnector,
-} from "@mui/lab";
-import { Box } from "@mui/material";
 import ContentSection from "shared/components/contentSection/ContentSection";
+import SubPointsList from "shared/components/SubPointsList";
+import SubPointsItem from "shared/components/SubPointsItem";
+import { education } from "shared/constants/education";
 const Education = () => {
-  const education = {
-    startDate: "October 2019",
-    endDate: "December 2023",
-    institution: "Warsaw University Of Technology",
-    degree: "Bachelor's Degree",
-    field: "Automation & Robotics",
-  };
-
   return (
     <ContentSection index="02" title="My Education">
-      <Box display="flex" justifyContent="left">
-        <div>
-          <h3>{education.institution}</h3>
-          <p>{education.field}</p>
-          <span>{education.degree}</span>
-        </div>
-
-        <Timeline sx={{ maxWidth: "400px" }}>
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>{education.endDate}</TimelineContent>
-          </TimelineItem>
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot />
-            </TimelineSeparator>
-            <TimelineContent>{education.startDate}</TimelineContent>
-          </TimelineItem>
-        </Timeline>
-      </Box>
+      <div>
+        <SubPointsItem
+          header={education.institution}
+          subtitle2={`${education.degree} in  ${education.field}`}
+          startDate={education.startDate}
+          endDate={education.endDate}
+          headerUrl={education.schoolUrl}
+        />
+        <SubPointsList subPoints={education.skillsSubPoints} />
+      </div>
     </ContentSection>
   );
 };
