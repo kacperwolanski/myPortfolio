@@ -2,7 +2,6 @@ import React from "react";
 import AboutButton from "./topMenuButtons/AboutButton";
 import EducationButton from "./topMenuButtons/EducationButton";
 import ExperienceButton from "./topMenuButtons/ExperienceButton";
-import ContactButton from "./topMenuButtons/ContactButton";
 import {
   SubContainer,
   TopMenuButtonsContainer,
@@ -15,6 +14,8 @@ import HomeButton from "./topMenuButtons/HomeButton";
 import Resume from "../../components/socialMedias/resume/Resume";
 import LanguageSwitcher from "shared/components/languageSwitcher/LanguageSwitcher";
 import ThemeSwitcher from "shared/components/themeSwitcher/ThemeSwitcher";
+import CircledButton from "shared/components/CircledButton";
+import theme from "theme/theme";
 
 const TopMenu = () => {
   const { isHidden } = useIsTopMenuHidden();
@@ -31,7 +32,10 @@ const TopMenu = () => {
         <Resume />
       </TopMenuButtonsContainer>
       <SubContainer>
-        <ContactButton />
+        <CircledButton
+          title="Contact Me"
+          strokeColor={theme.palette.primary.main}
+        />
         <LanguageSwitcher />
         <ThemeSwitcher />
       </SubContainer>

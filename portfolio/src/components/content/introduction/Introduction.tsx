@@ -7,7 +7,9 @@ import {
   SubTitle,
 } from "./introduction.styles";
 import { introductionData } from "shared/constants/introduction";
-import { BlurredRectangle } from "@shared/components/BlurredRectangle";
+import { BlurredRectangle } from "shared/components/BlurredRectangle";
+import CircledButton from "shared/components/CircledButton";
+import theme from "theme/theme";
 
 const Introduction = () => {
   const { name, subTitle, description, profileImgUrl } = introductionData;
@@ -18,6 +20,10 @@ const Introduction = () => {
       <NameContainer>{name}</NameContainer>
       <SubTitle>{subTitle}</SubTitle>
       <Description>{description}</Description>
+      <CircledButton
+        title="Contact Me"
+        strokeColor={theme.palette.primary.main}
+      />
     </IntroductionContainer>
   );
 };

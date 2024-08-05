@@ -8,7 +8,7 @@ export const IntroductionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  max-width: 50%;
 `;
 
 export const ProfileImage = styled.img`
