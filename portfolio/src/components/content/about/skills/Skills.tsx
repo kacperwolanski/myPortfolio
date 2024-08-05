@@ -11,7 +11,6 @@ import {
   os,
   otherSkills,
 } from "shared/constants/skillSets";
-
 const Skills = () => {
   return (
     <div>

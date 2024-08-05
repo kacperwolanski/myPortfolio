@@ -1,18 +1,19 @@
 import React from "react";
 import {
   HeaderContainer,
-  SectionDivider,
   SectionTitle,
+  SubTitle,
 } from "./sectionHeader.styles";
 
 interface Props {
   title: string;
+  subTitle?: string;
 }
-const SectionHeader = ({ title }: Props) => {
+const SectionHeader = ({ title, subTitle }: Props) => {
   return (
     <HeaderContainer>
       <SectionTitle>{title}</SectionTitle>
-      <SectionDivider />
+      {subTitle && <SubTitle>{subTitle}</SubTitle>}
     </HeaderContainer>
   );
 };
