@@ -2,23 +2,22 @@ import React from "react";
 import {
   Description,
   IntroductionContainer,
-  MyNameIs,
   NameContainer,
+  ProfileImage,
   SubTitle,
 } from "./introduction.styles";
+import { introductionData } from "shared/constants/introduction";
+import { BlurredRectangle } from "@shared/components/BlurredRectangle";
 
 const Introduction = () => {
+  const { name, subTitle, description, profileImgUrl } = introductionData;
   return (
     <IntroductionContainer>
-      <MyNameIs>Hi, my name is</MyNameIs>
-      <NameContainer>Kacper Wolański</NameContainer>
-      <SubTitle>I build things for the web</SubTitle>
-      <Description>
-        Hi, I'm passionate Software Developer with experience in React
-        development. Throughout my career, I've had the chance to work on a
-        variety of exciting projects, from a full-stack carpooling web
-        application to a video streaming platform.
-      </Description>
+      <BlurredRectangle top={-40} left={-400} />
+      <ProfileImage src={profileImgUrl} />
+      <NameContainer>{name}</NameContainer>
+      <SubTitle>{subTitle}</SubTitle>
+      <Description>{description}</Description>
     </IntroductionContainer>
   );
 };
