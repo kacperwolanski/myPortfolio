@@ -4,7 +4,7 @@ import {
   ContentContainer,
   ElementTitleButton,
   TitlesList,
-} from "./horizontalAccordion.styles";
+} from "./jobAccordion.styles";
 
 interface AccordionElement {
   title: string;
@@ -15,7 +15,7 @@ interface Props {
   elements: AccordionElement[];
 }
 
-const HorizontalAccordion: React.FC<Props> = ({ elements }) => {
+const JobAccordion: React.FC<Props> = ({ elements }) => {
   const [currentElement, setCurrentElement] = useState(elements[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -48,4 +48,4 @@ const HorizontalAccordion: React.FC<Props> = ({ elements }) => {
   );
 };
 
-export default HorizontalAccordion;
+export default JobAccordion;
