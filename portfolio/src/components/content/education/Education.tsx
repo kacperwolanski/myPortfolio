@@ -1,6 +1,6 @@
 import React from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
-import SubPointsList from "shared/components/SubPointsList";
+import SubPointsList from "shared/components/subPointsList/SubPointsList";
 import SubPointsItem from "shared/components/SubPointsItem";
 import { education } from "shared/constants/education";
 const Education = () => {

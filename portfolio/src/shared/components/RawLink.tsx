@@ -5,11 +5,17 @@ interface Props {
   to: string;
   children: ReactNode;
   onClick?: () => void;
-  dataTestId?: string;
   isDisabled?: boolean;
+  openInNewTab?: boolean;
 }
 
-const RawLink = ({ to, children, onClick, dataTestId, isDisabled }: Props) => {
+const RawLink = ({
+  to,
+  children,
+  onClick,
+  isDisabled,
+  openInNewTab,
+}: Props) => {
   const linkStyle = {
     textDecoration: "none",
     color: "inherit",
@@ -30,7 +36,8 @@ const RawLink = ({ to, children, onClick, dataTestId, isDisabled }: Props) => {
           href={to}
           style={linkStyle}
           onClick={handleLinkClick}
-          data-testid={dataTestId}
+          target={openInNewTab ? "_blank" : undefined}
+          rel={openInNewTab ? "noopener noreferrer" : undefined}
         >
           {children}
         </MuiLink>

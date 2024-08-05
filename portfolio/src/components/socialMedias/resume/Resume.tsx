@@ -3,7 +3,7 @@ import { ResumeContainer } from "./resume.styles";
 
 const Resume: React.FC = () => {
   const handleOpenPdf = () => {
-    const pdfUrl = `${process.env.PUBLIC_URL}/KacperWolanski.pdf`; // URL to the PDF file in the public folder
+    const pdfUrl = `${process.env.PUBLIC_URL}/KacperWolanski.pdf`;
     window.open(pdfUrl, "_blank");
   };
 

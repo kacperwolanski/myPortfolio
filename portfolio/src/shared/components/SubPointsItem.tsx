@@ -33,7 +33,7 @@ const SubPointsItem = ({
     <Box display="flex">
       <div>
         {headerUrl ? (
-          <RawLink to={headerUrl}>
+          <RawLink to={headerUrl} openInNewTab>
             <HeaderContainer clickable={true}>{header}</HeaderContainer>
           </RawLink>
         ) : (

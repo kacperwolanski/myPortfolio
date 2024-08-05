@@ -1,8 +1,8 @@
 import React from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
-import HorizontalAccordion from "shared/components/HorizontalAccordion";
+import HorizontalAccordion from "shared/components/horizontalAccordion/HorizontalAccordion";
 import SubPointsItem from "shared/components/SubPointsItem";
-import SubPointsList from "shared/components/SubPointsList";
+import SubPointsList from "shared/components/subPointsList/SubPointsList";
 import { workExperience } from "shared/constants/workExperience";
 
 const Experience = () => {
@@ -15,8 +15,7 @@ const Experience = () => {
             content: (
               <div>
                 <SubPointsItem
-                  header={work.position}
-                  subtitle2={work.company}
+                  header={`${work.position} at ${work.company}`}
                   startDate={work.startDate}
                   endDate={work.endDate}
                   headerUrl={work.companyUrl}

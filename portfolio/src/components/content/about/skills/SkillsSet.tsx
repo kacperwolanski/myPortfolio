@@ -1,6 +1,5 @@
 import React from "react";
 import Skill from "./Skill";
-
 import {
   SkillsContainer,
   SkillSetTitle,
