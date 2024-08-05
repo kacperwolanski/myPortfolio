@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "baseUrl": "src",
     "lib": ["es6", "dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -10,12 +10,12 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
@@ -23,12 +23,12 @@
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
+      "@shared/*": ["shared/*"],
       "@assets/*": ["assets/*"],
       "@hooks/*": ["hooks/*"],
       "@context/*": ["context/*"],
       "@services/*": ["services/*"],
-      "@pages/*": ["pages/*"],
-      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+      "@pages/*": ["pages/*"]
     }
   },
   "include": ["src"]

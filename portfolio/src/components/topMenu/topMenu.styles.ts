@@ -29,3 +29,9 @@ export const TopMenuButtonsContainer = styled.div`
   gap: 30px;
   align-items: center;
 `;
+
+export const SubContainer = styled.div`
+  display: flex;
+  gap: 30px;
+  align-items: center;
+`;

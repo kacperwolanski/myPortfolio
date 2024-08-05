@@ -6,7 +6,7 @@ import ContentSection from "shared/components/contentSection/ContentSection";
 
 const About = () => {
   return (
-    <ContentSection index="01" title="About Me">
+    <ContentSection title="About Me">
       <div>
         <Description>
           I specialize in creating web applications with React. My goal is to

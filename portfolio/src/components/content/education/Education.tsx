@@ -5,7 +5,7 @@ import SubPointsItem from "shared/components/SubPointsItem";
 import { education } from "shared/constants/education";
 const Education = () => {
   return (
-    <ContentSection index="02" title="My Education">
+    <ContentSection title="My Education">
       <div>
         <SubPointsItem
           header={education.institution}

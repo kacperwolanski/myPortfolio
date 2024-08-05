@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import theme from "theme/theme";
 
 export const ResumeContainer = styled.div`
-  color: white;
-  border: 1px solid white;
+  color: ${theme.palette.secondary.main};
   padding: 10px;
   cursor: pointer;
   &:hover {

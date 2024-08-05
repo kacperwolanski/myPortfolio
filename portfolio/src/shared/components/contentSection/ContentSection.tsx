@@ -4,13 +4,13 @@ import SectionHeader from "./sectionHeader/SectionHeader";
 
 interface Props {
   title: string;
-  index: string;
+
   children: JSX.Element;
 }
-const ContentSection = ({ title, index, children }: Props) => {
+const ContentSection = ({ title, children }: Props) => {
   return (
     <ContentSectionWrapper>
-      <SectionHeader title={title} index={index} />
+      <SectionHeader title={title} />
       {children}
     </ContentSectionWrapper>
   );

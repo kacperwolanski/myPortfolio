@@ -7,7 +7,7 @@ import { workExperience } from "shared/constants/workExperience";
 
 const Experience = () => {
   return (
-    <ContentSection index="03" title="Experience">
+    <ContentSection title="Experience">
       <HorizontalAccordion
         elements={workExperience.map((work) => {
           return {
