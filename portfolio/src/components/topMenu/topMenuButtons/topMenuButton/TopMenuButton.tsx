@@ -1,14 +1,13 @@
 import React from "react";
-import { IndexContainer, TMButtonContainer } from "./topMenuButton.styles";
-
+import { TitleContainer, TMButtonContainer } from "./topMenuButton.styles";
 interface Props {
-  index: string;
   title: string;
+  isSelected?: boolean;
 }
-const TopMenuButton = ({ index, title }: Props) => {
+const TopMenuButton = ({ title, isSelected }: Props) => {
   return (
     <TMButtonContainer>
-      <IndexContainer>{index}.</IndexContainer> {title}
+      <TitleContainer isSelected={isSelected}>{title}</TitleContainer>
     </TMButtonContainer>
   );
 };

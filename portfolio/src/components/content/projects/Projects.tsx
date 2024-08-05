@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 
 const Projects = () => {
   return (
-    <ContentSection index="04" title="Projects">
+    <ContentSection title="Projects">
       <div>
         {projects.map((project, index) => {
           const marginLeft = index % 2 === 0 ? "-100px" : "100px";
