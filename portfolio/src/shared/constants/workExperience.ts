@@ -4,7 +4,7 @@ export const workExperience = [
     endDate: "Aug 2024",
     company: "Codespot",
     position: "Software Engineer",
-    companyUrl: "https://www.pw.edu.pl/",
+    companyUrl: "https://www.codespot.io/",
     skillsSubPoints: [
       "Developing a video industry application for watching TV and VOD content online",
       "working with team of developers using Github, Github Actions, Jira, Figma",

@@ -1,31 +1,22 @@
 import React from "react";
 import CircleIcon from "@mui/icons-material/Circle";
+import { SubContainer, SubList } from "./subPointsList.styles";
 import styled from "styled-components";
 
 interface SubPointsListProps {
   subPoints: string[];
 }
 
-const SubList = styled.div`
-  text-align: left;
-  margin-top: 15px;
+const SubPoint = styled.p`
+  font-weight: 100;
 `;
-
-const SubContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 15px;
-  margin-top: -15px;
-`;
-
 const SubPointsList: React.FC<SubPointsListProps> = ({ subPoints }) => {
   return (
     <SubList>
-      {subPoints.map((subPoint) => (
-        <SubContainer>
+      {subPoints.map((subPoint, index) => (
+        <SubContainer key={index}>
           <CircleIcon sx={{ fontSize: "10px" }} />
-          <p>{subPoint}</p>
+          <SubPoint>{subPoint}</SubPoint>
         </SubContainer>
       ))}
     </SubList>

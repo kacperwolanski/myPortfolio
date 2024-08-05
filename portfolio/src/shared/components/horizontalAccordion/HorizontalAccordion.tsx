@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import theme from "theme/theme";
+import {
+  AccordionContainer,
+  ContentContainer,
+  ElementTitleButton,
+  TitlesList,
+} from "./horizontalAccordion.styles";
 
 interface AccordionElement {
   title: string;
@@ -11,29 +15,17 @@ interface Props {
   elements: AccordionElement[];
 }
 
-const AccordionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-`;
-
-const TitlesList = styled.div`
-  display: flex;
-  gap: 30px;
-  margin-bottom: 30px;
-  justify-content: left;
-`;
-
-const ElementTitleButton = styled.button<{ isSelected?: boolean }>`
-  border: none;
-  background: none;
-  color: ${(props) =>
-    props.isSelected ? theme.palette.primary.main : "white"};
-  cursor: pointer;
-`;
-
 const HorizontalAccordion: React.FC<Props> = ({ elements }) => {
   const [currentElement, setCurrentElement] = useState(elements[0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleElementChange = (element: AccordionElement) => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentElement(element);
+      setIsTransitioning(false);
+    }, 200);
+  };
 
   return (
     <AccordionContainer>
@@ -41,14 +33,17 @@ const HorizontalAccordion: React.FC<Props> = ({ elements }) => {
         {elements.map((element: AccordionElement, index: number) => (
           <ElementTitleButton
             key={index}
+            data-title={element.title}
             isSelected={currentElement.title === element.title}
-            onClick={() => setCurrentElement(element)}
+            onClick={() => handleElementChange(element)}
           >
             {element.title}
           </ElementTitleButton>
         ))}
       </TitlesList>
-      {currentElement.content}
+      <ContentContainer isTransitioning={isTransitioning}>
+        {currentElement.content}
+      </ContentContainer>
     </AccordionContainer>
   );
 };
