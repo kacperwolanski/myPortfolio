@@ -7,12 +7,13 @@ export const HeaderContainer = styled.div`
   align-items: center;
   width: 100%;
   text-align: center;
+  font-family: "Inter";
 `;
 
 export const SectionTitle = styled.span`
   color: white;
   font-size: 45px;
-  font-weight: 900;
+  font-weight: 1000;
   letter-spacing: -1px;
 `;
 

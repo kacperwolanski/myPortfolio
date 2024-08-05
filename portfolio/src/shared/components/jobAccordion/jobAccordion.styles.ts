@@ -3,25 +3,27 @@ import theme from "theme/theme";
 
 export const AccordionContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+  align-items: start;
+  margin-top: 80px;
 `;
 
 export const TitlesList = styled.div`
   display: flex;
-  gap: 60px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  margin-top: 20px;
   justify-content: center;
   margin-right: 100px;
 `;
 
 export const ElementTitleButton = styled.button<{ isSelected?: boolean }>`
   border: none;
-  background: none;
-  color: ${(props) =>
-    props.isSelected ? theme.palette.primary.main : "white"};
+  background: ${(props) =>
+    props.isSelected ? theme.palette.custom.darkGray : "none"};
+  color: white;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: background 0.3s, color 0.2s; /* Added transition for background */
+  width: 160px;
+  height: 56px;
 `;
 
 export const ContentContainer = styled.div<{ isTransitioning: boolean }>`
