@@ -39,7 +39,7 @@ const RawLink = ({
           target={openInNewTab ? "_blank" : undefined}
           rel={openInNewTab ? "noopener noreferrer" : undefined}
         >
-          {children}
+          <span style={{ cursor: "pointer" }}>{children}</span>
         </MuiLink>
       )}
     </>

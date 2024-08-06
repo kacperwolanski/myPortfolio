@@ -1,8 +1,9 @@
 import React from "react";
 import { Project as ProjectType } from "shared/constants/types";
 import styled from "styled-components";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import { RawLink } from "shared/components/RawLink";
+import theme from "theme/theme";
+import { LinkIcon } from "../../../../shared/assets/icons/Icons";
 
 interface Props {
   project: ProjectType;
@@ -10,69 +11,95 @@ interface Props {
 
 const ProjectContainer = styled.div`
   position: relative;
-  z-index: 10;
   padding: 20px;
+  max-height: 380px;
+
+  &:hover .project-image {
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  &:hover .project-description {
+    z-index: 1;
+    opacity: 1;
+  }
 `;
 
 const TextContainer = styled.div`
-  position: absolute;
-  top: 60px;
-  left: 0px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(4px);
-  z-index: 1000;
-  padding: 20px;
   border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  max-width: 350px;
 `;
 
 const ProjectName = styled.h2`
-  padding: 0;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
 `;
 
 const TechStackList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  max-width: 200px;
   line-height: 10px;
+  max-width: 300px;
 `;
 
 const Technology = styled.span`
   font-weight: 100;
+  color: ${theme.palette.secondary.main};
+  font-size: 14px;
 `;
 
 const ProjectDescription = styled.div`
-  max-width: 400px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 220px;
+  width: 350px;
+  border-radius: 10px;
   padding: 20px;
   color: white;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  transition: z-index 0.3s, opacity 0.3s;
+  opacity: 0;
 `;
 
 const ProjectImage = styled.img`
-  max-width: 100%;
-  height: 350px;
-  width: 500px;
-  top: 10px;
-  left: 350px;
+  height: 220px;
+  width: 350px;
+  z-index: 1;
   position: relative;
   border-radius: 10px;
+  transition: z-index 0.3s, opacity 0.3s;
 `;
 
 const GithubLink = styled.div`
-  margin-top: 5px;
-  margin-bottom: 0;
-  padding: 0;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 0;
 `;
 
 const Project = ({ project }: Props) => {
   return (
     <ProjectContainer>
+      <ProjectDescription className="project-description">
+        {project.description}
+      </ProjectDescription>
+      {project.imageUrl && (
+        <ProjectImage
+          className="project-image"
+          src={project.imageUrl}
+          alt={project.name}
+        />
+      )}
       <TextContainer>
         <ProjectName>{project.name}</ProjectName>
         <TechStackList>
@@ -80,20 +107,13 @@ const Project = ({ project }: Props) => {
             <Technology key={index}>{technology}</Technology>
           ))}
         </TechStackList>
-        <ProjectDescription>
-          {project.description}
-          {project.githubUrl && (
-            <GithubLink>
-              <RawLink to={project.githubUrl} openInNewTab>
-                <GitHubIcon style={{ cursor: "pointer" }} />
-              </RawLink>
-            </GithubLink>
-          )}
-        </ProjectDescription>
+
+        <GithubLink>
+          <RawLink to={project.githubUrl} openInNewTab>
+            <LinkIcon />
+          </RawLink>
+        </GithubLink>
       </TextContainer>
-      {project.imageUrl && (
-        <ProjectImage src={project.imageUrl} alt={project.name} />
-      )}
     </ProjectContainer>
   );
 };

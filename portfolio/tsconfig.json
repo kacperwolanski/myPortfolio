@@ -1,35 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "baseUrl": "src",
-    "lib": ["es6", "dom", "dom.iterable", "esnext"],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext", "es6"],
     "allowJs": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "paths": {
-      "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"],
-      "@shared/*": ["shared/*"],
-      "@assets/*": ["assets/*"],
-      "@hooks/*": ["hooks/*"],
-      "@context/*": ["context/*"],
-      "@services/*": ["services/*"],
-      "@pages/*": ["pages/*"]
-    }
+    "jsx": "react-jsx"
   },
   "include": ["src"]
 }
