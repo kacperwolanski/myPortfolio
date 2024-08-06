@@ -13,9 +13,11 @@ interface Props {
 }
 
 const Container = styled.div`
-  min-width: 700px;
+  max-width: 100%;
+  min-width: 1000px;
   display: flex;
   justify-content: space-between;
+
   font-family: "Inter";
 `;
 const Headers = styled.div`

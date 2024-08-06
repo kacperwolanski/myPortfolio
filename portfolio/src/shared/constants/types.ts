@@ -10,3 +10,5 @@ export interface Project {
   githubUrl: string;
   imageUrl: string;
 }
+
+export type ProjectLabel = "All" | "Personal" | "Commercial";
