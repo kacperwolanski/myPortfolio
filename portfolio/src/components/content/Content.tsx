@@ -6,6 +6,7 @@ import Education from "./education/Education";
 import Experience from "./experience/Experience";
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
+import Footer from "./footer/Footer";
 
 const Content = () => {
   return (
@@ -16,6 +17,7 @@ const Content = () => {
       <Experience />
       <Projects />
       <Contact />
+      <Footer />
     </ContentWrapper>
   );
 };

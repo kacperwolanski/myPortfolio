@@ -9,7 +9,9 @@ interface Props {
 const SocialMediaIcon = ({ children, url }: Props) => {
   return (
     <IconWrapper>
-      <RawLink to={url}>{children}</RawLink>
+      <RawLink to={url} openInNewTab>
+        {children}
+      </RawLink>
     </IconWrapper>
   );
 };
