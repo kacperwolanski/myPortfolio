@@ -31,9 +31,7 @@ const theme = createTheme({
       background: "#0E0E0E",
       darkGray: "#1F1E1E",
       lightGray: "#6B7280",
-      errorRed: "#ff3333",
-      lightBorder: "#F3F4F6",
-      positiveGreen: "#1F7640",
+      borderGray: " #484E53",
     },
   },
   typography: {

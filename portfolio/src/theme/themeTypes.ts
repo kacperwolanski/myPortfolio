@@ -16,9 +16,7 @@ declare module "@mui/material/styles" {
       background: string;
       darkGray: string;
       lightGray: string;
-      errorRed: string;
-      lightBorder: string;
-      positiveGreen: string;
+      borderGray: string;
     };
   }
 
@@ -27,9 +25,7 @@ declare module "@mui/material/styles" {
       background: string;
       darkGray: string;
       lightGray: string;
-      errorRed: string;
-      lightBorder: string;
-      positiveGreen: string;
+      borderGray: string;
     };
   }
 }

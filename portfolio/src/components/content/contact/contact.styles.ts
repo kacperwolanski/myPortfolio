@@ -12,11 +12,18 @@ export const EmailContainer = styled.div`
   gap: 10px;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${theme.palette.custom.darkGray};
+  border: 2px solid ${theme.palette.custom.darkGray};
   width: 260px;
   padding: 20px 10px;
   border-radius: 15px;
+  &:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.01);
+  }
 `;
 export const Email = styled.span`
   color: ${theme.palette.secondary.main};
+`;
+export const MainLink = styled.a`
+  text-decoration: none;
 `;
