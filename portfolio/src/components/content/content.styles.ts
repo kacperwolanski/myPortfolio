@@ -7,4 +7,5 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 200px;
+  overflow: hidden;
 `;
