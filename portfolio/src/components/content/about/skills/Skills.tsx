@@ -15,9 +15,9 @@ const Skills = () => {
   return (
     <div>
       <SkillsSet skillSet={programmingLanguages} />
-      <p>
-        <SkillsSet skillSet={frontend} />
-      </p>
+      <br />
+      <SkillsSet skillSet={frontend} />
+      <br />
       <SkillsSet skillSet={backend} />
       <SkillsSet skillSet={testing} />
       <SkillsSet skillSet={uiDesign} />

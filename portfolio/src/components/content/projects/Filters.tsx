@@ -1,15 +1,18 @@
-import { ProjectLabel } from "../../../shared/constants/types";
+import { ProjectLabel } from "shared/constants/types";
 import React from "react";
 import { FilterButtons } from "./projects.styles";
-import CircledButton from "../../../shared/components/CircledButton";
-import { projectsLabels } from "../../../shared/constants/projects";
-import theme from "../../../theme/theme";
+import CircledButton from "shared/components/CircledButton";
+import { projectsLabels } from "shared/constants/projects";
+import { useThemeStore } from "theme/useThemeStore";
+import { lightTheme } from "theme/theme";
 
 interface Props {
   selectedLabel: ProjectLabel;
   setSelectedLabel: React.Dispatch<React.SetStateAction<ProjectLabel>>;
 }
 const Filters = ({ selectedLabel, setSelectedLabel }: Props) => {
+  const { currentTheme } = useThemeStore();
+  const isLightMode = currentTheme === lightTheme;
   return (
     <FilterButtons>
       {projectsLabels.map((label) => (
@@ -19,12 +22,18 @@ const Filters = ({ selectedLabel, setSelectedLabel }: Props) => {
           }}
           key={label}
           title={label}
-          strokeColor={theme.palette.custom.darkGray}
+          strokeColor={
+            isLightMode ? "transparent" : currentTheme.palette.custom.darkGray
+          }
           color={
-            label !== selectedLabel ? theme.palette.secondary.main : "white"
+            label !== selectedLabel
+              ? currentTheme.palette.secondary.main
+              : currentTheme.palette.custom.header
           }
           fillColor={
-            label === selectedLabel ? theme.palette.custom.darkGray : "none"
+            label === selectedLabel
+              ? currentTheme.palette.custom.darkGray
+              : "none"
           }
         />
       ))}

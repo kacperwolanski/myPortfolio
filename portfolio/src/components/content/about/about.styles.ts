@@ -1,10 +1,10 @@
+import { Theme } from "@mui/material";
 import styled from "styled-components";
-import theme from "theme/theme";
 
-export const Description = styled.p`
+export const Description = styled.p<{ theme: Theme }>`
   text-align: center;
   max-width: 600px;
-  color: ${theme.palette.secondary.main};
+  color: ${(props) => props.theme.palette.secondary.main};
 `;
 export const Container = styled.div`
   position: relative;

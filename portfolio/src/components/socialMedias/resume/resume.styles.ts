@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import theme from "theme/theme";
+import { Theme } from "@mui/material";
 
-export const ResumeContainer = styled.div`
-  color: ${theme.palette.secondary.main};
+export const ResumeContainer = styled.div<{ theme: Theme }>`
+  color: ${(props) => props.theme.palette.secondary.main};
   padding: 10px;
   cursor: pointer;
   &:hover {

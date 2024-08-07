@@ -6,12 +6,14 @@ import TopMenuButtons from "./topMenuButtons/TopMenuButtons";
 import ThemeSwitcher from "./themeSwitcher/ThemeSwitcher";
 import LanguageSwitcher from "./languageSwitcher/LanguageSwitcher";
 import ContactMeButton from "./ContactMeButton";
+import { useThemeStore } from "theme/useThemeStore";
 
 const TopMenu = () => {
   const { isHidden } = useIsTopMenuHidden();
+  const { currentTheme } = useThemeStore();
 
   return (
-    <TopMenuContainer isHidden={isHidden}>
+    <TopMenuContainer theme={currentTheme} isHidden={isHidden}>
       <TopMenuLogo />
       <TopMenuButtons />
       <SubContainer>

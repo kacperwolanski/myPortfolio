@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import theme from "../../../../theme/theme";
+import { Theme } from "@mui/material";
 
-export const TMButtonContainer = styled.div`
-  color: white;
+export const TMButtonContainer = styled.div<{ theme: Theme }>`
+  color: ${(props) => props.theme.palette.custom.header};
   font-family: "Montserrat", sans-serif;
   padding: 10px;
   &:hover {
@@ -11,7 +11,7 @@ export const TMButtonContainer = styled.div`
   }
 `;
 
-export const TitleContainer = styled.span`
-  color: ${theme.palette.secondary.main};
+export const TitleContainer = styled.span<{ theme: Theme }>`
+  color: ${(props) => props.theme.palette.secondary.main};
   font-family: "Montserrat", sans-serif;
 `;

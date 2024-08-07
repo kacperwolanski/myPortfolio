@@ -1,6 +1,5 @@
+import { Theme } from "@mui/material";
 import styled from "styled-components";
-import theme from "theme/theme";
-
 export const AccordionContainer = styled.div`
   display: flex;
   align-items: start;
@@ -15,11 +14,14 @@ export const TitlesList = styled.div`
   margin-right: 100px;
 `;
 
-export const ElementTitleButton = styled.button<{ isSelected?: boolean }>`
+export const ElementTitleButton = styled.button<{
+  theme: Theme;
+  isSelected?: boolean;
+}>`
   border: none;
   background: ${(props) =>
-    props.isSelected ? theme.palette.custom.darkGray : "none"};
-  color: white;
+    props.isSelected ? props.theme.palette.custom.darkGray : "none"};
+  color: ${(props) => props.theme.palette.custom.header};
   cursor: pointer;
   transition: background 0.3s, color 0.2s; /* Added transition for background */
   width: 160px;
