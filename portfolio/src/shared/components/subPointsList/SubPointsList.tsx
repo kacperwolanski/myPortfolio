@@ -1,26 +1,25 @@
 import React from "react";
 import CircleIcon from "@mui/icons-material/Circle";
-import { SubContainer, SubList } from "./subPointsList.styles";
-import styled from "styled-components";
-import theme from "theme/theme";
+import { SubContainer, SubList, SubPoint } from "./subPointsList.styles";
+import { useThemeStore } from "theme/useThemeStore";
 
 interface SubPointsListProps {
   subPoints: string[];
 }
 
-const SubPoint = styled.p`
-  font-weight: 100;
-  color: ${theme.palette.secondary.main};
-`;
 const SubPointsList: React.FC<SubPointsListProps> = ({ subPoints }) => {
+  const { currentTheme } = useThemeStore();
   return (
     <SubList>
       {subPoints.map((subPoint, index) => (
         <SubContainer key={index}>
           <CircleIcon
-            sx={{ fontSize: "10px", color: theme.palette.secondary.main }}
+            sx={{
+              fontSize: "10px",
+              color: currentTheme.palette.secondary.main,
+            }}
           />
-          <SubPoint>{subPoint}</SubPoint>
+          <SubPoint theme={currentTheme}>{subPoint}</SubPoint>
         </SubContainer>
       ))}
     </SubList>

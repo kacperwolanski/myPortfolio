@@ -17,6 +17,8 @@ declare module "@mui/material/styles" {
       darkGray: string;
       lightGray: string;
       borderGray: string;
+      header: string;
+      blurredBackground: string;
     };
   }
 
@@ -26,6 +28,8 @@ declare module "@mui/material/styles" {
       darkGray: string;
       lightGray: string;
       borderGray: string;
+      header: string;
+      blurredBackground: string;
     };
   }
 }

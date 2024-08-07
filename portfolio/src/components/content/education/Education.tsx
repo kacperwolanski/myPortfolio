@@ -1,16 +1,18 @@
 import React from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import SubPointsList from "shared/components/subPointsList/SubPointsList";
-import ExperienceItem from "shared/components/ExperienceItem";
+import ExperienceItem from "shared/components/experienceItem/ExperienceItem";
 import { education } from "shared/constants/education";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
 import { EducationContainer } from "./education.styles";
 import { sectionIds } from "shared/constants/sectionsIds";
+import { useThemeStore } from "theme/useThemeStore";
 const Education = () => {
+  const { currentTheme } = useThemeStore();
   return (
     <ContentSection title="Education" subTitle="Journey for knowledge">
       <EducationContainer id={sectionIds.education}>
-        <BlurredRectangle top={-200} left={-900} />
+        <BlurredRectangle top={-200} left={-900} theme={currentTheme} />
         <ExperienceItem
           header={education.institution}
           subtitle2={`${education.degree} in  ${education.field}`}

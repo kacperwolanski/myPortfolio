@@ -6,6 +6,7 @@ import {
   SkillsSetContainer,
 } from "./skills.styles";
 import { SkillSet } from "shared/constants/types";
+import { useThemeStore } from "theme/useThemeStore";
 
 interface Props {
   skillSet: SkillSet;
@@ -13,10 +14,11 @@ interface Props {
 
 const SkillsSet: React.FC<Props> = ({ skillSet }) => {
   const { title, skills } = skillSet;
+  const { currentTheme } = useThemeStore();
   return (
     <SkillsSetContainer>
-      <SkillSetTitle>{title}</SkillSetTitle>
-      <SkillsContainer>
+      <SkillSetTitle theme={currentTheme}>{title}</SkillSetTitle>
+      <SkillsContainer theme={currentTheme}>
         {skills.map((skill) => (
           <Skill key={skill} skill={skill} />
         ))}

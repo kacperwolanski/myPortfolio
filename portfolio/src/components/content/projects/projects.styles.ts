@@ -18,5 +18,5 @@ export const FilterButtons = styled.div`
   justify-content: center;
   gap: 50px;
   margin-top: 80px;
-  margin-left: 30px;
+  margin-left: 20px;
 `;

@@ -5,6 +5,7 @@ import {
   ElementTitleButton,
   TitlesList,
 } from "./jobAccordion.styles";
+import { useThemeStore } from "theme/useThemeStore";
 
 interface AccordionElement {
   title: string;
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const JobAccordion: React.FC<Props> = ({ elements }) => {
+  const { currentTheme } = useThemeStore();
   const [currentElement, setCurrentElement] = useState(elements[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -32,6 +34,7 @@ const JobAccordion: React.FC<Props> = ({ elements }) => {
       <TitlesList>
         {elements.map((element: AccordionElement, index: number) => (
           <ElementTitleButton
+            theme={currentTheme}
             key={index}
             data-title={element.title}
             isSelected={currentElement.title === element.title}

@@ -1,10 +1,11 @@
 import CircledButton from "shared/components/CircledButton";
 import React from "react";
-import theme from "theme/theme";
 import { scrollToSection } from "shared/helpers/scrollToSection";
 import { sectionIds } from "shared/constants/sectionsIds";
+import { useThemeStore } from "theme/useThemeStore";
 
 const ContactMeButton = () => {
+  const { currentTheme } = useThemeStore();
   const handleClick = () => {
     scrollToSection(sectionIds.contact);
   };
@@ -12,7 +13,7 @@ const ContactMeButton = () => {
     <CircledButton
       title="Contact Me"
       onClick={handleClick}
-      strokeColor={theme.palette.primary.main}
+      strokeColor={currentTheme.palette.primary.main}
     />
   );
 };

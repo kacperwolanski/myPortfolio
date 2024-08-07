@@ -3,16 +3,18 @@ import TopMenuButtons from "../../../components/topMenu/topMenuButtons/TopMenuBu
 import React from "react";
 import SocialMedias from "../../../components/socialMedias/SocialMedias";
 import { Container, LogoButtons, Signature } from "./footer.styles";
+import { useThemeStore } from "theme/useThemeStore";
 
 const Footer = () => {
+  const { currentTheme } = useThemeStore();
   return (
-    <Container>
+    <Container theme={currentTheme}>
       <LogoButtons>
         <TopMenuLogo />
         <TopMenuButtons />
         <SocialMedias />
       </LogoButtons>
-      <Signature>created by Kacper Wolański</Signature>
+      <Signature theme={currentTheme}>created by Kacper Wolański</Signature>
     </Container>
   );
 };

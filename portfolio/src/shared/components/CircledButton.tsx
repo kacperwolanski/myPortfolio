@@ -1,6 +1,6 @@
+import { useThemeStore } from "theme/useThemeStore";
 import React from "react";
 import styled from "styled-components";
-import theme from "theme/theme";
 
 interface Props {
   title: string;
@@ -16,13 +16,16 @@ const CircledButton = ({
   onClick,
   color,
 }: Props) => {
+  const { currentTheme } = useThemeStore();
   const Container = styled.button`
     border-radius: 15px;
     background: ${fillColor ? fillColor : "none"};
     border: 1px solid;
-    color: ${color ? color : theme.palette.secondary.main};
+    color: ${color ? color : currentTheme.palette.secondary.main};
     padding: 15px 30px;
-    border-color: ${strokeColor ? strokeColor : theme.palette.secondary.main};
+    border-color: ${strokeColor
+      ? strokeColor
+      : currentTheme.palette.secondary.main};
     &:hover {
       cursor: pointer;
     }
