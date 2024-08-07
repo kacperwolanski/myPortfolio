@@ -5,10 +5,11 @@ import ExperienceItem from "shared/components/ExperienceItem";
 import { education } from "shared/constants/education";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
 import { EducationContainer } from "./education.styles";
+import { sectionIds } from "shared/constants/sectionsIds";
 const Education = () => {
   return (
     <ContentSection title="Education" subTitle="Journey for knowledge">
-      <EducationContainer>
+      <EducationContainer id={sectionIds.education}>
         <BlurredRectangle top={-200} left={-900} />
         <ExperienceItem
           header={education.institution}

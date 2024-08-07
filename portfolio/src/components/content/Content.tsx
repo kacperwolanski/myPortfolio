@@ -7,18 +7,22 @@ import Experience from "./experience/Experience";
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
+import TopMenu from "../topMenu/TopMenu";
 
 const Content = () => {
   return (
-    <ContentWrapper>
-      <Introduction />
-      <About />
-      <Education />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
-    </ContentWrapper>
+    <div>
+      <TopMenu />
+      <ContentWrapper>
+        <Introduction />
+        <About />
+        <Education />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+      </ContentWrapper>
+    </div>
   );
 };
 

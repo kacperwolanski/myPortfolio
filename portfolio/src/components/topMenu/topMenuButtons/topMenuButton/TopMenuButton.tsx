@@ -1,13 +1,17 @@
 import React from "react";
 import { TitleContainer, TMButtonContainer } from "./topMenuButton.styles";
+import { scrollToSection } from "shared/helpers/scrollToSection";
 interface Props {
   title: string;
-  isSelected?: boolean;
+  sectionId: string;
 }
-const TopMenuButton = ({ title, isSelected }: Props) => {
+const TopMenuButton = ({ title, sectionId }: Props) => {
+  const handleClick = () => {
+    scrollToSection(sectionId);
+  };
   return (
-    <TMButtonContainer>
-      <TitleContainer isSelected={isSelected}>{title}</TitleContainer>
+    <TMButtonContainer onClick={handleClick}>
+      <TitleContainer>{title}</TitleContainer>
     </TMButtonContainer>
   );
 };

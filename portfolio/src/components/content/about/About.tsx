@@ -5,11 +5,12 @@ import ContentSection from "shared/components/contentSection/ContentSection";
 import CircledButton from "shared/components/CircledButton";
 import theme from "theme/theme";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
+import { sectionIds } from "shared/constants/sectionsIds";
 
 const About = () => {
   return (
     <ContentSection title="About Me" subTitle="Get to know me">
-      <Container>
+      <Container id={sectionIds.about}>
         <BlurredRectangle top={-140} left={800} />
         <Description>
           I specialize in creating web applications with React. My goal is to
