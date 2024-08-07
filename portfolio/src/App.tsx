@@ -1,5 +1,4 @@
 import React from "react";
-import TopMenu from "./components/topMenu/TopMenu";
 import styled from "styled-components";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme/theme";
@@ -17,7 +16,6 @@ const App: React.FC = () => {
     <MainContainer>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <TopMenu />
         <Content />
       </ThemeProvider>
     </MainContainer>

@@ -1,15 +1,16 @@
-import { GmailIcon } from "../../../shared/assets/icons/Icons";
+import { GmailIcon } from "shared/assets/icons/Icons";
 import React from "react";
-import ContentSection from "../../../shared/components/contentSection/ContentSection";
+import ContentSection from "shared/components/contentSection/ContentSection";
 import { EmailContainer, Email, Container, MainLink } from "./contact.styles";
-import { BlurredRectangle } from "../../../shared/components/BlurredRectangle";
-import { introductionData } from "../../../shared/constants/introduction";
+import { BlurredRectangle } from "shared/components/BlurredRectangle";
+import { introductionData } from "shared/constants/introduction";
+import { sectionIds } from "shared/constants/sectionsIds";
 
 const Contact = () => {
   const { email } = introductionData;
   return (
     <ContentSection title="Get in touch" subTitle="Let's create together">
-      <Container>
+      <Container id={sectionIds.contact}>
         <BlurredRectangle top={-600} left={-800} />
         <MainLink href={`mailto:${email}`}>
           <EmailContainer>

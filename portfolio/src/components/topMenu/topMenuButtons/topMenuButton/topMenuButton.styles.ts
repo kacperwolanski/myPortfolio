@@ -11,8 +11,7 @@ export const TMButtonContainer = styled.div`
   }
 `;
 
-export const TitleContainer = styled.span<{ isSelected?: boolean }>`
-  color: ${({ isSelected }) =>
-    isSelected ? theme.palette.primary.main : theme.palette.secondary.main};
+export const TitleContainer = styled.span`
+  color: ${theme.palette.secondary.main};
   font-family: "Montserrat", sans-serif;
 `;
