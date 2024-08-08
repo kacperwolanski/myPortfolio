@@ -4,12 +4,12 @@ import { scrollToSection } from "shared/helpers/scrollToSection";
 import { useThemeStore } from "theme/useThemeStore";
 interface Props {
   title: string;
-  sectionId: string;
+  sectionId?: string;
 }
 const TopMenuButton = ({ title, sectionId }: Props) => {
   const { currentTheme } = useThemeStore();
   const handleClick = () => {
-    scrollToSection(sectionId);
+    if (sectionId) scrollToSection(sectionId);
   };
   return (
     <TMButtonContainer theme={currentTheme} onClick={handleClick}>

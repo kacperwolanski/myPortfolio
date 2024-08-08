@@ -10,6 +10,8 @@ export const TMButtonContainer = styled.div<{ theme: Theme }>`
     cursor: pointer;
   }
   z-index: 100;
+  min-width: 100px;
+  text-align: center;
 `;
 
 export const TitleContainer = styled.span<{ theme: Theme }>`

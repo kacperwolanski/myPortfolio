@@ -5,7 +5,7 @@ import SectionHeader from "./sectionHeader/SectionHeader";
 interface Props {
   title: string;
   children: JSX.Element;
-  subTitle?: string;
+  subTitle: string;
 }
 const ContentSection = ({ title, subTitle, children }: Props) => {
   return (

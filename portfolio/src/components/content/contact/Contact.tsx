@@ -6,12 +6,17 @@ import { BlurredRectangle } from "shared/components/BlurredRectangle";
 import { introductionData } from "shared/constants/introduction";
 import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { email } = introductionData;
   const { currentTheme } = useThemeStore();
+  const { t: translate } = useTranslation();
   return (
-    <ContentSection title="Get in touch" subTitle="Let's create together">
+    <ContentSection
+      title={translate("contactTitle")}
+      subTitle={translate("contactSubtitle")}
+    >
       <Container id={sectionIds.contact}>
         <BlurredRectangle top={-600} left={-800} theme={currentTheme} />
         <MainLink href={`mailto:${email}`}>
