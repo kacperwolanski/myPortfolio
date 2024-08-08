@@ -1,5 +1,5 @@
 import { Theme } from "@mui/material";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   :root {
@@ -20,3 +20,11 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
    
   }
 `;
+export const MainContainer = styled.div<{ theme: Theme }>`
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    background-color:rgba(${(props) =>
+      props.theme.palette.custom.background},1);
+  }
+  `;

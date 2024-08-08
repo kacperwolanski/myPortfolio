@@ -8,10 +8,9 @@ import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 import TopMenu from "../topMenu/TopMenu";
-
 const Content = () => {
   return (
-    <div>
+    <>
       <TopMenu />
       <ContentWrapper>
         <Introduction />
@@ -22,7 +21,7 @@ const Content = () => {
         <Contact />
         <Footer />
       </ContentWrapper>
-    </div>
+    </>
   );
 };
 
