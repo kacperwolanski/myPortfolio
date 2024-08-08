@@ -1,5 +1,5 @@
 export const programmingLanguages = {
-  title: "Programming Languages",
+  title: "programmingLanguages",
   skills: ["Typescript", "Javascript", "Python", "C"],
 };
 
@@ -22,7 +22,7 @@ export const backend = {
 };
 
 export const testing = {
-  title: "Testing",
+  title: "testing",
   skills: ["React Testing Library", "Unit Testing"],
 };
 
@@ -32,12 +32,12 @@ export const uiDesign = {
 };
 
 export const automation = {
-  title: "Automation",
+  title: "automation",
   skills: ["GH Actions", "ESLint"],
 };
 
 export const teamwork = {
-  title: "Teamwork",
+  title: "teamWork",
   skills: ["Github", "Jira", "Confluence", "GitLab", "MS Teams"],
 };
 
@@ -47,7 +47,7 @@ export const os = {
 };
 
 export const otherSkills = {
-  title: "Other Skills",
+  title: "otherSkills",
   skills: [
     "Postman",
     "REST API",

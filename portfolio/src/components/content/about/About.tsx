@@ -6,26 +6,25 @@ import CircledButton from "shared/components/CircledButton";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
 import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const { currentTheme } = useThemeStore();
+  const { t: translate } = useTranslation();
   return (
-    <ContentSection title="About Me" subTitle="Get to know me">
+    <ContentSection
+      title={translate("aboutTitle")}
+      subTitle={translate("aboutSubtitle")}
+    >
       <Container id={sectionIds.about}>
         <BlurredRectangle top={-140} left={800} theme={currentTheme} />
         <Description theme={currentTheme}>
-          I specialize in creating web applications with React. My goal is to
-          deliver high-quality, seamless user experiences. While my main focus
-          is on front-end development, I also have solid experience with
-          back-end technologies like NestJs and Python. <br /> <br />
-          Check out my mobile application project developed with React Native on
-          my GitHub profile. It’s a testament to my versatility and ability to
-          adapt to different technologies.
+          {translate("aboutDescription")}
         </Description>
 
         <Skills />
         <CircledButton
-          title="Download Resume"
+          title={translate("downloadResume")}
           strokeColor={currentTheme.palette.primary.main}
         />
       </Container>

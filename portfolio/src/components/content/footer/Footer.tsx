@@ -4,9 +4,11 @@ import React from "react";
 import SocialMedias from "../../../components/socialMedias/SocialMedias";
 import { Container, LogoButtons, Signature } from "./footer.styles";
 import { useThemeStore } from "theme/useThemeStore";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { currentTheme } = useThemeStore();
+  const { t: translate } = useTranslation();
   return (
     <Container theme={currentTheme}>
       <LogoButtons>
@@ -14,7 +16,7 @@ const Footer = () => {
         <TopMenuButtons />
         <SocialMedias />
       </LogoButtons>
-      <Signature theme={currentTheme}>created by Kacper Wolański</Signature>
+      <Signature theme={currentTheme}>{translate("signature")}</Signature>
     </Container>
   );
 };

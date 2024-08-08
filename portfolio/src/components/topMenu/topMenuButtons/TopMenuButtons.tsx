@@ -5,7 +5,7 @@ import EducationButton from "../topMenuButtons/EducationButton";
 import ExperienceButton from "../topMenuButtons/ExperienceButton";
 import ProjectsButton from "../topMenuButtons/ProjectsButton";
 import HomeButton from "../topMenuButtons/HomeButton";
-import Resume from "../../../components/socialMedias/resume/Resume";
+import Resume from "../../../shared/components/Resume";
 const TopMenuButtons = () => {
   return (
     <div>

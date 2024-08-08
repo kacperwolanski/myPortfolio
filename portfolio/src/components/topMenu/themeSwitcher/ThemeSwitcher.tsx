@@ -18,6 +18,7 @@ const ThemeSwitcher: React.FC = () => {
   };
 
   const ThemeIcon = styled.div`
+    color: ${currentTheme.palette.custom.header};
     margin-top: 5px;
     &:hover {
       cursor: pointer;
@@ -26,12 +27,8 @@ const ThemeSwitcher: React.FC = () => {
   return (
     <IconButton onClick={toggleTheme}>
       <ThemeIcon onClick={toggleTheme}>
-        {currentlyLightMode && (
-          <LightModeIcon sx={{ color: currentTheme.palette.custom.header }} />
-        )}
-        {currentlyDarkMode && (
-          <DarkModeIcon sx={{ color: currentTheme.palette.custom.header }} />
-        )}
+        {currentlyLightMode && <LightModeIcon />}
+        {currentlyDarkMode && <DarkModeIcon />}
       </ThemeIcon>
     </IconButton>
   );

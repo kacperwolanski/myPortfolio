@@ -5,6 +5,7 @@ export const Description = styled.p<{ theme: Theme }>`
   text-align: center;
   max-width: 600px;
   color: ${(props) => props.theme.palette.secondary.main};
+  font-family: "Inter";
 `;
 export const Container = styled.div`
   position: relative;

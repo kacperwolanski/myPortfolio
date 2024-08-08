@@ -1,9 +1,15 @@
 import React from "react";
 import TopMenuButton from "./topMenuButton/TopMenuButton";
 import { sectionIds } from "shared/constants/sectionsIds";
-
+import { useTranslation } from "react-i18next";
 const AboutButton = () => {
-  return <TopMenuButton title="About" sectionId={sectionIds.about} />;
+  const { t: translate } = useTranslation();
+  return (
+    <TopMenuButton
+      title={translate("aboutButton")}
+      sectionId={sectionIds.about}
+    />
+  );
 };
 
 export default AboutButton;

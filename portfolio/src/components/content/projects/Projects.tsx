@@ -1,20 +1,27 @@
 import React, { useState } from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
-import { projects } from "shared/constants/projects";
 import Project from "./project/Project";
 import { ProjectLabel } from "shared/constants/types";
 import { Container, ProjectsContainer } from "./projects.styles";
 import Filters from "./Filters";
 import { sectionIds } from "shared/constants/sectionsIds";
+import { useTranslation } from "react-i18next";
+import useProjectsItems from "./hooks/useProjectsItems";
 
 const Projects = () => {
+  const { t: translate, i18n } = useTranslation();
+  const { projectItems } = useProjectsItems();
   const [selectedLabel, setSelectedLabel] = useState<ProjectLabel>("All");
 
-  const filteredProjects = projects.filter((project) => {
+  const filteredProjects = projectItems.filter((project) => {
     return project.labels.includes(selectedLabel);
   });
   return (
-    <ContentSection title="Projects" subTitle="Some of my Work">
+    <ContentSection
+      key={i18n.language}
+      title={translate("projectsTitle")}
+      subTitle={translate("projectsSubtitle")}
+    >
       <Container id={sectionIds.projects}>
         <Filters
           selectedLabel={selectedLabel}
