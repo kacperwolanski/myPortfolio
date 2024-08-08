@@ -13,14 +13,20 @@ const Education = () => {
     <ContentSection title="Education" subTitle="Journey for knowledge">
       <EducationContainer id={sectionIds.education}>
         <BlurredRectangle top={-200} left={-900} theme={currentTheme} />
-        <ExperienceItem
-          header={education.institution}
-          subtitle2={`${education.degree} in  ${education.field}`}
-          startDate={education.startDate}
-          endDate={education.endDate}
-          headerUrl={education.schoolUrl}
-        />
-        <SubPointsList subPoints={education.skillsSubPoints} />
+        {education.map((edu) => {
+          return (
+            <>
+              <ExperienceItem
+                header={edu.institution}
+                subtitle2={`${edu.degree} in  ${edu.field}`}
+                startDate={edu.startDate}
+                endDate={edu.endDate}
+                headerUrl={edu.schoolUrl}
+              />
+              <SubPointsList subPoints={edu.skillsSubPoints} />
+            </>
+          );
+        })}
       </EducationContainer>
     </ContentSection>
   );

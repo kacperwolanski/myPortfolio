@@ -18,6 +18,7 @@ const ThemeSwitcher: React.FC = () => {
   };
 
   const ThemeIcon = styled.div`
+    margin-top: 5px;
     &:hover {
       cursor: pointer;
     }

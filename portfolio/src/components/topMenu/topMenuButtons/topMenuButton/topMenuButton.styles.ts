@@ -9,6 +9,7 @@ export const TMButtonContainer = styled.div<{ theme: Theme }>`
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
   }
+  z-index: 100;
 `;
 
 export const TitleContainer = styled.span<{ theme: Theme }>`

@@ -18,7 +18,6 @@ const useIsTopMenuHidden = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
-      console.log("Removing scroll event listener");
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
