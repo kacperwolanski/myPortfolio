@@ -27,8 +27,8 @@ const ThemeSwitcher: React.FC = () => {
   return (
     <IconButton onClick={toggleTheme}>
       <ThemeIcon onClick={toggleTheme}>
-        {currentlyLightMode && <LightModeIcon />}
-        {currentlyDarkMode && <DarkModeIcon />}
+        {currentlyLightMode && <DarkModeIcon />}
+        {currentlyDarkMode && <LightModeIcon />}
       </ThemeIcon>
     </IconButton>
   );
