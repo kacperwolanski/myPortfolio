@@ -26,9 +26,32 @@ export const TopMenuContainer = styled.div<TopMenuContainerProps>`
   box-shadow: 0px 10px 30px -10px rgba(${(props) => props.theme.palette.custom.background}, 0.3);
 `;
 
-export const TopMenuButtonsContainer = styled.div`
+export const TopMenuButtonsContainer = styled.div<{
+  theme: Theme;
+  vertical?: boolean;
+}>`
   display: flex;
-  gap: 30px;
+  flex-direction: ${(props) => (props.vertical ? "column" : "row")};
+
+  gap: ${(props) => (props.vertical ? "50px" : "15px")};
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+    gap: ${(props) => (props.vertical ? "50px" : "15px")};
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    gap: ${(props) => (props.vertical ? "50px" : "15px")};
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    gap: ${(props) => (props.vertical ? "40px" : "20px")};
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    gap: ${(props) => (props.vertical ? "40px" : "25px")};
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    gap: ${(props) => (props.vertical ? "40px" : "30px")};
+  }
   align-items: center;
 `;
 

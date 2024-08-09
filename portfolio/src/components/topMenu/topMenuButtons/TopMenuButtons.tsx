@@ -6,18 +6,22 @@ import ExperienceButton from "../topMenuButtons/ExperienceButton";
 import ProjectsButton from "../topMenuButtons/ProjectsButton";
 import HomeButton from "../topMenuButtons/HomeButton";
 import Resume from "../../../shared/components/Resume";
-const TopMenuButtons = () => {
+import { useThemeStore } from "theme/useThemeStore";
+
+interface Props {
+  vertical?: boolean;
+}
+const TopMenuButtons = ({ vertical }: Props) => {
+  const { currentTheme } = useThemeStore();
   return (
-    <div>
-      <TopMenuButtonsContainer>
-        <HomeButton />
-        <AboutButton />
-        <EducationButton />
-        <ExperienceButton />
-        <ProjectsButton />
-        <Resume />
-      </TopMenuButtonsContainer>
-    </div>
+    <TopMenuButtonsContainer theme={currentTheme} vertical={vertical}>
+      <HomeButton />
+      <AboutButton />
+      <EducationButton />
+      <ExperienceButton />
+      <ProjectsButton />
+      <Resume />
+    </TopMenuButtonsContainer>
   );
 };
 
