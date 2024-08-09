@@ -21,4 +21,5 @@ export const Signature = styled.span<{ theme: Theme }>`
   text-align: center;
   font-size: 16px;
   font-family: "Inter";
+  font-weight: 200;
 `;

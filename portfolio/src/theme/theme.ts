@@ -87,7 +87,7 @@ export const lightTheme = createTheme({
       lightGray: "#6B7280",
       borderGray: " #484E53",
       header: "#484E53",
-      blurredBackground: "255,255,255",
+      blurredBackground: "140,168,184",
     },
   },
   typography: {
