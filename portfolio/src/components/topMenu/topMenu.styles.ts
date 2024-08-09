@@ -33,20 +33,20 @@ export const TopMenuButtonsContainer = styled.div<{
   display: flex;
   flex-direction: ${(props) => (props.vertical ? "column" : "row")};
 
-  gap: ${(props) => (props.vertical ? "50px" : "15px")};
+  gap: 15px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    gap: ${(props) => (props.vertical ? "50px" : "15px")};
+    gap: 15px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
-    gap: ${(props) => (props.vertical ? "50px" : "15px")};
+    gap: ${(props) => (props.vertical ? "20px" : "15px")};
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    gap: ${(props) => (props.vertical ? "40px" : "20px")};
+    gap: 20px;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
-    gap: ${(props) => (props.vertical ? "40px" : "25px")};
+    gap: ${(props) => (props.vertical ? "30px" : "25px")};
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {

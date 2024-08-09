@@ -1,52 +1,60 @@
-import { Box, Drawer, Theme } from "@mui/material";
-import SocialMedias from "components/socialMedias/SocialMedias";
+import { Drawer } from "@mui/material";
 import SocialMediasElements from "components/socialMedias/SocialMediasElements";
 import ContactMeButton from "components/topMenu/ContactMeButton";
 import LanguageSwitcher from "components/topMenu/languageSwitcher/LanguageSwitcher";
 import ThemeSwitcher from "components/topMenu/themeSwitcher/ThemeSwitcher";
 import TopMenuButtons from "components/topMenu/topMenuButtons/TopMenuButtons";
 import TopMenuLogo from "components/topMenu/topMenuLogo/TopMenuLogo";
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useRef } from "react";
+
 import { useThemeStore } from "theme/useThemeStore";
+import {
+  BottomSection,
+  DividerWrapper,
+  LogoWrapper,
+  SideMenuContent,
+} from "./mobileView.styles";
 
 interface Props {
-  mobileOpen: boolean;
+  menuOpened: boolean;
   handleDrawerToggle: () => void;
 }
-const LogoWrapper = styled.div`
-  margin-top: 20px;
-  margin-bottom: 30px;
-`;
-const SideMenuContent = styled.div`
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
-const BottomSection = styled.div<{ theme: Theme }>`
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-`;
-
-const DividerWrapper = styled.div<{ theme: Theme }>`
-  margin-top: 40px;
-  justify-content: space-evenly;
-  padding: 40px;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  border-top: 1px solid ${(props) => props.theme.palette.custom.borderGray};
-  gap: 20px;
-`;
-const SideMenu = ({ handleDrawerToggle, mobileOpen }: Props) => {
+const SideMenu = ({ handleDrawerToggle, menuOpened }: Props) => {
   const { currentTheme } = useThemeStore();
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target as Node)
+      ) {
+        handleDrawerToggle();
+      }
+    };
+
+    if (menuOpened) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpened, handleDrawerToggle]);
+
   return (
     <Drawer
+      ref={drawerRef}
+      hideBackdrop={true}
       sx={{
         position: "relative",
         "& .MuiDrawer-paper": {
@@ -58,7 +66,7 @@ const SideMenu = ({ handleDrawerToggle, mobileOpen }: Props) => {
       }}
       variant="temporary"
       anchor="right"
-      open={mobileOpen}
+      open={menuOpened}
       onClose={handleDrawerToggle}
       ModalProps={{ keepMounted: true }}
     >

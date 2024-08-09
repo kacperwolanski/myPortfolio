@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Theme } from "@mui/material";
 import { useThemeStore } from "theme/useThemeStore";
 import SideMenu from "./SideMenu";
+import { useSideMenuStore } from "components/topMenu/hooks/useSideMenuStore";
 
 const Container = styled.div`
   display: flex;
@@ -27,9 +28,9 @@ const StyledIconButton = styled.button<{ theme: Theme }>`
 `;
 const TopMenuMobile = () => {
   const { currentTheme } = useThemeStore();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const { isSideMenuOpened, setIsSideMenuOpened } = useSideMenuStore();
   const handleDrawerToggle = () => {
-    setMenuOpen(!menuOpen);
+    setIsSideMenuOpened(!isSideMenuOpened);
   };
 
   return (
@@ -38,7 +39,10 @@ const TopMenuMobile = () => {
       <StyledIconButton theme={currentTheme} onClick={handleDrawerToggle}>
         <MenuRoundedIcon />
       </StyledIconButton>
-      <SideMenu handleDrawerToggle={handleDrawerToggle} mobileOpen={menuOpen} />
+      <SideMenu
+        handleDrawerToggle={handleDrawerToggle}
+        menuOpened={isSideMenuOpened}
+      />
     </Container>
   );
 };

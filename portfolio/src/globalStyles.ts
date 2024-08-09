@@ -24,6 +24,7 @@ export const MainContainer = styled.div<{ theme: Theme }>`
     position: relative;
     overflow-x: hidden;
     width: 100%;
+
     background-color:rgba(${(props) =>
       props.theme.palette.custom.background},1);
   }
