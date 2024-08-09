@@ -29,6 +29,21 @@ const CircledButton = ({
     &:hover {
       cursor: pointer;
     }
+    @media (min-width: ${currentTheme.breakpoints.values.sm}px) {
+      font-size: 12px;
+    }
+
+    @media (min-width: ${currentTheme.breakpoints.values.md}px) {
+      font-size: 13px;
+    }
+
+    @media (min-width: ${currentTheme.breakpoints.values.lg}px) {
+      font-size: 15px;
+    }
+
+    @media (min-width: ${currentTheme.breakpoints.values.xl}px) {
+      font-size: 15px;
+    }
   `;
   return <Container onClick={onClick}>{title}</Container>;
 };
