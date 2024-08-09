@@ -2,9 +2,10 @@ import { ProjectLabel } from "shared/constants/types";
 import React from "react";
 import { FilterButtons } from "./projects.styles";
 import CircledButton from "shared/components/CircledButton";
-import { projectsLabels } from "shared/constants/projects";
+
 import { useThemeStore } from "theme/useThemeStore";
 import { lightTheme } from "theme/theme";
+import { projectsLabels } from "shared/constants/projectsLabels";
 
 interface Props {
   selectedLabel: ProjectLabel;

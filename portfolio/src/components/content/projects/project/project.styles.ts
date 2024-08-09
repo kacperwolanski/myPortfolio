@@ -71,7 +71,7 @@ export const ProjectImage = styled.img`
   z-index: 1;
   position: relative;
   border-radius: 10px;
-  transition: z-index 0.3s, opacity 0.3s;
+  transition: opacity 0.3s ease-in-out;
 `;
 
 export const GithubLink = styled.div`

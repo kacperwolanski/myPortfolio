@@ -1,11 +1,10 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Project as ProjectType } from "shared/constants/types";
 import { RawLink } from "shared/components/RawLink";
 import { LinkIcon } from "../../../../shared/assets/icons/Icons";
 import {
   ProjectContainer,
   ProjectDescription,
-  ProjectImage,
   TextContainer,
   ProjectName,
   TechStackList,
@@ -13,6 +12,9 @@ import {
   GithubLink,
 } from "./project.styles";
 import { useThemeStore } from "theme/useThemeStore";
+import ProjectImageSkeleton from "shared/components/skeletons/ProjectImageSkeleton";
+
+const ProjectImage = lazy(() => import("./ProjectImageContainer"));
 
 interface Props {
   project: ProjectType;
@@ -20,18 +22,19 @@ interface Props {
 
 const Project = ({ project }: Props) => {
   const { currentTheme } = useThemeStore();
+
   return (
     <ProjectContainer>
       <ProjectDescription theme={currentTheme} className="project-description">
         {project.description}
       </ProjectDescription>
+
       {project.imageUrl && (
-        <ProjectImage
-          className="project-image"
-          src={project.imageUrl}
-          alt={project.name}
-        />
+        <Suspense fallback={<ProjectImageSkeleton />}>
+          <ProjectImage src={project.imageUrl} alt={project.name} />
+        </Suspense>
       )}
+
       <TextContainer theme={currentTheme}>
         <ProjectName theme={currentTheme}>{project.name}</ProjectName>
         <TechStackList>
