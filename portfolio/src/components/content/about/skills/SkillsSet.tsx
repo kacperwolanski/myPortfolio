@@ -18,7 +18,7 @@ const SkillsSet: React.FC<Props> = ({ skillSet }) => {
   const { currentTheme } = useThemeStore();
   const { title, skills } = skillSet;
   return (
-    <SkillsSetContainer>
+    <SkillsSetContainer theme={currentTheme}>
       <SkillSetTitle theme={currentTheme}>{translate(title)}</SkillSetTitle>
       <SkillsContainer theme={currentTheme}>
         {skills.map((skill) => (

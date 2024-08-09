@@ -11,9 +11,12 @@ import {
   os,
   otherSkills,
 } from "shared/constants/skillSets";
+import { SkillsWrapper } from "./skills.styles";
+import { useThemeStore } from "theme/useThemeStore";
 const Skills = () => {
+  const { currentTheme } = useThemeStore();
   return (
-    <div>
+    <SkillsWrapper theme={currentTheme}>
       <SkillsSet skillSet={programmingLanguages} />
       <br />
       <SkillsSet skillSet={frontend} />
@@ -25,7 +28,7 @@ const Skills = () => {
       <SkillsSet skillSet={teamwork} />
       <SkillsSet skillSet={os} />
       <SkillsSet skillSet={otherSkills} />
-    </div>
+    </SkillsWrapper>
   );
 };
 
