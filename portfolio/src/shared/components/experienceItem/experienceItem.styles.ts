@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div<{ theme: Theme }>`
   width: 100%;
   display: flex;
+
   flex-direction: row;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     flex-direction: column;
@@ -36,6 +37,7 @@ export const HeaderContainer = styled.span<{
 }>`
   ${(props) => props.clickable && "cursor: pointer;"};
   font-size: 16px;
+
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 16px;
   }

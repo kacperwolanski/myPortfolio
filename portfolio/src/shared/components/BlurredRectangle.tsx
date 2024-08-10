@@ -12,11 +12,13 @@ export const BlurredRectangle = styled.div<{
   left: ${({ left }) => left}px;
   right: ${({ right }) => right}px;
 
+  z-index: 0;
   width: 900px;
   height: 900px;
   background: radial-gradient(
     circle,
-    rgba(${(props) => props.theme.palette.custom.blurredBackground}, 0.3) 0%,
+    rgba(${(props) => props.theme.palette.custom.blurredBackground}, 0.4) 0%,
     rgba(0, 0, 0, 0) 70%
   );
+  pointer-events: none;
 `;

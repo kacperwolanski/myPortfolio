@@ -25,7 +25,6 @@ const Introduction = () => {
       <Suspense fallback={<ProfileImageSkeleton />}>
         <ProfileImage />
       </Suspense>
-
       <NameContainer theme={currentTheme}>{name}</NameContainer>
       <SubTitle theme={currentTheme}>{jobTitle}</SubTitle>
       <Description theme={currentTheme}>
