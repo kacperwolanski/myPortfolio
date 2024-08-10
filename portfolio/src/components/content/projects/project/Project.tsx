@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState } from "react";
+import React, { Suspense, lazy } from "react";
 import { Project as ProjectType } from "shared/constants/types";
 import { RawLink } from "shared/components/RawLink";
 import { LinkIcon } from "../../../../shared/assets/icons/Icons";

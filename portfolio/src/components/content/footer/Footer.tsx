@@ -19,7 +19,7 @@ const Footer = () => {
       <LogoButtons theme={currentTheme}>
         <TopMenuLogo />
         <TopMenuButtons />
-        <br />
+
         <SocialMediasWrapper theme={currentTheme}>
           <SocialMediasElements />
         </SocialMediasWrapper>

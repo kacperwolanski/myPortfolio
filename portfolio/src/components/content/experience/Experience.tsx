@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import JobAccordion from "shared/components/jobAccordion/JobAccordion";
 import SubPointsItem from "shared/components/experienceItem/ExperienceItem";
 import SubPointsList from "shared/components/subPointsList/SubPointsList";
-import { workExperience } from "shared/constants/workExperience";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
 import { ExperienceContainer } from "./experience.styles";
 import { sectionIds } from "shared/constants/sectionsIds";
