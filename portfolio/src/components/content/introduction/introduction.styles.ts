@@ -8,7 +8,7 @@ export const IntroductionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 50%;
+  width: 100%;
   text-align: center;
 `;
 
@@ -69,20 +69,29 @@ export const SubTitle = styled.h1<{ theme: Theme }>`
 `;
 
 export const Description = styled.p<{ theme: Theme }>`
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
+    margin-top: -30px;
+    width: 75%;
+  }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     margin-top: -30px;
+    width: 75%;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
     margin-top: -40px;
+    width: 70%;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
     margin-top: -50px;
+    width: 60%;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
     margin-top: -60px;
+    width: 60%;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
     margin-top: -60px;
+    width: 60%;
   }
   text-align: center;
   margin-top: -25px;
