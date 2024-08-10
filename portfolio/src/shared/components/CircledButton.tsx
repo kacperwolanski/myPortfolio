@@ -24,6 +24,7 @@ const CircledButton = ({
     border-radius: 15px;
     background: ${fillColor ? fillColor : "none"};
     border: 1px solid;
+    z-index: 10;
     color: ${color ? color : currentTheme.palette.secondary.main};
     padding: 15px 30px;
     border-color: ${strokeColor
