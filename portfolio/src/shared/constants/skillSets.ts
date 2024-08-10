@@ -38,7 +38,7 @@ export const automation = {
 
 export const teamwork = {
   title: "teamWork",
-  skills: ["Github", "Jira", "Confluence", "GitLab", "MS Teams"],
+  skills: ["Github", "Jira", "Confluence", "GitLab"],
 };
 
 export const os = {
