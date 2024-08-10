@@ -8,5 +8,5 @@ export const ContentWrapper = styled.div<{ blurredContent: boolean }>`
   gap: 200px;
   overflow: hidden;
   filter: ${(props) => (props.blurredContent ? "blur(10px)" : "none")};
-  pointer-events: none;
+  pointer-events: ${(props) => (props.blurredContent ? "none" : "default")};
 `;

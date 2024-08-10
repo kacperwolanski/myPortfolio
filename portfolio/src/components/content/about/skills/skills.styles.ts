@@ -40,7 +40,6 @@ export const SkillSetTitle = styled.h3<{ theme: Theme }>`
   flex-wrap: wrap;
   text-align: center;
   color: ${(props) => props.theme.palette.custom.header};
-
   font-size: 14px;
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
