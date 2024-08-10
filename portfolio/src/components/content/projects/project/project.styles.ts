@@ -4,8 +4,8 @@ import { Theme } from "@mui/material";
 export const ProjectContainer = styled.div<{ theme: Theme }>`
   position: relative;
   display: flex;
+  z-index: 10;
   flex-direction: column;
-
   &:hover .project-image {
     z-index: 0;
   }
@@ -56,6 +56,7 @@ export const TextContainer = styled.div<{ theme: Theme }>`
 export const ProjectName = styled.h2<{ theme: Theme }>`
   font-family: "Inter";
   font-size: 15px;
+  z-index: 10;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 15px;
   }

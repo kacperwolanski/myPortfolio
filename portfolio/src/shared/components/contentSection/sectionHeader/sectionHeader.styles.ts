@@ -13,6 +13,7 @@ export const HeaderContainer = styled.div<{ theme: Theme }>`
 export const SectionTitle = styled.span<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.custom.header};
   font-size: 30px;
+  z-index: 10;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 30px;
   }
@@ -34,6 +35,7 @@ export const SectionTitle = styled.span<{ theme: Theme }>`
 
 export const SubTitle = styled.span<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.primary.main};
+  z-index: 10;
   font-size: 12px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 12px;

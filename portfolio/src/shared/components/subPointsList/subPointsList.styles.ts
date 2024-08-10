@@ -19,7 +19,7 @@ export const SubContainer = styled.div`
 export const SubPoint = styled.p<{ theme: Theme }>`
   font-weight: 100;
   font-size: 14px;
-
+  z-index: 10;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 14px;
   }
