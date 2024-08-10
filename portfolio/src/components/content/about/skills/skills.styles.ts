@@ -6,6 +6,7 @@ export const SkillsWrapper = styled.div<{ theme: Theme }>`
   margin-top: 50px;
   margin-bottom: 20px;
   flex-direction: column;
+  z-index: 10;
   gap: 50px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     gap: 30px;

@@ -12,6 +12,7 @@ import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
 import ProfileImageSkeleton from "shared/components/skeletons/ProfileImageSkeleton";
+import ContactMeButton from "components/topMenu/ContactMeButton";
 const ProfileImage = lazy(() => import("./ProfileImage"));
 
 const Introduction = () => {
@@ -30,10 +31,7 @@ const Introduction = () => {
       <Description theme={currentTheme}>
         {translate("introduction")}
       </Description>
-      <CircledButton
-        title={translate("contactMeButton")}
-        strokeColor={currentTheme.palette.primary.main}
-      />
+      <ContactMeButton />
     </IntroductionContainer>
   );
 };

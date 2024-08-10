@@ -7,6 +7,7 @@ import { BlurredRectangle } from "shared/components/BlurredRectangle";
 import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
+import { openResume } from "shared/helpers/openResume";
 
 const About = () => {
   const { currentTheme } = useThemeStore();
@@ -24,6 +25,7 @@ const About = () => {
 
         <Skills />
         <CircledButton
+          onClick={openResume}
           title={translate("downloadResume")}
           strokeColor={currentTheme.palette.primary.main}
         />

@@ -11,7 +11,6 @@ export const BlurredRectangle = styled.div<{
   top: ${({ top }) => top}px;
   left: ${({ left }) => left}px;
   right: ${({ right }) => right}px;
-
   z-index: 0;
   width: 900px;
   height: 900px;
