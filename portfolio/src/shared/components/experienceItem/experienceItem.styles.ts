@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div<{ theme: Theme }>`
   width: 100%;
   display: flex;
-
+  z-index: 10;
   flex-direction: row;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     flex-direction: column;
