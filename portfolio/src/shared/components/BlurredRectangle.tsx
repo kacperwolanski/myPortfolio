@@ -3,12 +3,15 @@ import styled from "styled-components";
 
 export const BlurredRectangle = styled.div<{
   top: number;
-  left: number;
+  left?: number;
+  right?: number;
   theme: Theme;
 }>`
   position: absolute;
   top: ${({ top }) => top}px;
   left: ${({ left }) => left}px;
+  right: ${({ right }) => right}px;
+
   width: 900px;
   height: 900px;
   background: radial-gradient(

@@ -19,7 +19,7 @@ const Education = () => {
       subTitle={translate("educationSubtitle")}
     >
       <EducationContainer id={sectionIds.education}>
-        <BlurredRectangle top={-200} left={-900} theme={currentTheme} />
+        <BlurredRectangle top={-200} left={-500} theme={currentTheme} />
         {educationItems.map((edu) => {
           return (
             <>

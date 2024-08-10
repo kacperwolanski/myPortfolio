@@ -18,7 +18,7 @@ const Contact = () => {
       subTitle={translate("contactSubtitle")}
     >
       <Container id={sectionIds.contact}>
-        <BlurredRectangle top={-600} left={-800} theme={currentTheme} />
+        <BlurredRectangle top={-600} left={-500} theme={currentTheme} />
         <MainLink href={`mailto:${email}`}>
           <EmailContainer theme={currentTheme}>
             <GmailIcon />

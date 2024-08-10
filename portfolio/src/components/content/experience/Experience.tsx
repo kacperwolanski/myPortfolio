@@ -22,7 +22,7 @@ const Experience = () => {
       subTitle={translate("experienceSubtitle")}
     >
       <ExperienceContainer id={sectionIds.experience}>
-        <BlurredRectangle top={0} left={900} theme={currentTheme} />
+        <BlurredRectangle top={0} right={-300} theme={currentTheme} />
         <JobAccordion
           key={i18n.language}
           elements={experienceItems.map((work) => {

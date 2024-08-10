@@ -77,6 +77,7 @@ export const ElementTitleButton = styled.button<{
   transition: background 0.3s, color 0.2s; /* Added transition for background */
   width: 160px;
   height: 56px;
+  border-radius: 10px;
 `;
 
 export const ContentContainer = styled.div<{ isTransitioning: boolean }>`
