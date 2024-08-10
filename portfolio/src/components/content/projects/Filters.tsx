@@ -15,12 +15,13 @@ const Filters = ({ selectedLabel, setSelectedLabel }: Props) => {
   const { currentTheme } = useThemeStore();
   const isLightMode = currentTheme === lightTheme;
   return (
-    <FilterButtons>
+    <FilterButtons theme={currentTheme}>
       {projectsLabels.map((label) => (
         <CircledButton
           onClick={() => {
             setSelectedLabel(label);
           }}
+          minWidth={150}
           key={label}
           title={label}
           strokeColor={

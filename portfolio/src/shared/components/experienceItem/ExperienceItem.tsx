@@ -27,7 +27,7 @@ const ExperienceItem = ({
 }: Props) => {
   const { currentTheme } = useThemeStore();
   return (
-    <Container>
+    <Container theme={currentTheme}>
       <Headers>
         {headerUrl ? (
           <RawLink to={headerUrl} openInNewTab>

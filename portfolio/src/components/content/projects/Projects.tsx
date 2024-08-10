@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import Project from "./project/Project";
 import { ProjectLabel } from "shared/constants/types";
-import { Container, ProjectsContainer } from "./projects.styles";
+import { ProjectsContainer } from "./projects.styles";
 import Filters from "./Filters";
 import { sectionIds } from "shared/constants/sectionsIds";
 import { useTranslation } from "react-i18next";
@@ -22,17 +22,18 @@ const Projects = () => {
       title={translate("projectsTitle")}
       subTitle={translate("projectsSubtitle")}
     >
-      <Container id={sectionIds.projects}>
+      <div id={sectionIds.projects}>
         <Filters
           selectedLabel={selectedLabel}
           setSelectedLabel={setSelectedLabel}
         />
+
         <ProjectsContainer>
           {filteredProjects.map((project, index) => {
             return <Project key={index} project={project} />;
           })}
         </ProjectsContainer>
-      </Container>
+      </div>
     </ContentSection>
   );
 };

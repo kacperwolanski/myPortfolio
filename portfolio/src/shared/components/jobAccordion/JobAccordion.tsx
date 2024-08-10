@@ -30,8 +30,8 @@ const JobAccordion: React.FC<Props> = ({ elements }) => {
   };
 
   return (
-    <AccordionContainer>
-      <TitlesList>
+    <AccordionContainer theme={currentTheme}>
+      <TitlesList theme={currentTheme}>
         {elements.map((element: AccordionElement, index: number) => (
           <ElementTitleButton
             theme={currentTheme}

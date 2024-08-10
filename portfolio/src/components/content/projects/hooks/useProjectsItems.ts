@@ -10,7 +10,7 @@ const useProjectsItems = () => {
     techStack: ["React", "Typescript", "NestJs", "Mui", "Prisma", "WebSockets"],
     githubUrl: "",
     imageUrl:
-      "https://github.com/user-attachments/assets/1bdc4ee3-dc86-46f5-86f4-5cfa5f077d89",
+      "https://github.com/user-attachments/assets/b7712175-bf8c-4007-9466-d6c2a374b3d0",
   };
 
   const splitterProject = {
@@ -20,7 +20,7 @@ const useProjectsItems = () => {
     techStack: ["IOS", "React Native", "Typescript"],
     githubUrl: "https://github.com/kacperwolanski/smartsplit",
     imageUrl:
-      "https://github.com/user-attachments/assets/d5676733-8646-4b99-b175-3465d61ff424",
+      "https://github.com/user-attachments/assets/c3b83510-fc06-4978-9d9a-d76abbaafca1",
   };
 
   const faceRecognitionProject = {
@@ -30,7 +30,7 @@ const useProjectsItems = () => {
     techStack: ["OpenCV", "Python", "Numpy"],
     githubUrl: "https://github.com/kacperwolanski/face_recognition",
     imageUrl:
-      "https://github.com/user-attachments/assets/a0dc53ae-cdf2-4735-b60a-97df9c0ff36f",
+      "https://github.com/user-attachments/assets/1bcf2355-dc68-4bbc-b816-de5c5839da35",
   };
 
   const portfolioProject = {
@@ -40,14 +40,15 @@ const useProjectsItems = () => {
     techStack: ["React", "MUI", "Styled Components", "Figma"],
     githubUrl: "https://github.com/kacperwolanski/myPortfolio",
     imageUrl:
-      "https://github.com/user-attachments/assets/bedf4dfe-2075-47f9-b088-2cb6552444c7",
+      "https://github.com/user-attachments/assets/28189279-a886-41f7-96a5-4d63bc9ee7dd",
   };
 
   const projectItems = [
-    carpoolingProject,
-    splitterProject,
     faceRecognitionProject,
+    splitterProject,
+
     portfolioProject,
+    carpoolingProject,
   ];
 
   return { projectItems };

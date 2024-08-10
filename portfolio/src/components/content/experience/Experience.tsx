@@ -15,7 +15,6 @@ const Experience = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate, i18n } = useTranslation();
   const { experienceItems } = useExperienceItems();
-  console.log(experienceItems);
   if (!experienceItems.length) return <></>;
 
   return (
