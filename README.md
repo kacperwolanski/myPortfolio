@@ -1,6 +1,6 @@
 # myPortfolio
 
-Hi, check out my latest project of personal portfolio website. Built it using React with Styled Components.
+Hi, check out my latest project of personal portfolio website. Built it using React with Styled Components. Designed with Figma.
 
 ![image](https://github.com/user-attachments/assets/22d7db05-5261-4824-b1d1-feec3a0dc095)
 
