@@ -26,35 +26,38 @@ const Project = ({ project }: Props) => {
 
   return (
     <ProjectContainer theme={currentTheme}>
-      <ImageDescription>
-        <ProjectDescription
-          theme={currentTheme}
-          className="project-description"
-        >
-          {project.description}
-        </ProjectDescription>
-        {project.imageUrl && (
-          <Suspense fallback={<ProjectImageSkeleton />}>
-            <ProjectImageComponent src={project.imageUrl} alt={project.name} />
-          </Suspense>
-        )}
-      </ImageDescription>
-      <TextContainer theme={currentTheme}>
-        <ProjectName theme={currentTheme}>{project.name}</ProjectName>
-        <TechStackList>
-          {project.techStack.map((technology, index) => (
-            <Technology theme={currentTheme} key={index}>
-              {technology}
-            </Technology>
-          ))}
-        </TechStackList>
+      <RawLink to={project.githubUrl} openInNewTab>
+        <ImageDescription>
+          <ProjectDescription
+            theme={currentTheme}
+            className="project-description"
+          >
+            {project.description}
+          </ProjectDescription>
+          {project.imageUrl && (
+            <Suspense fallback={<ProjectImageSkeleton />}>
+              <ProjectImageComponent
+                src={project.imageUrl}
+                alt={project.name}
+              />
+            </Suspense>
+          )}
+        </ImageDescription>
+        <TextContainer theme={currentTheme}>
+          <ProjectName theme={currentTheme}>{project.name}</ProjectName>
+          <TechStackList>
+            {project.techStack.map((technology, index) => (
+              <Technology theme={currentTheme} key={index}>
+                {technology}
+              </Technology>
+            ))}
+          </TechStackList>
 
-        <GithubLink>
-          <RawLink to={project.githubUrl} openInNewTab>
+          <GithubLink>
             <LinkIcon />
-          </RawLink>
-        </GithubLink>
-      </TextContainer>
+          </GithubLink>
+        </TextContainer>
+      </RawLink>
     </ProjectContainer>
   );
 };
