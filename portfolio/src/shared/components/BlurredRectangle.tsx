@@ -16,7 +16,7 @@ export const BlurredRectangle = styled.div<{
   height: 900px;
   background: radial-gradient(
     circle,
-    rgba(${(props) => props.theme.palette.custom.blurredBackground}, 0.4) 0%,
+    rgba(${(props) => props.theme.palette.custom.blurredBackground}, 0.35) 0%,
     rgba(0, 0, 0, 0) 70%
   );
   pointer-events: none;

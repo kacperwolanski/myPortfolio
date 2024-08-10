@@ -24,7 +24,7 @@ const CircledButton = ({
     border-radius: 15px;
     background: ${fillColor ? fillColor : "none"};
     border: 1px solid;
-    z-index: 10;
+
     color: ${color ? color : currentTheme.palette.secondary.main};
     padding: 15px 30px;
     border-color: ${strokeColor
@@ -46,7 +46,11 @@ const CircledButton = ({
       font-size: 15px;
     }
   `;
-  return <Container onClick={onClick}>{title}</Container>;
+  return (
+    <Container onClick={onClick}>
+      <span style={{ zIndex: 10 }}>{title}</span>
+    </Container>
+  );
 };
 
 export default CircledButton;

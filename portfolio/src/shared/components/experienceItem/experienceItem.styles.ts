@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div<{ theme: Theme }>`
   width: 100%;
   display: flex;
-  z-index: 10;
+
   flex-direction: row;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     flex-direction: column;
@@ -30,6 +30,7 @@ export const Container = styled.div<{ theme: Theme }>`
 export const Headers = styled.div`
   display: flex;
   flex-direction: column;
+  z-index: 10;
 `;
 export const HeaderContainer = styled.span<{
   clickable: boolean;
@@ -61,7 +62,7 @@ export const HeaderContainer = styled.span<{
 
 export const Subtitle = styled.div<{ theme: Theme }>`
   font-size: 12px;
-
+  z-index: 10;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 12px;
   }
@@ -87,5 +88,6 @@ export const DateItem = styled.span`
 export const DatesContainer = styled.div<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.secondary.main};
   font-size: 14px;
+  z-index: 10;
   margin-top: 10px;
 `;
