@@ -12,9 +12,13 @@ interface Props {
   vertical?: boolean;
 }
 const TopMenuButtons = ({ vertical }: Props) => {
-  const { currentTheme } = useThemeStore();
+  const { currentTheme, isMobile } = useThemeStore();
   return (
-    <TopMenuButtonsContainer theme={currentTheme} vertical={vertical}>
+    <TopMenuButtonsContainer
+      theme={currentTheme}
+      vertical={vertical}
+      isMobile={isMobile}
+    >
       <HomeButton />
       <AboutButton />
       <EducationButton />
