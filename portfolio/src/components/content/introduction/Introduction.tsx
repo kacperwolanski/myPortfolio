@@ -21,7 +21,7 @@ const Introduction = () => {
 
   return (
     <IntroductionContainer id={sectionIds.home}>
-      <BlurredRectangle top={-40} left={-400} theme={currentTheme} />
+      <BlurredRectangle top={-100} left={-400} theme={currentTheme} />
       <Suspense fallback={<ProfileImageSkeleton />}>
         <ProfileImage />
       </Suspense>
