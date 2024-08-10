@@ -13,6 +13,7 @@ export const Container = styled.div<{ theme: Theme }>`
 export const LogoButtons = styled.div<{ theme: Theme }>`
   display: flex;
   align-items: center;
+
   gap: 10px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     flex-direction: column;
@@ -39,6 +40,7 @@ export const SocialMediasWrapper = styled.div<{ theme: Theme }>`
   display: flex;
   margin-top: 10px;
   justify-content: center;
+
   gap: 20px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     gap: 20px;
@@ -58,7 +60,6 @@ export const SocialMediasWrapper = styled.div<{ theme: Theme }>`
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
     gap: 50px;
   }
-  width: 100%;
 `;
 export const Signature = styled.span<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.secondary.main};
