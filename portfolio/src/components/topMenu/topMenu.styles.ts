@@ -29,8 +29,11 @@ export const TopMenuContainer = styled.div<TopMenuContainerProps>`
 export const TopMenuButtonsContainer = styled.div<{
   theme: Theme;
   vertical?: boolean;
+  isMobile?: boolean;
 }>`
   display: flex;
+  flex-wrap: ${(props) => (props.isMobile ? "wrap" : "nowrap")};
+  justify-content: center;
   flex-direction: ${(props) => (props.vertical ? "column" : "row")};
 
   gap: 15px;

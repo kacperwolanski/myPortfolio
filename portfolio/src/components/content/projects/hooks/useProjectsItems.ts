@@ -30,7 +30,7 @@ const useProjectsItems = () => {
     techStack: ["OpenCV", "Python", "Numpy"],
     githubUrl: "https://github.com/kacperwolanski/face_recognition",
     imageUrl:
-      "https://github.com/user-attachments/assets/1bcf2355-dc68-4bbc-b816-de5c5839da35",
+      "https://github.com/user-attachments/assets/af40c081-441b-412e-8be4-5e23ae3bb25e",
   };
 
   const portfolioProject = {
