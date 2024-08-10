@@ -5,8 +5,7 @@ export const ProjectContainer = styled.div<{ theme: Theme }>`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   &:hover .project-image {
     z-index: 0;
   }
@@ -38,6 +37,9 @@ export const ProjectContainer = styled.div<{ theme: Theme }>`
 
 export const ImageDescription = styled.div`
   position: relative;
+  top: 0;
+  left: 0;
+  min-height: 220px;
 `;
 export const TextContainer = styled.div<{ theme: Theme }>`
   background: rgba(${(props) => props.theme.palette.custom.background}, 0.2);
@@ -46,9 +48,7 @@ export const TextContainer = styled.div<{ theme: Theme }>`
   padding: 0px 0 10px 10px;
   display: flex;
   flex-direction: column;
-  min-height: 100px;
   width: 100%;
-  min-width: 350px;
   text-align: left;
   margin-top: 15px;
 `;

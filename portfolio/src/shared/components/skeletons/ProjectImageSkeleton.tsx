@@ -7,8 +7,10 @@ const ProjectImageSkeleton = () => {
       variant="rectangular"
       sx={{
         bgcolor: "grey.500",
-        height: "220px",
-        width: "350px",
+        minHeight: "220px",
+        minWidth: "350px",
+        height: "100%",
+        width: "100%",
         borderRadius: "10px",
       }}
       animation="wave"

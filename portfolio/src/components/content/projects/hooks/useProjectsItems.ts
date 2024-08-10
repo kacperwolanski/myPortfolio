@@ -10,7 +10,7 @@ const useProjectsItems = () => {
     techStack: ["React", "Typescript", "NestJs", "Mui", "Prisma", "WebSockets"],
     githubUrl: "",
     imageUrl:
-      "https://github.com/user-attachments/assets/b7712175-bf8c-4007-9466-d6c2a374b3d0",
+      "https://github.com/user-attachments/assets/a99c78e9-2ce5-46e7-896b-cc0b8b8a92b3",
   };
 
   const splitterProject = {
