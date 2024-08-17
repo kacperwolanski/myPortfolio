@@ -20,6 +20,7 @@ const ProfileImage = () => {
       theme={currentTheme}
       src={src}
       alt={"Profile"}
+      draggable={false}
       isLoading={isLoading}
       onLoad={handleImageLoad}
       loading="lazy"
