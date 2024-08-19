@@ -13,6 +13,8 @@ const useExperienceItems = () => {
       translate("codespotSkill2"),
       translate("codespotSkill3"),
       translate("codespotSkill4"),
+      translate("codespotSkill5"),
+      translate("codespotSkill6"),
     ],
   };
   const sas = {

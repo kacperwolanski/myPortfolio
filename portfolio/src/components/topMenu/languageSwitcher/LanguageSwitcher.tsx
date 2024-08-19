@@ -13,12 +13,12 @@ const LanguageSwitcher = () => {
 
   return (
     <>
-      {!currentLenIsPolish ? (
-        <FlagButton onClick={() => handleChangeLanguage("pl")}>
+      {currentLenIsPolish ? (
+        <FlagButton onClick={() => handleChangeLanguage("en")}>
           <Poland />
         </FlagButton>
       ) : (
-        <FlagButton onClick={() => handleChangeLanguage("en")}>
+        <FlagButton onClick={() => handleChangeLanguage("pl")}>
           <British />
         </FlagButton>
       )}
