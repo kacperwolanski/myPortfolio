@@ -7,7 +7,7 @@ const useProjectsItems = () => {
     name: translate("projectCarpoolingName"),
     labels: ["All", "Commercial"],
     description: translate("projectCarpoolingDescription"),
-    techStack: ["React", "Typescript", "NestJs", "Mui", "Prisma", "WebSockets"],
+    techStack: ["React", "Typescript", "NestJs", "MUI", "Prisma", "WebSockets"],
     githubUrl: "",
     imageUrl:
       "https://github.com/user-attachments/assets/a99c78e9-2ce5-46e7-896b-cc0b8b8a92b3",

@@ -12,13 +12,12 @@ export const frontend = {
     "Zustand",
     "Styled Components",
     "Pixel Perfect Design",
-    "CSS",
   ],
 };
 
 export const backend = {
   title: "Backend",
-  skills: ["Nest.Js", "Postman", "Prisma"],
+  skills: ["Nest.Js", "Postman", "Prisma", "Insomnia"],
 };
 
 export const testing = {
@@ -48,12 +47,5 @@ export const os = {
 
 export const otherSkills = {
   title: "otherSkills",
-  skills: [
-    "Postman",
-    "REST API",
-    "VS Code",
-    "PyCharm",
-    "Insomnia",
-    "Web Sockets",
-  ],
+  skills: ["REST API", "VS Code", "PyCharm", "Web Sockets", "Docker"],
 };
