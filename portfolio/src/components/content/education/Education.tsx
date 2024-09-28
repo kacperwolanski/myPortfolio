@@ -8,13 +8,17 @@ import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
 import useEducationItems from "./hooks/useEducationItems";
+import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 
 const Education = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
   const { educationItems } = useEducationItems();
+  const { ref, isVisible } = useIntersectionObserver();
   return (
     <ContentSection
+      isVisible={isVisible}
+      ref={ref}
       title={translate("educationTitle")}
       subTitle={translate("educationSubtitle")}
     >

@@ -9,4 +9,8 @@ export const ContentWrapper = styled.div<{ blurredContent: boolean }>`
   overflow: hidden;
   filter: ${(props) => (props.blurredContent ? "blur(10px)" : "none")};
   pointer-events: ${(props) => (props.blurredContent ? "none" : "default")};
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 `;

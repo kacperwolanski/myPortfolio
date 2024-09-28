@@ -4,6 +4,7 @@ import { scrollToSection } from "shared/helpers/scrollToSection";
 import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
+
 const ContactMeButton = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();

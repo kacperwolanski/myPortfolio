@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ContentWrapper } from "./content.styles";
 import About from "./about/About";
 import Introduction from "./introduction/Introduction";
