@@ -5,11 +5,6 @@ export const FlagButton = styled.button`
   border: none;
   padding: 0;
 
-  img {
-    width: 30px;
-    height: auto;
-  }
-
   &:focus {
     outline: none;
   }
