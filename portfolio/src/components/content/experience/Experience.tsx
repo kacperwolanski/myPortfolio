@@ -9,17 +9,22 @@ import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
 import useExperienceItems from "./hooks/useExperienceItems";
+import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 
 const Experience = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate, i18n } = useTranslation();
   const { experienceItems } = useExperienceItems();
-  if (!experienceItems.length) return <></>;
+  const { ref, isVisible } = useIntersectionObserver();
 
+  if (!experienceItems.length) return <></>;
   return (
     <ContentSection
+      isVisible={isVisible}
+      ref={ref}
       title={translate("experienceTitle")}
       subTitle={translate("experienceSubtitle")}
+      moveFromLeft={true}
     >
       <ExperienceContainer id={sectionIds.experience}>
         <BlurredRectangle top={0} right={-300} theme={currentTheme} />

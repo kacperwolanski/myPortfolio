@@ -7,15 +7,20 @@ import { introductionData } from "shared/constants/introduction";
 import { sectionIds } from "shared/constants/sectionsIds";
 import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
+import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 
 const Contact = () => {
   const { email } = introductionData;
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
+  const { ref, isVisible } = useIntersectionObserver();
   return (
     <ContentSection
+      isVisible={isVisible}
+      ref={ref}
       title={translate("contactTitle")}
       subTitle={translate("contactSubtitle")}
+      moveFromLeft={true}
     >
       <Container id={sectionIds.contact}>
         <BlurredRectangle top={-600} left={-500} theme={currentTheme} />
