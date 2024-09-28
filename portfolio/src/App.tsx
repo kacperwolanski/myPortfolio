@@ -4,10 +4,12 @@ import Content from "./components/content/Content";
 import { useThemeStore } from "./theme/useThemeStore";
 import { GlobalStyle, MainContainer } from "./globalStyles";
 import useIsMobile from "shared/hooks/useIsMobile";
+import useScrollRestoration from "shared/hooks/useScrollRestore";
 
 const App: React.FC = () => {
   const { currentTheme } = useThemeStore();
   useIsMobile();
+  useScrollRestoration();
   return (
     <MainContainer theme={currentTheme}>
       <ThemeProvider theme={currentTheme}>
