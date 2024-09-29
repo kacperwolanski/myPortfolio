@@ -44,7 +44,7 @@ const JobAccordion: React.FC<Props> = ({ elements }) => {
           </ElementTitleButton>
         ))}
       </TitlesList>
-      <ContentContainer isTransitioning={isTransitioning}>
+      <ContentContainer istransitioning={isTransitioning}>
         {currentElement.content}
       </ContentContainer>
     </AccordionContainer>

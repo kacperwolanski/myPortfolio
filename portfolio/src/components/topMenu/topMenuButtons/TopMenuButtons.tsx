@@ -17,7 +17,7 @@ const TopMenuButtons = ({ vertical }: Props) => {
     <TopMenuButtonsContainer
       theme={currentTheme}
       vertical={vertical}
-      isMobile={isMobile}
+      ismobile={isMobile}
     >
       <HomeButton />
       <AboutButton />
