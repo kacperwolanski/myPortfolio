@@ -11,7 +11,7 @@
 
   "aboutTitle": "O Mnie",
   "aboutSubtitle": "Moje umiejętności",
-  "aboutDescription": "Chociaż moją specjalizacją są technologie front-endowe, mam również doświadczenie w pracy z technologiami back-endowymi, takimi jak NestJs. Kodowałem również w Pythonie. Projekty dostępne są na moim GitHubie.",
+  "aboutDescription": "Chociaż moją specjalizacją są technologie front-endowe, mam również doświadczenie w pracy z technologiami back-endowymi, takimi jak NestJs. Kodowałem również w Pythonie.",
   "programmingLanguages": "Języki Programowania",
   "testing": "Testowanie",
   "automation": "Automatyzacja",
@@ -27,7 +27,7 @@
   "educationDegree": "Inżynier",
   "educationStartDate": "Paź 2019",
   "educationEndDate": "Gru 2023",
-  "educationSkill1": "Wiedza teretyczna i praktyczna z zakresu automatyki, robotyki, mechaniki oraz elektroniki",
+  "educationSkill1": "Wiedza teoretyczna i praktyczna z zakresu automatyki, robotyki, mechaniki oraz elektroniki",
   "educationSkill2": "Programowanie zarówno niskopoziomowe (Assembler) jak i wysokopoziomowe (Python, C)",
   "educationSkill3": "Umiejętności pracy zarówno w wieloosobowych i mniejszych zespołach, dążenie do rozwiązywania problemów",
   "educationSkill4": "Umiejętności posługiwania się dokumentacją techniczną",

@@ -36,6 +36,7 @@ export const AccordionContainer = styled.div<{ theme: Theme }>`
   }
   align-items: start;
   margin-top: 80px;
+  min-height: 400px;
 `;
 
 export const TitlesList = styled.div<{ theme: Theme }>`

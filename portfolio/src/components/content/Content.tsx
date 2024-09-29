@@ -20,9 +20,9 @@ const Content = () => {
       <ContentWrapper blurredContent={blurredContent}>
         <Introduction />
         <About />
-        <Education />
         <Experience />
         <Projects />
+        <Education />
         <Contact />
         <Footer />
       </ContentWrapper>
