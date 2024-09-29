@@ -21,9 +21,9 @@ const TopMenuButtons = ({ vertical }: Props) => {
     >
       <HomeButton />
       <AboutButton />
-      <EducationButton />
       <ExperienceButton />
       <ProjectsButton />
+      <EducationButton />
       <Resume />
     </TopMenuButtonsContainer>
   );

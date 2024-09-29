@@ -19,7 +19,6 @@ const Footer = () => {
       <LogoButtons theme={currentTheme}>
         <TopMenuLogo />
         <TopMenuButtons />
-
         <SocialMediasWrapper theme={currentTheme}>
           <SocialMediasElements />
         </SocialMediasWrapper>

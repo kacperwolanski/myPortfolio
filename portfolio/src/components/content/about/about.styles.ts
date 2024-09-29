@@ -11,6 +11,5 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
 `;

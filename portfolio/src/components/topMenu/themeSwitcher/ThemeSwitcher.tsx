@@ -8,13 +8,15 @@ import { darkTheme, lightTheme } from "theme/theme";
 
 const ThemeSwitcher: React.FC = () => {
   const { currentTheme, setCurrentTheme } = useThemeStore();
-
   const currentlyLightMode = currentTheme === lightTheme;
   const currentlyDarkMode = !currentlyLightMode;
 
   const toggleTheme = () => {
     const newTheme = currentlyLightMode ? darkTheme : lightTheme;
     setCurrentTheme(newTheme);
+
+    const themeMode = currentlyLightMode ? "dark" : "light";
+    sessionStorage.setItem("currentTheme", themeMode);
   };
 
   const ThemeIcon = styled.div`
