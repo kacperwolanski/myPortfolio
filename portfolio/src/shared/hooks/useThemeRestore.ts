@@ -10,10 +10,6 @@ const useThemeRestore = () => {
       const parsedTheme = currentLSTheme === "dark" ? darkTheme : lightTheme;
       setCurrentTheme(parsedTheme);
     }
-
-    return () => {
-      sessionStorage.removeItem("currentTheme");
-    };
   }, []);
 };
 

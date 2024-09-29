@@ -6,7 +6,7 @@ const ProfileImageSkeleton = () => {
     <Skeleton
       variant="circular"
       sx={{
-        bgcolor: "grey.500",
+        bgcolor: "grey.400",
         maxWidth: "300px",
         maxHeight: "300px",
         width: "100vw",

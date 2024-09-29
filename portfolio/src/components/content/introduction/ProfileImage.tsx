@@ -1,28 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { introductionData } from "shared/constants/introduction";
 import { useThemeStore } from "theme/useThemeStore";
 import { lightTheme } from "theme/theme";
 import { Img } from "./introduction.styles";
 
 const ProfileImage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+  const [imageSrc, setImageSrc] = useState("");
   const { currentTheme } = useThemeStore();
   const { darkProfileImgUrl, lightProfileImgUrl } = introductionData;
   const themeIsLight = currentTheme === lightTheme;
 
   const src = themeIsLight ? lightProfileImgUrl : darkProfileImgUrl;
-  const handleImageLoad = () => {
-    setIsLoading(false);
-  };
+
+  useEffect(() => {
+    setIsFadingOut(true);
+
+    const fadeOutDuration = 500;
+
+    const timeoutId = setTimeout(() => {
+      setIsFadingOut(false);
+      setImageSrc(src);
+    }, fadeOutDuration);
+
+    return () => clearTimeout(timeoutId);
+  }, [currentTheme, src]);
 
   return (
     <Img
       theme={currentTheme}
-      src={src}
-      alt={"Profile"}
+      src={imageSrc}
+      alt=""
       draggable={false}
-      isLoading={isLoading}
-      onLoad={handleImageLoad}
+      isfadingout={isFadingOut}
       loading="lazy"
     />
   );

@@ -81,9 +81,9 @@ export const ElementTitleButton = styled.button<{
   border-radius: 10px;
 `;
 
-export const ContentContainer = styled.div<{ isTransitioning: boolean }>`
+export const ContentContainer = styled.div<{ istransitioning: boolean }>`
   min-height: 360px;
   width: 100%;
-  opacity: ${(props) => (props.isTransitioning ? 0 : 1)};
+  opacity: ${(props) => (props.istransitioning ? 0 : 1)};
   transition: opacity 0.2s;
 `;

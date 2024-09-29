@@ -114,13 +114,14 @@ export const Description = styled.p<{ theme: Theme; isVisible: boolean }>`
     isVisible ? "translateY(0)" : "translateY(50px)"};
 `;
 
-export const Img = styled.img<{ isLoading: boolean; theme: Theme }>`
+export const Img = styled.img<{ isfadingout: boolean; theme: Theme }>`
   border-radius: 50%;
   z-index: 10;
-  opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
+  opacity: ${({ isfadingout }) => (isfadingout ? 0 : 1)};
   transition: opacity 0.5s ease-in-out;
   width: 200px;
   height: 200px;
+
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     width: 200px;
     height: 200px;
