@@ -118,7 +118,7 @@ export const Img = styled.img<{ isfadingout: boolean; theme: Theme }>`
   border-radius: 50%;
   z-index: 10;
   opacity: ${({ isfadingout }) => (isfadingout ? 0 : 1)};
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
   width: 200px;
   height: 200px;
 

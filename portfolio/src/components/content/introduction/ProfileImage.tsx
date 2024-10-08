@@ -11,21 +11,30 @@ const ProfileImage = () => {
   const { darkProfileImgUrl, lightProfileImgUrl } = introductionData;
   const themeIsLight = currentTheme === lightTheme;
 
-  const src = themeIsLight ? lightProfileImgUrl : darkProfileImgUrl;
+  const fadeOutDuration = 600;
 
   useEffect(() => {
+    const lightImage = new Image();
+    const darkImage = new Image();
+    lightImage.src = lightProfileImgUrl;
+    darkImage.src = darkProfileImgUrl;
+  }, [lightProfileImgUrl, darkProfileImgUrl]);
+
+  useEffect(() => {
+    const newSrc = themeIsLight ? lightProfileImgUrl : darkProfileImgUrl;
     setIsFadingOut(true);
 
-    const fadeOutDuration = 500;
+    const img = new Image();
+    img.src = newSrc;
+    img.onload = () => {
+      const timeoutId = setTimeout(() => {
+        setImageSrc(newSrc);
+        setIsFadingOut(false);
+      }, fadeOutDuration);
 
-    const timeoutId = setTimeout(() => {
-      setIsFadingOut(false);
-      setImageSrc(src);
-    }, fadeOutDuration);
-
-    return () => clearTimeout(timeoutId);
-  }, [currentTheme, src]);
-
+      return () => clearTimeout(timeoutId);
+    };
+  }, [currentTheme, themeIsLight, lightProfileImgUrl, darkProfileImgUrl]);
   return (
     <Img
       theme={currentTheme}
@@ -33,7 +42,6 @@ const ProfileImage = () => {
       alt=""
       draggable={false}
       isfadingout={isFadingOut}
-      loading="lazy"
     />
   );
 };

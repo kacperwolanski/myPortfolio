@@ -14,7 +14,8 @@ import { useTranslation } from "react-i18next";
 import ProfileImageSkeleton from "shared/components/skeletons/ProfileImageSkeleton";
 import ContactMeButton from "components/topMenu/ContactMeButton";
 import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
-const ProfileImage = lazy(() => import("./ProfileImage"));
+import ProfileImage from "./ProfileImage";
+// const ProfileImage = lazy(() => import("./ProfileImage"));
 
 const Introduction = () => {
   const { name, jobTitle } = introductionData;
