@@ -26,6 +26,7 @@ const Projects = () => {
       key={i18n.language}
       title={translate("projectsTitle")}
       subTitle={translate("projectsSubtitle")}
+      moveFromLeft={true}
     >
       <div id={sectionIds.projects}>
         <Filters

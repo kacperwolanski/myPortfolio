@@ -24,17 +24,14 @@ const ProfileImage = () => {
     const newSrc = themeIsLight ? lightProfileImgUrl : darkProfileImgUrl;
     setIsFadingOut(true);
 
-    const img = new Image();
-    img.src = newSrc;
-    img.onload = () => {
-      const timeoutId = setTimeout(() => {
-        setImageSrc(newSrc);
-        setIsFadingOut(false);
-      }, fadeOutDuration);
+    const timeoutId = setTimeout(() => {
+      setImageSrc(newSrc);
+      setIsFadingOut(false);
+    }, fadeOutDuration);
 
-      return () => clearTimeout(timeoutId);
-    };
+    return () => clearTimeout(timeoutId);
   }, [currentTheme, themeIsLight, lightProfileImgUrl, darkProfileImgUrl]);
+
   return (
     <Img
       theme={currentTheme}

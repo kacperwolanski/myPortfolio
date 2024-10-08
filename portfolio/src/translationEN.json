@@ -7,7 +7,7 @@
   "contactMeButton": "Contact",
   "resumeButton": "Resume",
 
-  "introduction": "Hi, I'm passionate Software Developer specialized in creating web applications with React. Throughout my career, I've had the chance to work on a variety of projects, from a full-stack carpooling web application to a video streaming platform. My goal is to deliver high-quality user experiences.",
+  "introduction": "Hi, I'm passionate Software Developer specialized in creating web applications with React. I've worked on a variety of projects, from a full-stack carpooling service to a video streaming platform.",
 
   "aboutTitle": "About Me",
   "aboutSubtitle": "Get to know my skills",
@@ -67,5 +67,9 @@
   "contactTitle": "Get in touch",
   "contactSubtitle": "Let's create together",
 
-  "signature": "built by Kacper Wolański"
+  "signature": "built by Kacper Wolański",
+
+  "All": "All",
+  "Personal": "Private",
+  "Commercial": "Commercial"
 }

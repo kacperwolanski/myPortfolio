@@ -6,6 +6,7 @@ import CircledButton from "shared/components/CircledButton";
 import { useThemeStore } from "theme/useThemeStore";
 import { lightTheme } from "theme/theme";
 import { projectsLabels } from "shared/constants/projectsLabels";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   selectedLabel: ProjectLabel;
@@ -13,6 +14,7 @@ interface Props {
 }
 const Filters = ({ selectedLabel, setSelectedLabel }: Props) => {
   const { currentTheme } = useThemeStore();
+  const { t: translate } = useTranslation();
   const isLightMode = currentTheme === lightTheme;
   return (
     <FilterButtons theme={currentTheme}>
@@ -23,7 +25,7 @@ const Filters = ({ selectedLabel, setSelectedLabel }: Props) => {
           }}
           minWidth={150}
           key={label}
-          title={label}
+          title={translate(label)}
           strokeColor={
             isLightMode ? "transparent" : currentTheme.palette.custom.darkGray
           }

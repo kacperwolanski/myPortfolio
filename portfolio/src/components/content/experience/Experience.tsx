@@ -24,7 +24,6 @@ const Experience = () => {
       ref={ref}
       title={translate("experienceTitle")}
       subTitle={translate("experienceSubtitle")}
-      moveFromLeft={true}
     >
       <ExperienceContainer id={sectionIds.experience}>
         <BlurredRectangle top={0} right={-300} theme={currentTheme} />
