@@ -7,7 +7,7 @@
   "contactMeButton": "Kontakt",
   "resumeButton": "CV",
 
-  "introduction": "Cześć, jestem programistą specjalizującym się w React. W trakcie mojej kariery miałem okazję pracować nad wieloma projektami, od fullstackowej aplikacji carpoolingowej, po platformę do streamingu wideo. ",
+  "introduction": "Cześć, jestem programistą pracującym z React. Pracowałem nad wieloma projektami, od fullstackowej aplikacji carpoolingowej, po platformę do streamingu wideo. ",
 
   "aboutTitle": "O Mnie",
   "aboutSubtitle": "Moje umiejętności",
@@ -67,5 +67,9 @@
   "contactTitle": "Odezwij się",
   "contactSubtitle": "Stwórzmy coś razem",
 
-  "signature": "wykonał Kacper Wolański"
+  "signature": "wykonał Kacper Wolański",
+
+  "All": "Wszystkie",
+  "Personal": "Prywatne",
+  "Commercial": "Komercyjne"
 }
