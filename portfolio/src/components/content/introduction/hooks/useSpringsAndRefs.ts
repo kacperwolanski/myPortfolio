@@ -1,25 +1,13 @@
 import { useSpring } from "@react-spring/web";
-import { useRef } from "react";
-import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 
 const useSpringsAndRefs = () => {
-  const nameRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const descriptionRef = useRef(null);
-  const buttonRef = useRef(null);
-
-  const { isVisible: isNameVisible } = useIntersectionObserver(nameRef);
-  const { isVisible: isSubtitleVisible } = useIntersectionObserver(subtitleRef);
-  const { isVisible: isDescriptionVisible } =
-    useIntersectionObserver(descriptionRef);
-  const { isVisible: isButtonVisible } = useIntersectionObserver(buttonRef);
-
   const nameSpring = useSpring({
     from: {
       opacity: 0,
     },
     to: {
-      opacity: isNameVisible ? 1 : 0,
+      y: 0,
+      opacity: 1,
     },
     config: { duration: 1200 },
     delay: 500,
@@ -31,8 +19,8 @@ const useSpringsAndRefs = () => {
       opacity: 0,
     },
     to: {
-      y: isNameVisible ? 0 : 50,
-      opacity: isNameVisible ? 1 : 0,
+      y: 0,
+      opacity: 1,
     },
     config: { duration: 1000 },
     delay: 1200,
@@ -44,8 +32,8 @@ const useSpringsAndRefs = () => {
       opacity: 0,
     },
     to: {
-      y: isNameVisible ? 0 : 50,
-      opacity: isNameVisible ? 1 : 0,
+      y: 0,
+      opacity: 1,
     },
     config: { duration: 1000 },
 
@@ -58,8 +46,8 @@ const useSpringsAndRefs = () => {
       opacity: 0,
     },
     to: {
-      y: isNameVisible ? 0 : 100,
-      opacity: isNameVisible ? 1 : 0,
+      y: 0,
+      opacity: 1,
     },
     config: { duration: 2000 },
     delay: 2200,
@@ -70,10 +58,6 @@ const useSpringsAndRefs = () => {
     subTitleSpring,
     descSpring,
     buttonSpring,
-    nameRef,
-    subtitleRef,
-    descriptionRef,
-    buttonRef,
   };
 };
 

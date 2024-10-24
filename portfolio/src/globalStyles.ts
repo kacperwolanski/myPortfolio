@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     scroll-behavior: smooth !important;
     overflow-x: hidden;
     background: var(--background-color);
-    transition: 0.5s;
     width: 100%;
   }
 
@@ -27,16 +26,12 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
 
   ::-webkit-scrollbar-track {
   background: var(--background-color);
-  
-    
-     
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-color); 
     border-radius: 10px;
     border: 3px solid var(--background-color); 
-      
   }
 
   ::-webkit-scrollbar-thumb:hover {
