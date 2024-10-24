@@ -20,16 +20,8 @@ const Introduction = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
 
-  const {
-    nameRef,
-    subtitleRef,
-    nameSpring,
-    descriptionRef,
-    buttonRef,
-    subTitleSpring,
-    descSpring,
-    buttonSpring,
-  } = useSpringsAndRefs();
+  const { nameSpring, subTitleSpring, descSpring, buttonSpring } =
+    useSpringsAndRefs();
 
   const name = "Kacper Wolański".split("");
 
@@ -65,7 +57,7 @@ const Introduction = () => {
 
       <animated.div style={nameSpring}>
         <NameContainer theme={currentTheme}>
-          <div ref={nameRef} style={{ display: "flex" }}>
+          <div style={{ display: "flex" }}>
             {springs.map((springStyle, index) => (
               <animated.span
                 key={index}
@@ -84,21 +76,17 @@ const Introduction = () => {
         </NameContainer>
       </animated.div>
       <animated.div style={subTitleSpring}>
-        <SubTitle theme={currentTheme} ref={subtitleRef}>
-          {jobTitle}
-        </SubTitle>
+        <SubTitle theme={currentTheme}>{jobTitle}</SubTitle>
       </animated.div>
 
-      <Description theme={currentTheme} ref={descriptionRef}>
+      <Description theme={currentTheme}>
         <animated.div style={descSpring}>
           {translate("introduction")}
         </animated.div>
       </Description>
 
       <animated.div style={buttonSpring}>
-        <div ref={buttonRef}>
-          <ContactMeButton />
-        </div>
+        <ContactMeButton />
       </animated.div>
     </IntroductionContainer>
   );
