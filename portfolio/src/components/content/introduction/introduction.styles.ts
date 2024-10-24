@@ -18,7 +18,7 @@ export const ProfileImage = styled.img`
   height: 300px;
 `;
 
-export const NameContainer = styled.h1<{ theme: Theme; isVisible: boolean }>`
+export const NameContainer = styled.h1<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.custom.header};
   font-weight: 900;
   letter-spacing: -3px;
@@ -38,14 +38,9 @@ export const NameContainer = styled.h1<{ theme: Theme; isVisible: boolean }>`
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
     font-size: 63px;
   }
-
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-  transform: ${({ isVisible }) =>
-    isVisible ? "translateY(0)" : "translateY(30px)"};
 `;
 
-export const SubTitle = styled.h1<{ theme: Theme; isVisible: boolean }>`
+export const SubTitle = styled.h1<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.primary.main};
   font-size: 15px;
   top: -25px;
@@ -71,14 +66,9 @@ export const SubTitle = styled.h1<{ theme: Theme; isVisible: boolean }>`
   }
   position: relative;
   font-weight: 500;
-
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-  transform: ${({ isVisible }) =>
-    isVisible ? "translateY(0)" : "translateY(50px)"};
 `;
 
-export const Description = styled.p<{ theme: Theme; isVisible: boolean }>`
+export const Description = styled.p<{ theme: Theme }>`
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     margin-top: -30px;
     width: 75%;
@@ -106,21 +96,20 @@ export const Description = styled.p<{ theme: Theme; isVisible: boolean }>`
   text-align: center;
   margin-top: -25px;
   color: ${(props) => props.theme.palette.secondary.main};
-  opacity: 0;
-
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-  transform: ${({ isVisible }) =>
-    isVisible ? "translateY(0)" : "translateY(50px)"};
 `;
 
-export const Img = styled.img<{ isfadingout: boolean; theme: Theme }>`
+export const Img = styled.div<{ theme: Theme }>`
   border-radius: 50%;
   z-index: 10;
-  opacity: ${({ isfadingout }) => (isfadingout ? 0 : 1)};
-  transition: opacity 0.6s ease-in-out;
-  width: 200px;
-  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
+    width: 200px;
+    height: 200px;
+  }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     width: 200px;
@@ -142,11 +131,4 @@ export const Img = styled.img<{ isfadingout: boolean; theme: Theme }>`
     width: 350px;
     height: 350px;
   }
-`;
-
-export const ButtonWrapper = styled.div<{ isVisible: boolean }>`
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-  transform: ${({ isVisible }) =>
-    isVisible ? "translateY(0)" : "translateY(100px)"};
 `;

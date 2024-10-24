@@ -29,6 +29,7 @@ const Filters = ({ selectedLabel, setSelectedLabel }: Props) => {
           strokeColor={
             isLightMode ? "transparent" : currentTheme.palette.custom.darkGray
           }
+          isActive={label === selectedLabel}
           color={
             label !== selectedLabel
               ? currentTheme.palette.secondary.main

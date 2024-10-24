@@ -9,9 +9,13 @@ interface Props {
   fillColor?: string;
   onClick?: () => void;
   minWidth?: number;
+  isActive?: boolean;
 }
 const CircledButton = forwardRef<HTMLButtonElement, Props>(
-  ({ title, strokeColor, fillColor, onClick, color, minWidth }, ref) => {
+  (
+    { title, strokeColor, fillColor, onClick, color, minWidth, isActive },
+    ref
+  ) => {
     const { currentTheme } = useThemeStore();
 
     return (
@@ -23,6 +27,7 @@ const CircledButton = forwardRef<HTMLButtonElement, Props>(
         color={color}
         minWidth={minWidth}
         currentTheme={currentTheme}
+        isActive={isActive}
       >
         <span style={{ zIndex: 10 }}>{title}</span>
       </Container>
