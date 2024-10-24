@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import SubPointsList from "shared/components/subPointsList/SubPointsList";
 import ExperienceItem from "shared/components/experienceItem/ExperienceItem";
@@ -13,12 +13,13 @@ import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 const Education = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
+  const eduRef = useRef(null);
   const { educationItems } = useEducationItems();
-  const { ref, isVisible } = useIntersectionObserver();
+  const { isVisible } = useIntersectionObserver(eduRef);
   return (
     <ContentSection
       isVisible={isVisible}
-      ref={ref}
+      ref={eduRef}
       title={translate("educationTitle")}
       subTitle={translate("educationSubtitle")}
     >

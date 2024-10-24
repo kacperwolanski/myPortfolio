@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import Project from "./project/Project";
 import { ProjectLabel } from "shared/constants/types";
@@ -13,7 +13,8 @@ const Projects = () => {
   const { t: translate, i18n } = useTranslation();
   const { projectItems } = useProjectsItems();
   const [selectedLabel, setSelectedLabel] = useState<ProjectLabel>("All");
-  const { ref, isVisible } = useIntersectionObserver();
+  const projectsRef = useRef(null);
+  const { isVisible } = useIntersectionObserver(projectsRef);
 
   const filteredProjects = projectItems.filter((project) => {
     return project.labels.includes(selectedLabel);
@@ -22,11 +23,10 @@ const Projects = () => {
   return (
     <ContentSection
       isVisible={isVisible}
-      ref={ref}
+      ref={projectsRef}
       key={i18n.language}
       title={translate("projectsTitle")}
       subTitle={translate("projectsSubtitle")}
-      moveFromLeft={true}
     >
       <div id={sectionIds.projects}>
         <Filters

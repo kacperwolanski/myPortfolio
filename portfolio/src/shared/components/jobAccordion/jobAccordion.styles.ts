@@ -41,6 +41,7 @@ export const AccordionContainer = styled.div<{ theme: Theme }>`
 
 export const TitlesList = styled.div<{ theme: Theme }>`
   display: flex;
+  gap: 20px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     flex-direction: column;
   }
@@ -74,11 +75,23 @@ export const ElementTitleButton = styled.button<{
     props.isSelected
       ? props.theme.palette.custom.header
       : props.theme.palette.secondary.main};
-  cursor: pointer;
-  transition: background 0.3s, color 0.2s; /* Added transition for background */
+  &:hover {
+    cursor: pointer;
+    background-color: ${(props) =>
+      props.isSelected
+        ? props.theme.palette.custom.darkGray
+        : "rgba(255, 255, 255, 0.1)"};
+  }
+  transition: background 0.3s, color 0.2s;
   width: 160px;
-  height: 56px;
+  height: 50px;
   border-radius: 10px;
+  border: ${(props) =>
+    props.isSelected
+      ? "none"
+      : `1px solid ${props.theme.palette.custom.darkGray}`};
+  border-color: ${(props) =>
+    !props.isSelected ? props.theme.palette.custom.darkGray : "none"};
 `;
 
 export const ContentContainer = styled.div<{ istransitioning: boolean }>`

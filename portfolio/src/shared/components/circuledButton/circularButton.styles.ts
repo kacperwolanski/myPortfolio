@@ -6,6 +6,7 @@ interface Props {
   fillColor?: string;
   onClick?: () => void;
   minWidth?: number;
+  isActive?: boolean;
   currentTheme: any;
 }
 
@@ -21,6 +22,8 @@ export const Container = styled.button<Props>`
     strokeColor ? strokeColor : currentTheme.palette.secondary.main};
   &:hover {
     cursor: pointer;
+    background-color: ${({ isActive, fillColor, strokeColor }) =>
+      isActive ? fillColor : strokeColor};
   }
   @media (min-width: ${({ currentTheme }) =>
       currentTheme.breakpoints.values.sm}px) {
@@ -38,4 +41,5 @@ export const Container = styled.button<Props>`
       currentTheme.breakpoints.values.xl}px) {
     font-size: 15px;
   }
+  transition: background 0.3s, color 0.2s;
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FlagButton } from "./languageSwitcher.styles";
+import useThrottled from "shared/hooks/useThrottled";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -10,10 +11,11 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
+  const throttledLanguageChange = useThrottled(handleChangeLanguage, 1000);
   return (
     <>
       {currentLenIsPolish ? (
-        <FlagButton onClick={() => handleChangeLanguage("en")}>
+        <FlagButton onClick={() => throttledLanguageChange("en")}>
           <img
             style={{ width: "50px", height: "30px" }}
             alt="PL"
@@ -21,7 +23,7 @@ const LanguageSwitcher = () => {
           />
         </FlagButton>
       ) : (
-        <FlagButton onClick={() => handleChangeLanguage("pl")}>
+        <FlagButton onClick={() => throttledLanguageChange("pl")}>
           <img
             style={{ width: "50px", height: "30px" }}
             alt="ENG"

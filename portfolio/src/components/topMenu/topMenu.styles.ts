@@ -20,6 +20,7 @@ export const TopMenuContainer = styled.div<TopMenuContainerProps>`
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: transform 0.3s ease;
+  transition: 0.5s;
   transform: ${({ isHidden }) =>
     isHidden ? "translateY(-100%)" : "translateY(0)"};
   z-index: 1000;

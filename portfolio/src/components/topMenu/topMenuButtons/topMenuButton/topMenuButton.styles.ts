@@ -5,6 +5,7 @@ export const TMButtonContainer = styled.div<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.custom.header};
   font-family: "Montserrat", sans-serif;
   padding: 10px;
+  transition: background 0.3s, color 0.2s;
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
@@ -13,6 +14,7 @@ export const TMButtonContainer = styled.div<{ theme: Theme }>`
   min-width: 100px;
   text-align: center;
   font-size: 12px;
+  border-radius: 10px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 12px;
   }

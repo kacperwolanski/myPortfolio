@@ -1,5 +1,5 @@
 import { GmailIcon } from "shared/assets/icons/Icons";
-import React from "react";
+import React, { useRef } from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import { EmailContainer, Email, Container, MainLink } from "./contact.styles";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
@@ -13,14 +13,14 @@ const Contact = () => {
   const { email } = introductionData;
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
-  const { ref, isVisible } = useIntersectionObserver();
+  const projectsRef = useRef(null);
+  const { isVisible } = useIntersectionObserver(projectsRef);
   return (
     <ContentSection
       isVisible={isVisible}
-      ref={ref}
+      ref={projectsRef}
       title={translate("contactTitle")}
       subTitle={translate("contactSubtitle")}
-      moveFromLeft={true}
     >
       <Container id={sectionIds.contact}>
         <BlurredRectangle top={-600} left={-500} theme={currentTheme} />

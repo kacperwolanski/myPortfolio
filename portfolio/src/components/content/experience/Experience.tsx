@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import JobAccordion from "shared/components/jobAccordion/JobAccordion";
 import SubPointsItem from "shared/components/experienceItem/ExperienceItem";
@@ -15,13 +15,14 @@ const Experience = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate, i18n } = useTranslation();
   const { experienceItems } = useExperienceItems();
-  const { ref, isVisible } = useIntersectionObserver();
+  const expRef = useRef(null);
+  const { isVisible } = useIntersectionObserver(expRef);
 
   if (!experienceItems.length) return <></>;
   return (
     <ContentSection
       isVisible={isVisible}
-      ref={ref}
+      ref={expRef}
       title={translate("experienceTitle")}
       subTitle={translate("experienceSubtitle")}
     >

@@ -1,21 +1,27 @@
-import { useEffect, useState, useRef } from "react";
+import { RefObject, useEffect, useState } from "react";
 
-const useIntersectionObserver = (delay?: number) => {
+type Options = IntersectionObserverInit;
+
+const useIntersectionObserver = (
+  ref: RefObject<HTMLElement>,
+  options?: Options
+) => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          const timeoutId = setTimeout(() => {
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
             setIsVisible(true);
-          }, delay);
-
-          return () => clearTimeout(timeoutId);
-        }
+            observer.disconnect();
+          }
+        });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.1,
+        ...options,
+      }
     );
 
     if (ref.current) {
@@ -27,9 +33,9 @@ const useIntersectionObserver = (delay?: number) => {
         observer.unobserve(ref.current);
       }
     };
-  }, [delay]);
+  }, [ref, options]);
 
-  return { ref, isVisible };
+  return { isVisible };
 };
 
 export default useIntersectionObserver;
