@@ -16,17 +16,17 @@ import { animated, useSprings } from "@react-spring/web";
 import useSpringsAndRefs from "./hooks/useSpringsAndRefs";
 
 const Introduction = () => {
-  const { jobTitle } = introductionData;
-  const { currentTheme } = useThemeStore();
+  const { currentTheme, isMobile } = useThemeStore();
   const { t: translate } = useTranslation();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [waveDelay, setWaveDelay] = useState<number>(500);
 
   const { nameSpring, subTitleSpring, descSpring, buttonSpring } =
     useSpringsAndRefs();
 
   const name = "Kacper Wolański".split("");
+  const { jobTitle } = introductionData;
 
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [waveDelay, setWaveDelay] = useState<number>(500);
   const springs = useSprings(
     name.length,
     name.map((_, i) => ({
@@ -49,12 +49,11 @@ const Introduction = () => {
   useEffect(() => {
     setWaveDelay(0);
   }, []);
+
   return (
     <IntroductionContainer id={sectionIds.home}>
       <BlurredRectangle top={-100} left={-400} theme={currentTheme} />
-
       <ProfileImage />
-
       <animated.div style={nameSpring}>
         <NameContainer theme={currentTheme}>
           <div style={{ display: "flex" }}>
@@ -66,8 +65,8 @@ const Introduction = () => {
                   display: "inline-block",
                   marginRight: name[index] === " " ? "8px" : "0",
                 }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseEnter={() => !isMobile && setHoveredIndex(index)}
+                onMouseLeave={() => !isMobile && setHoveredIndex(null)}
               >
                 {name[index]}
               </animated.span>

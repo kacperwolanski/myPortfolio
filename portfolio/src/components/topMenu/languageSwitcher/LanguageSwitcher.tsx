@@ -2,33 +2,30 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { FlagButton } from "./languageSwitcher.styles";
 import useThrottled from "shared/hooks/useThrottled";
+import { engLanguageKeyword, plLanguageKeyword } from "shared/i18n/i18n";
+import { engLangIcon, plLangIcon } from "shared/assets/icons/Icons";
+import { Language } from "shared/constants/types";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  const currentLenIsPolish = i18n.language === "pl";
+  const currentLenIsPolish = i18n.language === plLanguageKeyword;
 
-  const handleChangeLanguage = (lng: string) => {
+  const handleChangeLanguage = (lng: Language) => {
     i18n.changeLanguage(lng);
+    sessionStorage.setItem("currentLanguage", lng);
   };
 
-  const throttledLanguageChange = useThrottled(handleChangeLanguage, 1000);
+  const throttledLanguageChange = useThrottled(handleChangeLanguage, 500);
+  const iconStyle = { width: "50px", height: "30px" };
   return (
     <>
       {currentLenIsPolish ? (
-        <FlagButton onClick={() => throttledLanguageChange("en")}>
-          <img
-            style={{ width: "50px", height: "30px" }}
-            alt="PL"
-            src="https://github.com/user-attachments/assets/1ec77f8b-7048-4571-a716-7182562ba576"
-          />
+        <FlagButton onClick={() => throttledLanguageChange(engLanguageKeyword)}>
+          <img style={iconStyle} alt="PL" src={plLangIcon} />
         </FlagButton>
       ) : (
-        <FlagButton onClick={() => throttledLanguageChange("pl")}>
-          <img
-            style={{ width: "50px", height: "30px" }}
-            alt="ENG"
-            src="https://github.com/user-attachments/assets/7a429467-527b-42a0-8c92-d84ad6ca91a0"
-          />
+        <FlagButton onClick={() => throttledLanguageChange(plLanguageKeyword)}>
+          <img style={iconStyle} alt="ENG" src={engLangIcon} />
         </FlagButton>
       )}
     </>

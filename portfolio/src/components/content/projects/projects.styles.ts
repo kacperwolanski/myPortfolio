@@ -1,6 +1,10 @@
 import { Theme } from "@mui/material";
 import styled from "styled-components";
 
+export const Container = styled.div`
+  position: relative;
+`;
+
 export const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

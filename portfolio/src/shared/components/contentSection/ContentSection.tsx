@@ -8,13 +8,15 @@ interface Props {
   children: JSX.Element;
   subTitle: string;
   isVisible: boolean;
+  threshold?: number;
 }
 const ContentSection = forwardRef<HTMLDivElement, Props>(
-  ({ title, subTitle, children, isVisible }, ref) => {
+  ({ title, subTitle, children, isVisible, threshold }, ref) => {
     const containerSprings = useSpring({
       from: { y: 300, opacity: 0 },
       to: { y: isVisible ? 0 : 300, opacity: isVisible ? 1 : 0 },
       config: { duration: 1000 },
+      threshold: threshold,
     });
 
     return (

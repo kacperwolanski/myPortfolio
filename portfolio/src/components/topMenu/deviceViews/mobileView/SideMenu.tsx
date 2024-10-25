@@ -61,6 +61,7 @@ const SideMenu = ({ handleDrawerToggle, menuOpened }: Props) => {
           boxSizing: "border-box",
           minWidth: "250px",
           width: "65%",
+          transition: "background 0.5s",
           background: `rgba(${currentTheme.palette.custom.background})`,
         },
       }}
