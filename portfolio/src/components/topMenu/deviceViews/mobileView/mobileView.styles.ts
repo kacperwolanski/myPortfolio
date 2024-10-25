@@ -5,13 +5,19 @@ export const LogoWrapper = styled.div`
   margin-top: 20px;
   margin-bottom: 30px;
 `;
-export const SideMenuContent = styled.div`
+export const SideMenuContent = styled.div<{ currentTheme: any }>`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  transition: 5s;
+  transition: background-color 0.4s ease;
+  background-color: rgba(
+    ${(props) => props.currentTheme.palette.custom.background},
+    1
+  );
 `;
 
 export const BottomSection = styled.div<{ theme: Theme }>`

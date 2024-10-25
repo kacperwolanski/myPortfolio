@@ -61,8 +61,6 @@ const SideMenu = ({ handleDrawerToggle, menuOpened }: Props) => {
           boxSizing: "border-box",
           minWidth: "250px",
           width: "65%",
-          transition: "background 0.5s",
-          background: `rgba(${currentTheme.palette.custom.background})`,
         },
       }}
       variant="temporary"
@@ -71,7 +69,7 @@ const SideMenu = ({ handleDrawerToggle, menuOpened }: Props) => {
       onClose={handleDrawerToggle}
       ModalProps={{ keepMounted: true }}
     >
-      <SideMenuContent>
+      <SideMenuContent currentTheme={currentTheme}>
         <LogoWrapper>
           <TopMenuLogo />
         </LogoWrapper>
