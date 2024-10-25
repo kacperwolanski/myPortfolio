@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[821],{5821:(e,t,s)=>{s.r(t),s.d(t,{default:()=>l});var a=s(5043),o=s(8360),r=s(3969),c=s(579);const l=e=>{let{src:t,alt:s}=e;const[l,n]=(0,a.useState)(!0),{currentTheme:u}=(0,r.C)();return(0,c.jsx)(o.JX,{theme:u,className:"project-image",onLoad:()=>{n(!1)},src:t,alt:s,isLoading:l})}}}]);
+//# sourceMappingURL=821.414d0769.chunk.js.map
