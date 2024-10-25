@@ -6,9 +6,11 @@ import { GlobalStyle, MainContainer } from "./globalStyles";
 import useIsMobile from "shared/hooks/useIsMobile";
 import useScrollRestoration from "shared/hooks/useScrollRestore";
 import useThemeRestore from "shared/hooks/useThemeRestore";
+import useLanguageRestore from "shared/hooks/useLanguageRestore";
 
 const App: React.FC = () => {
   useThemeRestore();
+  useLanguageRestore();
   const { currentTheme } = useThemeStore();
   useIsMobile();
   useScrollRestoration();

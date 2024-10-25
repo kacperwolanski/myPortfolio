@@ -8,12 +8,12 @@ export const frontend = {
   skills: [
     "React",
     "React Native",
-    "React Spring",
-    "MUI",
     "Zustand",
+    "MUI",
     "Styled Components",
-    "Pixel Perfect Design",
+    "Spring",
     "VueJS",
+    "Pixel Perfect",
     "i18n",
   ],
 };
