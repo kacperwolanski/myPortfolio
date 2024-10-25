@@ -19,12 +19,21 @@ export const TopMenuContainer = styled.div<TopMenuContainerProps>`
   background: rgba(${(props) => props.theme.palette.custom.background}, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transition: transform 0.3s ease;
-  transition: 0.5s;
+  transition: 0.4s ease;
   transform: ${({ isHidden }) =>
     isHidden ? "translateY(-100%)" : "translateY(0)"};
   z-index: 1000;
-  box-shadow: 0px 10px 30px -10px rgba(${(props) => props.theme.palette.custom.background}, 0.3);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.05), transparent);
+    pointer-events: none;
+  }
 `;
 
 export const TopMenuButtonsContainer = styled.div<{
