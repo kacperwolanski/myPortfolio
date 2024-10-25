@@ -24,7 +24,7 @@ const About = () => {
       subTitle={translate("aboutSubtitle")}
     >
       <Container id={sectionIds.about}>
-        <BlurredRectangle top={-140} right={-300} theme={currentTheme} />
+        <BlurredRectangle top={-140} right={-600} theme={currentTheme} />
         <Description theme={currentTheme}>
           {translate("aboutDescription")}
         </Description>

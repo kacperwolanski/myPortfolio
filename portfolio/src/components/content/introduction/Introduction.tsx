@@ -12,32 +12,25 @@ import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
 import ContactMeButton from "components/topMenu/ContactMeButton";
 import ProfileImage from "./ProfileImage";
-import { animated, useSprings } from "@react-spring/web";
+import { animated } from "@react-spring/web";
 import useSpringsAndRefs from "./hooks/useSpringsAndRefs";
+import useWavedLetters from "shared/hooks/useWavedLetters";
 
 const Introduction = () => {
   const { currentTheme, isMobile } = useThemeStore();
   const { t: translate } = useTranslation();
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const splitName = "Kacper Wolański".split("");
+  const { springs, setHoveredIndex } = useWavedLetters(splitName);
   const [waveDelay, setWaveDelay] = useState<number>(500);
 
   const { nameSpring, subTitleSpring, descSpring, buttonSpring } =
     useSpringsAndRefs();
 
-  const name = "Kacper Wolański".split("");
   const { jobTitle } = introductionData;
-
-  const springs = useSprings(
-    name.length,
-    name.map((_, i) => ({
-      transform: hoveredIndex === i ? "translateY(-10px)" : "translateY(0px)",
-      config: { tension: 500, friction: 10 },
-    }))
-  );
 
   useEffect(() => {
     setTimeout(() => {
-      const nameCopy = [...name, null];
+      const nameCopy = [...splitName, null];
       nameCopy.forEach((_, index) => {
         setTimeout(() => {
           setHoveredIndex(index);
@@ -63,12 +56,12 @@ const Introduction = () => {
                 style={{
                   ...springStyle,
                   display: "inline-block",
-                  marginRight: name[index] === " " ? "8px" : "0",
+                  marginRight: splitName[index] === " " ? "8px" : "0",
                 }}
                 onMouseEnter={() => !isMobile && setHoveredIndex(index)}
                 onMouseLeave={() => !isMobile && setHoveredIndex(null)}
               >
-                {name[index]}
+                {splitName[index]}
               </animated.span>
             ))}
           </div>
