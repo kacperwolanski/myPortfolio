@@ -34,7 +34,17 @@
 
   "experienceTitle": "Experience",
   "experienceSubtitle": "Past roles and responsibilities",
-  "codespotPosition": "Software Engineer",
+
+  "turmsPosition": "Software Developer",
+  "turmsStartDate": "Jun 2023",
+  "turmsEndDate": "Present",
+  "turmsSkill1": "Fullstack developer in carpooling web application project, frontend focused",
+  "turmsSkill2": "Frontend: React, TypeScript, Material UI; Backend: NestJS, PostgreSQL, Prisma",
+  "turmsSkill3": "Direct communication with the client",
+  "turmsSkill4": "Working with WebSockets for messages and notification systems",
+  "turmsSkill5": "GitHub for version control and Trello for project management",
+
+  "codespotPosition": "Frontend Developer",
   "codespotStartDate": "Jan 2023",
   "codespotEndDate": "Sep 2024",
   "codespotSkill1": "Developing a video industry application for watching TV and VOD content online",

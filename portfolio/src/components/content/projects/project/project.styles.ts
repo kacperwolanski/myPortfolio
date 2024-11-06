@@ -57,6 +57,7 @@ export const ProjectName = styled.h2<{ theme: Theme }>`
   font-family: "Inter";
   font-size: 15px;
   z-index: 10;
+  max-width: 85%;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 15px;
   }

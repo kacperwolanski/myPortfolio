@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { FlagButton } from "./languageSwitcher.styles";
 import useThrottled from "shared/hooks/useThrottled";
 import { engLanguageKeyword, plLanguageKeyword } from "shared/i18n/i18n";
-import { engLangIcon, plLangIcon } from "shared/assets/icons/Icons";
 import { Language } from "shared/constants/types";
+import { ENGflagIcon, PLflagIcon } from "shared/assets/icons/Icons";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -16,16 +16,16 @@ const LanguageSwitcher = () => {
   };
 
   const throttledLanguageChange = useThrottled(handleChangeLanguage, 500);
-  const iconStyle = { width: "50px", height: "30px" };
+
   return (
     <>
       {currentLenIsPolish ? (
         <FlagButton onClick={() => throttledLanguageChange(engLanguageKeyword)}>
-          <img style={iconStyle} alt="PL" src={plLangIcon} />
+          <PLflagIcon />
         </FlagButton>
       ) : (
         <FlagButton onClick={() => throttledLanguageChange(plLanguageKeyword)}>
-          <img style={iconStyle} alt="ENG" src={engLangIcon} />
+          <ENGflagIcon />
         </FlagButton>
       )}
     </>

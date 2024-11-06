@@ -2,6 +2,21 @@ import { useTranslation } from "react-i18next";
 
 const useExperienceItems = () => {
   const { t: translate } = useTranslation();
+
+  const turms = {
+    startDate: translate("turmsStartDate"),
+    endDate: translate("turmsEndDate"),
+    company: "Turms Ride",
+    position: translate("turmsPosition"),
+    companyUrl: "https://www.turms.io/",
+    skillsSubPoints: [
+      translate("turmsSkill1"),
+      translate("turmsSkill2"),
+      translate("turmsSkill3"),
+      translate("turmsSkill4"),
+      translate("turmsSkill5"),
+    ],
+  };
   const codespot = {
     startDate: translate("codespotStartDate"),
     endDate: translate("codespotEndDate"),
@@ -30,7 +45,7 @@ const useExperienceItems = () => {
     ],
   };
 
-  const experienceItems = [codespot, sas];
+  const experienceItems = [turms, codespot, sas];
   return { experienceItems };
 };
 
