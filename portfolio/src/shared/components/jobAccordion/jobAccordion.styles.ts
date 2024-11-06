@@ -46,7 +46,7 @@ export const TitlesList = styled.div<{ theme: Theme }>`
     flex-direction: column;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    flex-direction: row;
+    flex-direction: column;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
     flex-direction: row;
