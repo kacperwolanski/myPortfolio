@@ -4,7 +4,6 @@ export const FlagButton = styled.button`
   background: none;
   border: none;
   padding: 0;
-
   &:focus {
     outline: none;
   }

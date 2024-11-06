@@ -12,7 +12,6 @@ export const frontend = {
     "MUI",
     "Styled Components",
     "Spring",
-    "VueJS",
     "Pixel Perfect",
     "i18n",
   ],
@@ -40,7 +39,7 @@ export const automation = {
 
 export const teamwork = {
   title: "teamWork",
-  skills: ["Github", "Jira", "Confluence", "GitLab"],
+  skills: ["Github", "Jira", "Confluence", "GitLab", "Trello"],
 };
 
 export const os = {
@@ -50,5 +49,5 @@ export const os = {
 
 export const otherSkills = {
   title: "otherSkills",
-  skills: ["REST API", "VS Code", "PyCharm", "Web Sockets", "Docker"],
+  skills: ["REST API", "VS Code", "Web Sockets", "PyCharm"],
 };

@@ -34,7 +34,17 @@
 
   "experienceTitle": "Doświadczenie",
   "experienceSubtitle": "Poprzednie role",
-  "codespotPosition": "Inżynier Oprogramowania",
+
+  "turmsPosition": "Inżynier Oprogramowania",
+  "turmsStartDate": "Cze 2024",
+  "turmsEndDate": "Obecnie",
+  "turmsSkill1": "Fullstack developer w projekcie aplikacji carpoolingowej, głownie rozwój frontendu",
+  "turmsSkill2": "Frontend: React, TypeScript, Material UI; Backend: NestJS, PostgreSQL, Prisma",
+  "turmsSkill3": "Bezpośrednia komunikacja z klientem",
+  "turmsSkill4": "Praca z WebSockets do obsługi systemów wiadomości i powiadomień",
+  "turmsSkill5": "GitHub do kontroli wersji i Trello do zarządzania projektem",
+
+  "codespotPosition": "Programista Frontend",
   "codespotStartDate": "Sty 2023",
   "codespotEndDate": "Wrz 2024",
   "codespotSkill1": "Tworzenie aplikacji video do oglądania TV i kontentu VOD online",
@@ -59,7 +69,7 @@
   "projectCarpoolingDescription": "Komercyjny projekt full-stack, zaprojektowany, aby pomóc ludziom w redukcji kosztów podróży samochodowych. Tutaj byłem również liderem małego zespołu programistów.",
   "projectSplitterName": "Aplikacja do podziału kosztów",
   "projectSplitterDescription": "Projekt aplikacji dla systemu IOS, stworzony w celu podziału kosztów między członków grupy przyjaciół.",
-  "projectPythonName": "Aplikacja do rozpoznawania twarzy w Pythonie",
+  "projectPythonName": "Aplikacja do rozpoznawania twarzy",
   "projectPythonDescription": "To moja praca dyplomowa. Aplikacja wykorzystuje bazę danych obrazów do rozpoznawania osób na obrazach statycznych lub w czasie rzeczywistym na obrazie z kamery internetowej.",
   "projectResumeName": "Strona Portfolio",
   "projectResumeDescription": "Projekt tej strony internetowej, samodzielnie zaprojektowany w Figma.",
