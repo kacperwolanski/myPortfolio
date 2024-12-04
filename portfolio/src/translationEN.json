@@ -47,7 +47,7 @@
   "codespotPosition": "Frontend Developer",
   "codespotStartDate": "Jan 2023",
   "codespotEndDate": "Sep 2024",
-  "codespotSkill1": "Developing a video industry application for watching TV and VOD content online",
+  "codespotSkill1": "Developing DotTv, a streaming application for watching TV and VOD content online",
   "codespotSkill2": "Working with team of developers using Github, Jira, Figma",
   "codespotSkill3": "Regular code reviews",
   "codespotSkill4": "SOLID principles",
@@ -73,6 +73,8 @@
   "projectPythonDescription": "This is my engineering diploma thesis. App uses database of images to recognize people in static images or in real-time computer web camera image.",
   "projectResumeName": "Portfolio",
   "projectResumeDescription": "Project of this website, self designed with Figma.",
+  "projectDotTvName": "DotTv App",
+  "projectDotTvDescription": "A web application designed for watching online television content. I worked on it as React developer during my time at Codespot.",
 
   "contactTitle": "Get in touch",
   "contactSubtitle": "Let's create together",

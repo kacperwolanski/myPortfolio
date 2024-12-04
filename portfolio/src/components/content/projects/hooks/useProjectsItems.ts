@@ -37,10 +37,20 @@ const useProjectsItems = () => {
     name: translate("projectResumeName"),
     labels: ["All", "Personal"],
     description: translate("projectResumeDescription"),
-    techStack: ["React", "MUI", "Styled Components", "Figma"],
+    techStack: ["React", "MUI", "Styled Components", "Figma", "Typescript"],
     githubUrl: "https://github.com/kacperwolanski/myPortfolio",
     imageUrl:
       "https://github.com/user-attachments/assets/28189279-a886-41f7-96a5-4d63bc9ee7dd",
+  };
+
+  const dottvProject = {
+    name: translate("projectDotTvName"),
+    labels: ["All", "Commercial"],
+    description: translate("projectDotTvDescription"),
+    techStack: ["React", "MUI", "CI/CD", "Figma", "Typescript"],
+    githubUrl: "https://www.dottv.app/",
+    imageUrl:
+      "https://github.com/user-attachments/assets/b4a2f68d-4bbb-4b66-a053-7ab60893f9c8",
   };
 
   const projectItems = [
@@ -49,6 +59,7 @@ const useProjectsItems = () => {
 
     portfolioProject,
     carpoolingProject,
+    dottvProject,
   ];
 
   return { projectItems };
