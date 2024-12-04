@@ -47,7 +47,7 @@
   "codespotPosition": "Programista Frontend",
   "codespotStartDate": "Sty 2023",
   "codespotEndDate": "Wrz 2024",
-  "codespotSkill1": "Tworzenie aplikacji video do oglądania TV i kontentu VOD online",
+  "codespotSkill1": "Tworzenie DotTv, aplikacji streamingowej do oglądania TV i kontentu VOD online",
   "codespotSkill2": "Praca w zespole programistów używając Githuba, Jira, Figma",
   "codespotSkill3": "Regularne code reviews",
   "codespotSkill4": "Stosowanie zasad SOLID",
@@ -73,6 +73,9 @@
   "projectPythonDescription": "To moja praca dyplomowa. Aplikacja wykorzystuje bazę danych obrazów do rozpoznawania osób na obrazach statycznych lub w czasie rzeczywistym na obrazie z kamery internetowej.",
   "projectResumeName": "Strona Portfolio",
   "projectResumeDescription": "Projekt tej strony internetowej, samodzielnie zaprojektowany w Figma.",
+
+  "projectDotTvName": "Aplikacja DotTv",
+  "projectDotTvDescription": "Aplikacja internetowa przeznaczona do oglądania kontentu telewizyjnego online. Pracowałem nad nią jako React developer podczas pracy w Codespot.",
 
   "contactTitle": "Odezwij się",
   "contactSubtitle": "Stwórzmy coś razem",

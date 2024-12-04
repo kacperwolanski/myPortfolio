@@ -8,7 +8,7 @@ const useExperienceItems = () => {
     endDate: translate("turmsEndDate"),
     company: "Turms Ride",
     position: translate("turmsPosition"),
-    companyUrl: "https://www.turms.io/",
+    companyUrl: "https://www.turmsride.com/",
     skillsSubPoints: [
       translate("turmsSkill1"),
       translate("turmsSkill2"),
