@@ -47,7 +47,19 @@ export const os = {
   skills: ["Windows", "MacOS", "IOS"],
 };
 
+export const cms = {
+  title: "CMS",
+  skills: ["WordPress", "Yoast SEO"],
+};
+
 export const otherSkills = {
   title: "otherSkills",
-  skills: ["REST API", "VS Code", "Web Sockets", "PyCharm"],
+  skills: [
+    "REST API",
+    "VS Code",
+    "Web Sockets",
+    "PyCharm",
+    "Google Maps Api",
+    "Shaka Player",
+  ],
 };
