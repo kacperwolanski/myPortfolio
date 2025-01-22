@@ -7,7 +7,7 @@
   "contactMeButton": "Contact",
   "resumeButton": "Resume",
 
-  "introduction": "Hi, I'm passionate Software Developer specialized in creating web applications with React. I've worked on a variety of projects, from a full-stack carpooling service to a video streaming platform.",
+  "introduction": "Hi, I'm passionate Web Developer specialized in creating web applications with React. I've worked on a variety of projects, from a full-stack carpooling service to a video streaming platform.",
 
   "aboutTitle": "About Me",
   "aboutSubtitle": "Get to know my skills",
@@ -65,6 +65,7 @@
   "projectFilter1": "All",
   "projectFilter2": "Commercial",
   "projectFilter3": "Personal",
+
   "projectCarpoolingName": "Carpooling web app",
   "projectCarpoolingDescription": "Full-stack commercial project, designed to help people with reducing car journey expenses. I was also leader of a small team of developers.",
   "projectSplitterName": "Costs splitter mobile app",
@@ -75,6 +76,9 @@
   "projectResumeDescription": "Project of this website, self designed with Figma.",
   "projectDotTvName": "DotTv App",
   "projectDotTvDescription": "A web application designed for watching online television content. I worked on it as React developer during my time at Codespot.",
+
+  "projectMotoAdvisorName": "Website for Moto Advisor",
+  "projectMotoAdvisorDescription": "Freelance website project for KiliAuto, a company specializing in advising clients on purchasing used cars and motorcycles. Self designed on Figma.",
 
   "contactTitle": "Get in touch",
   "contactSubtitle": "Let's create together",

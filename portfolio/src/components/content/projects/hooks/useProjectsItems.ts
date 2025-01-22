@@ -53,6 +53,16 @@ const useProjectsItems = () => {
       "https://github.com/user-attachments/assets/b4a2f68d-4bbb-4b66-a053-7ab60893f9c8",
   };
 
+  const motoAdviserProject = {
+    name: translate("projectMotoAdvisorName"),
+    labels: ["All", "Commercial"],
+    description: translate("projectMotoAdvisorDescription"),
+    techStack: ["Wordpress", "Elementor", "Yoast SEO"],
+    githubUrl: "https://kiliauto.pl/",
+    imageUrl:
+      "https://github.com/user-attachments/assets/9cc39662-fff7-4d8d-a70d-661d00a91c48",
+  };
+
   const projectItems = [
     faceRecognitionProject,
     splitterProject,
@@ -60,6 +70,7 @@ const useProjectsItems = () => {
     portfolioProject,
     carpoolingProject,
     dottvProject,
+    motoAdviserProject,
   ];
 
   return { projectItems };
