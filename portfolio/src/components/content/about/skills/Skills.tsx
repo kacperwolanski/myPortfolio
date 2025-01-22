@@ -8,7 +8,6 @@ import {
   uiDesign,
   automation,
   teamwork,
-  os,
   otherSkills,
   cms,
 } from "shared/constants/skillSets";

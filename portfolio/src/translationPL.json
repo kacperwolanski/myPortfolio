@@ -7,7 +7,7 @@
   "contactMeButton": "Kontakt",
   "resumeButton": "CV",
 
-  "introduction": "Cześć, jestem programistą pracującym z React. Pracowałem nad wieloma projektami, od fullstackowej aplikacji carpoolingowej, po platformę do streamingu wideo. ",
+  "introduction": "Cześć, jestem programistą webowym pracującym z React. Pracowałem nad wieloma projektami, od fullstackowej aplikacji carpoolingowej, po platformę do streamingu wideo. ",
 
   "aboutTitle": "O Mnie",
   "aboutSubtitle": "Moje umiejętności",
@@ -77,6 +77,8 @@
   "projectDotTvName": "Aplikacja DotTv",
   "projectDotTvDescription": "Aplikacja internetowa przeznaczona do oglądania kontentu telewizyjnego online. Pracowałem nad nią jako React developer podczas pracy w Codespot.",
 
+  "projectMotoAdvisorName": "Strona doradcy motoryzacyjnego",
+  "projectMotoAdvisorDescription": "Projekt strony internetowej realizowany jako freelancer dla KiliAuto, firmy specjalizującej się w doradztwie przy zakupie używanych samochodów i motocykli. Samodzielnie zaprojektowany w Figmie.",
   "contactTitle": "Odezwij się",
   "contactSubtitle": "Stwórzmy coś razem",
 

@@ -1,5 +1,5 @@
 export const introductionData = {
   name: "Kacper Wolański",
-  jobTitle: "Frontend Developer",
+  jobTitle: "Web Developer",
   email: "wolanski055@gmail.com",
 };
