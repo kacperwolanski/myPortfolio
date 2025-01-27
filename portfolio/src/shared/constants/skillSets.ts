@@ -54,12 +54,5 @@ export const cms = {
 
 export const otherSkills = {
   title: "otherSkills",
-  skills: [
-    "REST API",
-    "VS Code",
-    "Web Sockets",
-    "PyCharm",
-    "Google Maps Api",
-    "Shaka Player",
-  ],
+  skills: ["REST API", "VS Code", "Web Sockets", "Google Maps Api", "Docker"],
 };

@@ -38,11 +38,10 @@
   "turmsPosition": "Fullstack Developer",
   "turmsStartDate": "Jun 2023",
   "turmsEndDate": "Present",
-  "turmsSkill1": "Fullstack developer in carpooling web application project, frontend focused",
+  "turmsSkill1": "Developing carpooling web application serving approximately 100 users",
   "turmsSkill2": "Frontend: React, TypeScript, Material UI; Backend: NestJS, PostgreSQL, Prisma",
-  "turmsSkill3": "Direct communication with the client",
-  "turmsSkill4": "Working with WebSockets for messages and notification systems",
-  "turmsSkill5": "GitHub for version control and Trello for project management",
+  "turmsSkill3": "Web sockets based real-time messages and notification systems",
+  "turmsSkill4": "GitHub for version control and Trello for project management",
 
   "codespotPosition": "Frontend Developer",
   "codespotStartDate": "Jan 2023",
@@ -67,19 +66,22 @@
   "projectFilter3": "Personal",
 
   "projectCarpoolingName": "Carpooling web app",
-  "projectCarpoolingDescription": "Full-stack commercial project, designed to help people with reducing car journey expenses. I was also leader of a small team of developers.",
+  "projectCarpoolingDescription": "Carpooling web application currently serving around 100 users, offering a cost-effective solution with prices 35% lower than competitors.",
+
   "projectSplitterName": "Costs splitter mobile app",
   "projectSplitterDescription": "Mobile IOS app project, created to divide costs between members of a group of friends.",
+
   "projectPythonName": "Face recognition Python app",
   "projectPythonDescription": "This is my engineering diploma thesis. App uses database of images to recognize people in static images or in real-time computer web camera image.",
+
   "projectResumeName": "Portfolio",
   "projectResumeDescription": "Project of this website, self designed with Figma.",
+
   "projectDotTvName": "DotTv App",
   "projectDotTvDescription": "A web application designed for watching online television content. I worked on it as React developer during my time at Codespot.",
 
   "projectMotoAdvisorName": "Website for Moto Advisor",
-  "projectMotoAdvisorDescription": "Freelance website project for KiliAuto, a company specializing in advising clients on purchasing used cars and motorcycles. Self designed on Figma.",
-
+  "projectMotoAdvisorDescription": "Freelance project for KiliAuto, a company specializing in advising clients on purchasing used cars and motorcycles. I added SEO optimizations, which resulted in a 45% increase in monthly client acquisition.",
   "contactTitle": "Get in touch",
   "contactSubtitle": "Let's create together",
 

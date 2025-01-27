@@ -17,17 +17,17 @@ const Skills = () => {
   const { currentTheme } = useThemeStore();
   return (
     <SkillsWrapper theme={currentTheme}>
-      <SkillsSet skillSet={programmingLanguages} />
       <br />
       <SkillsSet skillSet={frontend} />
       <br />
       <SkillsSet skillSet={backend} />
+      <SkillsSet skillSet={programmingLanguages} />
       <SkillsSet skillSet={testing} />
-      <SkillsSet skillSet={uiDesign} />
+      <SkillsSet skillSet={cms} />
       <SkillsSet skillSet={automation} />
       <SkillsSet skillSet={teamwork} />
       {/* <SkillsSet skillSet={os} /> */}
-      <SkillsSet skillSet={cms} />
+      <SkillsSet skillSet={uiDesign} />
       <br />
       <SkillsSet skillSet={otherSkills} />
     </SkillsWrapper>

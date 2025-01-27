@@ -14,7 +14,6 @@ const useExperienceItems = () => {
       translate("turmsSkill2"),
       translate("turmsSkill3"),
       translate("turmsSkill4"),
-      translate("turmsSkill5"),
     ],
   };
   const codespot = {
