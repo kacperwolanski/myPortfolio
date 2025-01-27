@@ -38,11 +38,10 @@
   "turmsPosition": "Programista fullstack",
   "turmsStartDate": "Cze 2024",
   "turmsEndDate": "Obecnie",
-  "turmsSkill1": "Fullstack developer w projekcie aplikacji carpoolingowej, głownie rozwój frontendu",
+  "turmsSkill1": "Rozwój aplikacji webowej do carpoolingu obsługującej około 100 użytkowników",
   "turmsSkill2": "Frontend: React, TypeScript, Material UI; Backend: NestJS, PostgreSQL, Prisma",
-  "turmsSkill3": "Bezpośrednia komunikacja z klientem",
-  "turmsSkill4": "Praca z WebSockets do obsługi systemów wiadomości i powiadomień",
-  "turmsSkill5": "GitHub do kontroli wersji i Trello do zarządzania projektem",
+  "turmsSkill3": "Systemy wiadomości i powiadomień w czasie rzeczywistym oparte na WebSocketach",
+  "turmsSkill4": "GitHub do kontroli wersji i Trello do zarządzania projektem",
 
   "codespotPosition": "Programista Frontend",
   "codespotStartDate": "Sty 2023",
@@ -65,12 +64,16 @@
   "projectFilter1": "Wszystkie",
   "projectFilter2": "Komercyjne",
   "projectFilter3": "Osobiste",
+
   "projectCarpoolingName": "Aplikacja Carpoolingowa",
-  "projectCarpoolingDescription": "Komercyjny projekt full-stack, zaprojektowany, aby pomóc ludziom w redukcji kosztów podróży samochodowych. Tutaj byłem również liderem małego zespołu programistów.",
+  "projectCarpoolingDescription": "Aplikacja webowa do carpoolingu, która obecnie obsługuje około 100 użytkowników, oferująca kosztowo efektywne rozwiązanie z cenami o 35% niższymi niż u konkurencji.",
+
   "projectSplitterName": "Aplikacja do podziału kosztów",
   "projectSplitterDescription": "Projekt aplikacji dla systemu IOS, stworzony w celu podziału kosztów między członków grupy przyjaciół.",
+
   "projectPythonName": "Aplikacja do rozpoznawania twarzy",
   "projectPythonDescription": "To moja praca dyplomowa. Aplikacja wykorzystuje bazę danych obrazów do rozpoznawania osób na obrazach statycznych lub w czasie rzeczywistym na obrazie z kamery internetowej.",
+
   "projectResumeName": "Strona Portfolio",
   "projectResumeDescription": "Projekt tej strony internetowej, samodzielnie zaprojektowany w Figma.",
 
@@ -78,7 +81,8 @@
   "projectDotTvDescription": "Aplikacja internetowa przeznaczona do oglądania kontentu telewizyjnego online. Pracowałem nad nią jako React developer podczas pracy w Codespot.",
 
   "projectMotoAdvisorName": "Strona doradcy motoryzacyjnego",
-  "projectMotoAdvisorDescription": "Projekt strony internetowej realizowany jako freelancer dla KiliAuto, firmy specjalizującej się w doradztwie przy zakupie używanych samochodów i motocykli. Samodzielnie zaprojektowany w Figmie.",
+  "projectMotoAdvisorDescription": "Projekt freelancerski dla KiliAuto, firmy specjalizującej się w doradztwie przy zakupie używanych samochodów i motocykli. Moja optymalizacja SEO przyczyniła się do 45% wzrostu liczby pozyskiwanych klientów miesięcznie.",
+
   "contactTitle": "Odezwij się",
   "contactSubtitle": "Stwórzmy coś razem",
 
