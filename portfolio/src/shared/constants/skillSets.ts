@@ -7,9 +7,12 @@ export const frontend = {
   title: "Frontend",
   skills: [
     "React",
+    "NextJS",
     "React Native",
     "Zustand",
-    "MUI",
+    "Redux",
+    "MaterialUI",
+    "Tailwind CSS",
     "Styled Components",
     "Spring",
     "Pixel Perfect",
@@ -39,7 +42,7 @@ export const automation = {
 
 export const teamwork = {
   title: "teamWork",
-  skills: ["Github", "Jira", "Confluence", "GitLab", "Trello"],
+  skills: ["Github", "Jira", "Confluence", "GitLab", "Trello", "Agile/Scrum"],
 };
 
 export const os = {
