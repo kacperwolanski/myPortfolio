@@ -27,6 +27,7 @@ const ThemeSwitcher: React.FC = () => {
       cursor: pointer;
     }
   `;
+
   return (
     <IconButton onClick={throttledToggleTheme}>
       <ThemeIcon>

@@ -11,16 +11,17 @@ export const SideMenuContent = styled.div<{ currentTheme: any }>`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  transition: 5s;
+  height: 100vh;
+  width: 100%;
   transition: background-color 0.4s ease;
   background-color: rgba(
     ${(props) => props.currentTheme.palette.custom.background},
     1
   );
+  overflow-y: auto;
 `;
 
-export const BottomSection = styled.div<{ theme: Theme }>`
+export const BottomSection = styled.div`
   display: flex;
   margin-top: 20px;
   flex-direction: column;

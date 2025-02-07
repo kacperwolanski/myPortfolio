@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TopMenuLogo from "../../topMenuLogo/TopMenuLogo";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import styled from "styled-components";
