@@ -1,28 +1,39 @@
 {
   "files": {
-    "main.js": "/myPortfolio/static/js/main.8c6bbe43.js",
+    "main.js": "/myPortfolio/static/js/main.4f7905ad.js",
     "static/js/362.cbd20493.chunk.js": "/myPortfolio/static/js/362.cbd20493.chunk.js",
     "static/js/789.ed0f74b0.chunk.js": "/myPortfolio/static/js/789.ed0f74b0.chunk.js",
-    "static/js/230.bd4d0951.chunk.js": "/myPortfolio/static/js/230.bd4d0951.chunk.js",
+    "static/js/230.97bc4d6e.chunk.js": "/myPortfolio/static/js/230.97bc4d6e.chunk.js",
     "static/js/697.4c92b859.chunk.js": "/myPortfolio/static/js/697.4c92b859.chunk.js",
     "static/js/821.9424cf5c.chunk.js": "/myPortfolio/static/js/821.9424cf5c.chunk.js",
     "static/media/light.svg": "/myPortfolio/static/media/light.84239c9005bfe7a7b8a75f1edc09dfe8.svg",
     "static/media/dark.svg": "/myPortfolio/static/media/dark.8592cc8f85dda066ded55f52f4057ae8.svg",
+    "static/media/Postgresql.svg": "/myPortfolio/static/media/Postgresql.16a13f7a92308bdacfc76dc185e588d2.svg",
     "static/media/ENGflagIcon.svg": "/myPortfolio/static/media/ENGflagIcon.bc381a1634e02d88bb2814270cdc7b78.svg",
     "static/media/PLflagIcon.svg": "/myPortfolio/static/media/PLflagIcon.f86a56aff0fbd374fb325c56a2385adb.svg",
+    "static/media/NestJS.svg": "/myPortfolio/static/media/NestJS.0e8aaa67a4eca3650b4909ba37bca159.svg",
+    "static/media/Typescript.svg": "/myPortfolio/static/media/Typescript.3a756b5e6021216fa8d5847af82f9545.svg",
+    "static/media/Figma.svg": "/myPortfolio/static/media/Figma.4379db8d76af2374737b5a3f5a449664.svg",
+    "static/media/MaterialUI.svg": "/myPortfolio/static/media/MaterialUI.b1dc1104c617eba18b47d3c80bbc1b75.svg",
     "index.html": "/myPortfolio/index.html",
+    "static/media/Wordpress.svg": "/myPortfolio/static/media/Wordpress.1f37ddb5f77e338e35a83b6b76a33b89.svg",
     "static/media/Logo.svg": "/myPortfolio/static/media/Logo.7fe201b34140d2d511cdf22c22656239.svg",
+    "static/media/Github.svg": "/myPortfolio/static/media/Github.82fa3c0bab63f5df889d5c27dba11d46.svg",
+    "static/media/NextJS.svg": "/myPortfolio/static/media/NextJS.f02850cae96ed173e57edeab1e727327.svg",
+    "static/media/JavaScript.svg": "/myPortfolio/static/media/JavaScript.e6b05045d383b9e5b5e338ec3b225870.svg",
+    "static/media/Tailwind.svg": "/myPortfolio/static/media/Tailwind.45463ed5d813c7adeae89c4bc2f608d2.svg",
+    "static/media/React.svg": "/myPortfolio/static/media/React.677220fe71c53820da1a7c5ea3122127.svg",
     "static/media/GmailIcon.svg": "/myPortfolio/static/media/GmailIcon.f7744983b2b63b4aa25e3a9379e66c10.svg",
     "static/media/LinkIcon.svg": "/myPortfolio/static/media/LinkIcon.636bed123d933fb96bba7e047ddb9ddd.svg",
     "static/media/getFetch.cjs": "/myPortfolio/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.8c6bbe43.js.map": "/myPortfolio/static/js/main.8c6bbe43.js.map",
+    "main.4f7905ad.js.map": "/myPortfolio/static/js/main.4f7905ad.js.map",
     "362.cbd20493.chunk.js.map": "/myPortfolio/static/js/362.cbd20493.chunk.js.map",
     "789.ed0f74b0.chunk.js.map": "/myPortfolio/static/js/789.ed0f74b0.chunk.js.map",
-    "230.bd4d0951.chunk.js.map": "/myPortfolio/static/js/230.bd4d0951.chunk.js.map",
+    "230.97bc4d6e.chunk.js.map": "/myPortfolio/static/js/230.97bc4d6e.chunk.js.map",
     "697.4c92b859.chunk.js.map": "/myPortfolio/static/js/697.4c92b859.chunk.js.map",
     "821.9424cf5c.chunk.js.map": "/myPortfolio/static/js/821.9424cf5c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.8c6bbe43.js"
+    "static/js/main.4f7905ad.js"
   ]
 }
