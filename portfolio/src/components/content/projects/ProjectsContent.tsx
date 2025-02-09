@@ -26,6 +26,7 @@ const ProjectsContent = () => {
       ref={projectsRef}
       title={translate("projectsTitle")}
       subTitle={translate("projectsSubtitle")}
+      doNotAnimateY
     >
       <Container id={sectionIds.projects}>
         <Filters
@@ -35,7 +36,14 @@ const ProjectsContent = () => {
 
         <ProjectsContainer>
           {filteredProjects.map((project, index) => {
-            return <Project key={index} project={project} />;
+            return (
+              <Project
+                key={index}
+                project={project}
+                isVisible={isVisible}
+                index={index}
+              />
+            );
           })}
         </ProjectsContainer>
       </Container>

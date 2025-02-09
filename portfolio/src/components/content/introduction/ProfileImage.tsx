@@ -1,28 +1,28 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useThemeStore } from "theme/useThemeStore";
 import { lightTheme } from "theme/theme";
 import { Img } from "./introduction.styles";
 import { Dark, Light } from "shared/assets/images/Images";
-import { useSpring, animated } from "@react-spring/web";
 
+import * as motion from "motion/react-client";
 const ProfileImage = () => {
   const { currentTheme } = useThemeStore();
   const themeIsLight = currentTheme === lightTheme;
 
-  const [imageSpring, api] = useSpring(() => ({
-    opacity: 0,
-    config: { duration: 500 },
-  }));
-
-  useEffect(() => {
-    api.start({ opacity: 1, from: { opacity: 0 } });
-  }, [currentTheme, api]);
   return (
-    <animated.div style={{ ...imageSpring, zIndex: 10 }}>
+    <motion.div
+      style={{ zIndex: 10 }}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.5,
+        scale: { type: "spring", visualDuration: 0.5, bounce: 0.5 },
+      }}
+    >
       <Img theme={currentTheme} draggable={false}>
         {themeIsLight ? <Light /> : <Dark />}
       </Img>
-    </animated.div>
+    </motion.div>
   );
 };
 

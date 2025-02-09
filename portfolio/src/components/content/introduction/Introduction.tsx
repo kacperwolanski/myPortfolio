@@ -46,7 +46,9 @@ const Introduction = () => {
   return (
     <IntroductionContainer id={sectionIds.home}>
       <BlurredRectangle top={-100} left={-400} theme={currentTheme} />
+
       <ProfileImage />
+
       <animated.div style={nameSpring}>
         <NameContainer theme={currentTheme}>
           <div style={{ display: "flex" }}>

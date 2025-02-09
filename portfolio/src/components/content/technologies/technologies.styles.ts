@@ -6,7 +6,7 @@ export const TechnologyContainer = styled.a`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
+
   gap: 16px;
   max-width: 80px;
   text-align: center;
@@ -15,12 +15,34 @@ export const TechnologyContainer = styled.a`
   text-decoration: none;
   &:hover {
     opacity: 1;
+    transform: translateY(-5px);
   }
+  transition: transform 0.3s ease-in-out;
 `;
 
-export const IconWrapper = styled.div`
-  width: 48px;
-  height: 48px;
+export const IconWrapper = styled.div<{ theme: Theme }>`
+  width: 20px;
+  height: 20px;
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+    width: 26px;
+    height: 26px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    width: 32px;
+    height: 32px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    width: 44px;
+    height: 44px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    width: 48px;
+    height: 48px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +51,7 @@ export const IconWrapper = styled.div`
 
 export const Title = styled.p<{ theme: Theme }>`
   font-weight: 300;
-  margin-top: 0px;
+
   color: ${(props) => props.theme.palette.custom.header};
 `;
 
@@ -56,12 +78,12 @@ export const TechnologiesContainer = styled.div<{ theme: Theme }>`
   &:hover {
     animation-play-state: paused;
   }
-  gap: 5px;
+  gap: 10px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    gap: 5px;
+    gap: 15px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
-    gap: 20px;
+    gap: 30px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
     gap: 50px;
@@ -84,6 +106,6 @@ export const SideShadow = styled.div<{
   height: 160px;
   width: 40px;
   z-index: 10;
-  box-shadow: 0px 0px 50px 80px
+  box-shadow: 0px 0px 50px 50px
     rgba(${(props) => props.theme.palette.custom.background}, 1);
 `;
