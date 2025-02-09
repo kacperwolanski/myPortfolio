@@ -6,6 +6,11 @@ export const ProjectContainer = styled.div<{ theme: Theme }>`
   display: flex;
   z-index: 10;
   flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
   &:hover .project-image {
     z-index: 0;
   }

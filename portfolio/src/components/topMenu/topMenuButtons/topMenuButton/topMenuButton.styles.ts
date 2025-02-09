@@ -9,7 +9,10 @@ export const TMButtonContainer = styled.div<{ theme: Theme }>`
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    transform: translateY(-3px);
   }
+
+  transition: transform 0.3s ease-in-out;
   z-index: 100;
   min-width: 100px;
   text-align: center;

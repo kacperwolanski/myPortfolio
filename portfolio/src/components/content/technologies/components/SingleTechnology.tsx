@@ -22,7 +22,7 @@ const SingleTechnology = ({ technology }: Props) => {
 
   return (
     <TechnologyContainer href={link} target="_blank" rel="noopener noreferrer">
-      <IconWrapper>{icon}</IconWrapper>
+      <IconWrapper theme={currentTheme}>{icon}</IconWrapper>
       <Title theme={currentTheme}>{title}</Title>
     </TechnologyContainer>
   );
