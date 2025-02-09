@@ -10,6 +10,7 @@ import Footer from "./footer/Footer";
 import TopMenu from "../topMenu/TopMenu";
 import { useSideMenuStore } from "components/topMenu/hooks/useSideMenuStore";
 import { useThemeStore } from "theme/useThemeStore";
+import Technologies from "./technologies/Technologies";
 const Content = () => {
   const { isMobile } = useThemeStore();
   const { isSideMenuOpened } = useSideMenuStore();
@@ -22,6 +23,7 @@ const Content = () => {
         <About />
         <Experience />
         <Projects />
+        <Technologies />
         <Education />
         <Contact />
         <Footer />
