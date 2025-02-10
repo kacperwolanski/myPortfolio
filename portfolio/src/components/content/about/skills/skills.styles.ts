@@ -1,7 +1,7 @@
 import { Theme } from "@mui/material";
 import styled from "styled-components";
 
-export const SkillsWrapper = styled.div<{ theme: Theme }>`
+export const SkillsWrapperContainer = styled.div<{ theme: Theme }>`
   display: flex;
   margin-top: 50px;
   margin-bottom: 20px;

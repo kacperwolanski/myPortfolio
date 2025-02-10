@@ -32,17 +32,20 @@ const JobAccordion: React.FC<Props> = ({ elements }) => {
   return (
     <AccordionContainer theme={currentTheme}>
       <TitlesList theme={currentTheme}>
-        {elements.map((element: AccordionElement, index: number) => (
-          <ElementTitleButton
-            theme={currentTheme}
-            key={index}
-            data-title={element.title}
-            isSelected={currentElement.title === element.title}
-            onClick={() => handleElementChange(element)}
-          >
-            {element.title}
-          </ElementTitleButton>
-        ))}
+        {elements.map((element: AccordionElement, index: number) => {
+          const buttonSelected = currentElement.title === element.title;
+          return (
+            <ElementTitleButton
+              theme={currentTheme}
+              key={index}
+              data-title={element.title}
+              isSelected={buttonSelected}
+              onClick={() => !buttonSelected && handleElementChange(element)}
+            >
+              {element.title}
+            </ElementTitleButton>
+          );
+        })}
       </TitlesList>
       <ContentContainer istransitioning={isTransitioning}>
         {currentElement.content}

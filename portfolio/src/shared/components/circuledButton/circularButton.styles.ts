@@ -21,7 +21,8 @@ export const Container = styled.button<Props>`
   border-color: ${({ strokeColor, currentTheme }) =>
     strokeColor ? strokeColor : currentTheme.palette.secondary.main};
   &:hover {
-    cursor: pointer;
+    transform: ${(props) => (!props.isActive ? "translateY(-5px)" : "")};
+    cursor: ${(props) => (!props.isActive ? "pointer" : "default")};
     background-color: ${({ isActive, fillColor, strokeColor }) =>
       isActive ? fillColor : strokeColor};
   }
@@ -41,5 +42,5 @@ export const Container = styled.button<Props>`
       currentTheme.breakpoints.values.xl}px) {
     font-size: 15px;
   }
-  transition: background 0.3s, color 0.2s;
+  transition: background 0.3s, color 0.2s, transform 0.3s;
 `;
