@@ -17,7 +17,7 @@
   "automation": "Automatyzacja",
   "teamWork": "Praca Zespołowa",
   "otherSkills": "Pozostałe technologie",
-  "downloadResume": "Pobierz CV",
+  "downloadResume": "Sprawdź CV",
 
   "educationTitle": "Edukacja",
   "educationSubtitle": "W poszukiwaniu wiedzy",
@@ -35,7 +35,7 @@
   "experienceTitle": "Doświadczenie",
   "experienceSubtitle": "Poprzednie role",
 
-  "turmsPosition": "Programista fullstack",
+  "turmsPosition": "Programista Fullstack",
   "turmsStartDate": "Cze 2024",
   "turmsEndDate": "Obecnie",
   "turmsSkill1": "Rozwój aplikacji webowej do carpoolingu obsługującej około 100 użytkowników",

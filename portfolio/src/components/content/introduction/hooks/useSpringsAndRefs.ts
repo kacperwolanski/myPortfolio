@@ -61,10 +61,12 @@ const useSpringsAndRefs = () => {
     from: {
       y: 100,
       opacity: 0,
+      zIndex: 10,
     },
     to: {
       y: 0,
       opacity: 1,
+      zIndex: 10,
     },
     config: { duration: 2000 },
     delay: 2200,

@@ -76,13 +76,14 @@ export const ElementTitleButton = styled.button<{
       ? props.theme.palette.custom.header
       : props.theme.palette.secondary.main};
   &:hover {
-    cursor: pointer;
+    transform: ${(props) => (!props.isSelected ? "translateY(-5px)" : "")};
+    cursor: ${(props) => (!props.isSelected ? "pointer" : "default")};
     background-color: ${(props) =>
       props.isSelected
         ? props.theme.palette.custom.darkGray
         : "rgba(255, 255, 255, 0.1)"};
   }
-  transition: background 0.3s, color 0.2s;
+  transition: background 0.3s, color 0.2s, transform 0.3s;
   width: 160px;
   height: 50px;
   border-radius: 10px;

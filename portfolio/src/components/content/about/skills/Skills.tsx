@@ -1,36 +1,29 @@
-import React from "react";
-import SkillsSet from "./SkillsSet";
-import {
-  programmingLanguages,
-  frontend,
-  backend,
-  testing,
-  uiDesign,
-  automation,
-  teamwork,
-  otherSkills,
-  cms,
-} from "shared/constants/skillSets";
-import { SkillsWrapper } from "./skills.styles";
+import React, { useRef } from "react";
+import { skillsSets } from "shared/constants/skillSets";
+import { SkillsWrapperContainer } from "./skills.styles";
 import { useThemeStore } from "theme/useThemeStore";
+import SkillWrapper from "./SkillWrapper";
+import { SkillSet } from "shared/constants/types";
+import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
+
 const Skills = () => {
   const { currentTheme } = useThemeStore();
+  const skillsRef = useRef(null);
+  const { isVisible } = useIntersectionObserver(skillsRef);
   return (
-    <SkillsWrapper theme={currentTheme}>
-      <br />
-      <SkillsSet skillSet={frontend} />
-      <br />
-      <SkillsSet skillSet={backend} />
-      <SkillsSet skillSet={programmingLanguages} />
-      <SkillsSet skillSet={testing} />
-      <SkillsSet skillSet={cms} />
-      <SkillsSet skillSet={automation} />
-      <SkillsSet skillSet={teamwork} />
-      {/* <SkillsSet skillSet={os} /> */}
-      <SkillsSet skillSet={uiDesign} />
-      <br />
-      <SkillsSet skillSet={otherSkills} />
-    </SkillsWrapper>
+    <SkillsWrapperContainer theme={currentTheme} ref={skillsRef}>
+      <>
+        {skillsSets.map((skillSet: SkillSet, index: number) => (
+          <SkillWrapper
+            key={skillSet.title}
+            skillSet={skillSet}
+            index={index}
+            marginBottom={index === 0 || index === 1}
+            isVisible={isVisible}
+          />
+        ))}
+      </>
+    </SkillsWrapperContainer>
   );
 };
 

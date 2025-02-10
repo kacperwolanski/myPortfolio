@@ -59,3 +59,15 @@ export const otherSkills = {
   title: "otherSkills",
   skills: ["REST API", "VS Code", "Web Sockets", "Google Maps Api", "Docker"],
 };
+
+export const skillsSets = [
+  programmingLanguages,
+  frontend,
+  backend,
+  testing,
+  uiDesign,
+  automation,
+  teamwork,
+  cms,
+  otherSkills,
+];
