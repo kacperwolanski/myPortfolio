@@ -70,6 +70,11 @@ export const Title = styled.p<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.custom.header};
 `;
 
+export const MyTechnologiesSection = styled.div`
+  position: relative;
+  top: 70px;
+`;
+
 export const scrollAnimation = keyframes`
   from {
     transform: translateX(0);
@@ -77,11 +82,6 @@ export const scrollAnimation = keyframes`
   to {
    transform: translateX(-50%);
   }
-`;
-
-export const MyTechnologiesSection = styled.div`
-  position: relative;
-  top: 70px;
 `;
 
 export const TechnologiesContainer = styled.div<{ theme: Theme }>`

@@ -12,7 +12,7 @@ const ProfileImage = () => {
   return (
     <motion.div
       style={{
-        zIndex: 10,
+        zIndex: 2,
         width: "100%",
         height: "100%",
         display: "flex",
