@@ -11,7 +11,13 @@ const ProfileImage = () => {
 
   return (
     <motion.div
-      style={{ zIndex: 10 }}
+      style={{
+        zIndex: 10,
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{

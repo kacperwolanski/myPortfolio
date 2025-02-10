@@ -99,9 +99,8 @@ export const Description = styled.p<{ theme: Theme }>`
 `;
 
 export const Img = styled.div<{ theme: Theme }>`
-  border-radius: 50%;
   z-index: 10;
-  overflow: hidden;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,19 +115,19 @@ export const Img = styled.div<{ theme: Theme }>`
     height: 200px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
-    width: 230px;
-    height: 230px;
+    width: 450px;
+    height: 450px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
-    width: 300px;
-    height: 300px;
+    width: 550px;
+    height: 550px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
-    width: 350px;
-    height: 350px;
+    width: 550px;
+    height: 550px;
   }
 `;

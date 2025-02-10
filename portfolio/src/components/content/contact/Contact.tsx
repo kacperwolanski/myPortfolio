@@ -13,12 +13,12 @@ const Contact = () => {
   const { email } = introductionData;
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
-  const projectsRef = useRef(null);
-  const { isVisible } = useIntersectionObserver(projectsRef);
+  const contactRef = useRef(null);
+  const { isVisible } = useIntersectionObserver(contactRef);
   return (
     <ContentSection
       isVisible={isVisible}
-      ref={projectsRef}
+      ref={contactRef}
       title={translate("contactTitle")}
       subTitle={translate("contactSubtitle")}
     >

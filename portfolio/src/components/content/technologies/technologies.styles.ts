@@ -51,7 +51,22 @@ export const IconWrapper = styled.div<{ theme: Theme }>`
 
 export const Title = styled.p<{ theme: Theme }>`
   font-weight: 300;
-
+  font-size: 12px;
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+    font-size: 12px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    font-size: 15px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    font-size: 16px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    font-size: 16px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    font-size: 16px;
+  }
   color: ${(props) => props.theme.palette.custom.header};
 `;
 

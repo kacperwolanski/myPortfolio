@@ -10,9 +10,21 @@ interface Props {
   isVisible: boolean;
   threshold?: number;
   doNotAnimateY?: boolean;
+  contentWidth?: number;
 }
 const ContentSection = forwardRef<HTMLDivElement, Props>(
-  ({ title, subTitle, children, isVisible, threshold, doNotAnimateY }, ref) => {
+  (
+    {
+      title,
+      subTitle,
+      children,
+      isVisible,
+      threshold,
+      doNotAnimateY,
+      contentWidth,
+    },
+    ref
+  ) => {
     const containerSprings = useSpring(
       doNotAnimateY
         ? {}
@@ -25,7 +37,7 @@ const ContentSection = forwardRef<HTMLDivElement, Props>(
     );
 
     return (
-      <ContentSectionWrapper ref={ref}>
+      <ContentSectionWrapper ref={ref} width={contentWidth}>
         <animated.div style={containerSprings}>
           <SectionHeader title={title} subTitle={subTitle} />
           {children}

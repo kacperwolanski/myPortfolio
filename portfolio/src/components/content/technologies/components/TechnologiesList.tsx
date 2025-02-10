@@ -5,20 +5,18 @@ import {
   TechnologiesContainer,
 } from "../technologies.styles";
 import SingleTechnology, { Technology } from "./SingleTechnology";
-import { Box } from "@mui/material";
 
 const TechnologiesList = ({ techList }: { techList: Technology[] }) => {
   const { currentTheme } = useThemeStore();
 
+  const wrapperSx = {
+    display: "flex",
+    paddingX: "10px",
+    overflow: "hidden",
+  };
   return (
     <MyTechnologiesSection>
-      <Box
-        sx={{
-          display: "flex",
-          paddingX: "10px",
-          overflow: "hidden",
-        }}
-      >
+      <div style={wrapperSx}>
         <SideShadow theme={currentTheme} style={{ left: "-55px" }} />
         <TechnologiesContainer theme={currentTheme}>
           {techList.map((technology, index) => (
@@ -26,7 +24,7 @@ const TechnologiesList = ({ techList }: { techList: Technology[] }) => {
           ))}
         </TechnologiesContainer>
         <SideShadow theme={currentTheme} style={{ right: "-50px" }} />
-      </Box>
+      </div>
     </MyTechnologiesSection>
   );
 };
