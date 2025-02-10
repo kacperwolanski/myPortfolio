@@ -23,6 +23,7 @@ const Technologies = () => {
       ref={techRef}
       title={translate("technologiesTitle")}
       subTitle={translate("technologiesSubtitle")}
+      contentWidth={90}
     >
       <TechnologiesList techList={multipliedTechList} />
     </ContentSection>

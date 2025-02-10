@@ -26,9 +26,9 @@ i18next
 
   .init({
     resources,
-    fallbackLng: "en",
+    fallbackLng: "pl",
 
-    lng: "en",
+    lng: "pl",
     interpolation: {
       escapeValue: false,
     },

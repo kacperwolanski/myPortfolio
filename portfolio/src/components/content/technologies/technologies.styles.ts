@@ -51,8 +51,28 @@ export const IconWrapper = styled.div<{ theme: Theme }>`
 
 export const Title = styled.p<{ theme: Theme }>`
   font-weight: 300;
-
+  font-size: 12px;
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+    font-size: 12px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    font-size: 15px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    font-size: 16px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    font-size: 16px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    font-size: 16px;
+  }
   color: ${(props) => props.theme.palette.custom.header};
+`;
+
+export const MyTechnologiesSection = styled.div`
+  position: relative;
+  top: 70px;
 `;
 
 export const scrollAnimation = keyframes`
@@ -62,11 +82,6 @@ export const scrollAnimation = keyframes`
   to {
    transform: translateX(-50%);
   }
-`;
-
-export const MyTechnologiesSection = styled.div`
-  position: relative;
-  top: 70px;
 `;
 
 export const TechnologiesContainer = styled.div<{ theme: Theme }>`

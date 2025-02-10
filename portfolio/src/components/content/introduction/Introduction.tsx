@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import {
   Description,
+  FirstName,
   IntroductionContainer,
-  NameContainer,
   SubTitle,
+  Surname,
 } from "./introduction.styles";
 import { introductionData } from "shared/constants/introduction";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
@@ -17,14 +18,19 @@ import useSpringsAndRefs from "./hooks/useSpringsAndRefs";
 import useWavedLetters from "shared/hooks/useWavedLetters";
 
 const Introduction = () => {
-  const { currentTheme, isMobile } = useThemeStore();
+  const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
   const splitName = "Kacper Wolański".split("");
-  const { springs, setHoveredIndex } = useWavedLetters(splitName);
+  const { setHoveredIndex } = useWavedLetters(splitName);
   const [waveDelay, setWaveDelay] = useState<number>(500);
 
-  const { nameSpring, subTitleSpring, descSpring, buttonSpring } =
-    useSpringsAndRefs();
+  const {
+    firstNameSpring,
+    surnameSpring,
+    subTitleSpring,
+    descSpring,
+    buttonSpring,
+  } = useSpringsAndRefs();
 
   const { jobTitle } = introductionData;
 
@@ -46,29 +52,28 @@ const Introduction = () => {
   return (
     <IntroductionContainer id={sectionIds.home}>
       <BlurredRectangle top={-100} left={-400} theme={currentTheme} />
-
       <ProfileImage />
 
-      <animated.div style={nameSpring}>
-        <NameContainer theme={currentTheme}>
-          <div style={{ display: "flex" }}>
-            {springs.map((springStyle, index) => (
-              <animated.span
-                key={index}
-                style={{
-                  ...springStyle,
-                  display: "inline-block",
-                  marginRight: splitName[index] === " " ? "8px" : "0",
-                }}
-                onMouseEnter={() => !isMobile && setHoveredIndex(index)}
-                onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-              >
-                {splitName[index]}
-              </animated.span>
+      <animated.div style={firstNameSpring}>
+        <FirstName theme={currentTheme}>
+          {Array(20)
+            .fill("Kacper")
+            .map((name, index) => (
+              <span key={index}>{name}</span>
             ))}
-          </div>
-        </NameContainer>
+        </FirstName>
       </animated.div>
+
+      <animated.div style={surnameSpring}>
+        <Surname theme={currentTheme}>
+          {Array(20)
+            .fill("Wolański")
+            .map((name, index) => (
+              <span key={index}>{name}</span>
+            ))}
+        </Surname>
+      </animated.div>
+
       <animated.div style={subTitleSpring}>
         <SubTitle theme={currentTheme}>{jobTitle}</SubTitle>
       </animated.div>

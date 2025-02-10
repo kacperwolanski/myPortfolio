@@ -1,8 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Theme } from "@mui/material";
 
 export const IntroductionContainer = styled.div`
-  margin-top: 200px;
   font-family: "Poppins";
   display: flex;
   flex-direction: column;
@@ -10,40 +9,117 @@ export const IntroductionContainer = styled.div`
   align-items: center;
   width: 100%;
   text-align: center;
+  position: relative;
 `;
 
-export const ProfileImage = styled.img`
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
+export const scrollAnimationR = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+   transform: translateX(50%);
+  }
 `;
 
-export const NameContainer = styled.h1<{ theme: Theme }>`
+export const scrollAnimationL = keyframes`
+  from {
+    transform: translateX(50%);
+  }
+  to {
+   transform: translateX(-50%);
+  }
+`;
+
+export const FirstName = styled.h1<{ theme: Theme }>`
+  color: ${(props) => props.theme.palette.custom.header};
+  opacity: 0.3;
+  font-weight: 900;
+  letter-spacing: -3px;
+  font-size: 140px;
+  top: 0px;
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
+    font-size: 140px;
+    top: 0px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+    font-size: 150px;
+    top: 50px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    font-size: 180px;
+    top: 0px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    font-size: 190px;
+    top: -20px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    font-size: 200px;
+    top: -20px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    font-size: 200px;
+    top: -20px;
+  }
+  position: absolute;
+
+  left: 0;
+  display: flex;
+  width: 200%;
+  white-space: nowrap;
+  animation: ${scrollAnimationR} 75s linear infinite;
+  span {
+    padding-right: 300px;
+  }
+`;
+
+export const Surname = styled.h1<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.custom.header};
   font-weight: 900;
   letter-spacing: -3px;
-  font-size: 30px;
+  height: 300px;
+  font-size: 80px;
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
+    font-size: 80px;
+  }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    font-size: 35px;
+    font-size: 90px;
+    bottom: 0px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
-    font-size: 40px;
+    font-size: 100px;
+    bottom: 10px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    font-size: 50px;
+    font-size: 110px;
+    bottom: 100px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
-    font-size: 58px;
+    font-size: 110px;
+    bottom: 10px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
-    font-size: 63px;
+    font-size: 120px;
+    bottom: 10px;
+  }
+  position: absolute;
+
+  right: 0;
+  display: flex;
+  width: 200%;
+  white-space: nowrap;
+  animation: ${scrollAnimationL} 50s linear infinite;
+  opacity: 0.8;
+  span {
+    padding-right: 300px;
   }
 `;
 
 export const SubTitle = styled.h1<{ theme: Theme }>`
+  z-index: 10;
   color: ${(props) => props.theme.palette.primary.main};
   font-size: 15px;
-  top: -25px;
+  margin-top: 125px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     font-size: 15px;
     top: -35px;
@@ -69,6 +145,7 @@ export const SubTitle = styled.h1<{ theme: Theme }>`
 `;
 
 export const Description = styled.p<{ theme: Theme }>`
+  z-index: 10;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     margin-top: -30px;
     width: 75%;
@@ -99,36 +176,40 @@ export const Description = styled.p<{ theme: Theme }>`
 `;
 
 export const Img = styled.div<{ theme: Theme }>`
-  border-radius: 50%;
-  z-index: 10;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 300px;
+  height: 300px;
+  margin-top: 300px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
-    width: 200px;
-    height: 200px;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    width: 200px;
-    height: 200px;
-  }
-  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
-    width: 230px;
-    height: 230px;
-  }
-  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    width: 250px;
-    height: 250px;
-  }
-  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
     width: 300px;
     height: 300px;
+    margin-top: 100px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+    width: 300px;
+    height: 300px;
+    margin-top: 250px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    width: 450px;
+    height: 450px;
+    margin-top: 270px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    width: 450px;
+    height: 450px;
+    margin-top: 300px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    width: 550px;
+    height: 550px;
+    margin-top: 300px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
-    width: 350px;
-    height: 350px;
+    width: 550px;
+    height: 550px;
+    margin-top: 300px;
   }
 `;

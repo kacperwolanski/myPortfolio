@@ -79,7 +79,7 @@ const SideMenu = ({ handleDrawerToggle, menuOpened }: Props) => {
         <BottomSection>
           <ContactMeButton />
           <LanguageSwitcher />
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
         </BottomSection>
         <DividerWrapper theme={currentTheme}>
           <SocialMediasElements />
