@@ -1,5 +1,5 @@
 import { useSpring } from "@react-spring/web";
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense, useState } from "react";
 import { a as three } from "@react-spring/three";
 import { a as web } from "@react-spring/web";
 import { Canvas } from "@react-three/fiber";
@@ -10,8 +10,8 @@ const FloatingMac = () => {
   const [open, setOpen] = useState(true);
 
   const props = useSpring({
-    open: open ? 1 : 0,
-    config: { mass: 5, tension: 200, friction: 30 },
+    open: open ? 0 : 1,
+    config: { mass: 2, tension: 170, friction: 26 },
   });
 
   return (
@@ -19,12 +19,28 @@ const FloatingMac = () => {
       style={{
         width: "100vw",
         height: "100vh",
+        maxHeight: "800px",
+        maxWidth: "1000px",
         display: "flex",
         alignItems: "center",
+        textAlign: "center",
         justifyContent: "center",
+
+        zIndex: 1000,
+        flexDirection: "column",
       }}
     >
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 35 }}>
+      <web.h1
+        style={{
+          opacity: 1,
+          transform: props.open.to(
+            (o) => `translate3d(-50%,${o * 50 - 100}px,0)`
+          ),
+        }}
+      >
+        {open ? "click to open" : "click to close"}
+      </web.h1>
+      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 28 }}>
         <three.pointLight
           position={[10, 10, 10]}
           intensity={1.5}
@@ -35,7 +51,7 @@ const FloatingMac = () => {
             rotation={[0, Math.PI, 0]}
             onClick={(e) => (e.stopPropagation(), setOpen(!open))}
           >
-            <Model open={open} hinge={props.open.to([1, 0], [1.575, -0.425])} />
+            <Model open={open} hinge={props.open.to([0, 1], [-0.425, 1.575])} />
           </group>
           <Environment preset="city" />
         </Suspense>

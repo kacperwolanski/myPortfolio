@@ -23,7 +23,7 @@ const Content = () => {
       <ContentWrapper blurredContent={blurredContent}>
         <Introduction />
         {/* <MyService /> */}
-        {/* <FloatingMac /> */}
+        <FloatingMac />
         <About />
         <Experience />
         <Projects />

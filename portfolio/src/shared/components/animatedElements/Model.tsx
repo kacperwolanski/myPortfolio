@@ -23,7 +23,6 @@ interface GLTFResult {
   materials: {
     aluminium: Material;
     "matte.001": Material;
-    "screen.001": Material;
     keys: Material;
     trackpad: Material;
     touchbar: Material;
@@ -45,36 +44,48 @@ const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
     document.body.style.cursor = hovered ? "pointer" : "auto";
   }, [hovered]);
 
-  // Apply hinge rotation
-  useEffect(() => {
-    if (lidRef.current) {
-      lidRef.current.rotation.x = hinge.get();
-    }
-  }, [hinge]);
+  useFrame((state) => {
+    if (!lidRef.current) return;
+    const t = state.clock.getElapsedTime();
+    const openRotation = THREE.MathUtils.lerp(
+      lidRef.current.rotation.x,
+      1.575,
+      (Math.cos(t) + 1) / 20
+    );
+    const closingRotation = THREE.MathUtils.lerp(
+      lidRef.current.rotation.x,
+      -0.425,
+      (Math.cos(t) + 1) / 20
+    );
 
-  // Make it float in the air when opened
+    const targetRotation = open ? openRotation : closingRotation;
+
+    lidRef.current.rotation.x = targetRotation;
+  });
+
   useFrame((state) => {
     if (!group.current) return;
+
     const t = state.clock.getElapsedTime();
     group.current.rotation.x = THREE.MathUtils.lerp(
       group.current.rotation.x,
       open ? Math.cos(t / 10) / 10 + 0.25 : 0,
-      0.1
+      0.05
     );
     group.current.rotation.y = THREE.MathUtils.lerp(
       group.current.rotation.y,
       open ? Math.sin(t / 10) / 4 : 0,
-      0.1
+      0.05
     );
     group.current.rotation.z = THREE.MathUtils.lerp(
       group.current.rotation.z,
       open ? Math.sin(t / 10) / 10 : 0,
-      0.1
+      0.05
     );
     group.current.position.y = THREE.MathUtils.lerp(
       group.current.position.y,
       open ? (-2 + Math.sin(t)) / 3 : -4.3,
-      0.1
+      0.05
     );
   });
   return (
@@ -82,18 +93,11 @@ const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
       ref={group}
       {...props}
       position={[0, -1.5, 0]}
-      onPointerOver={(e) => {
-        e.stopPropagation();
-        setHovered(true);
-      }}
+      onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
       onPointerOut={() => setHovered(false)}
       dispose={null}
     >
-      <group
-        ref={lidRef}
-        position={[0, -0.04, 0.41]}
-        rotation-x={[hinge.get(), 0, 0]}
-      >
+      <group dispose={null} ref={lidRef} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.965, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
@@ -115,7 +119,7 @@ const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
             occlude
           >
             <div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
-              werciaaaa
+              Kacper Wolanski
             </div>
           </Html>
         </group>
