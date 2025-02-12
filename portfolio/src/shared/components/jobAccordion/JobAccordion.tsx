@@ -42,7 +42,16 @@ const JobAccordion: React.FC<Props> = ({ elements }) => {
               isSelected={buttonSelected}
               onClick={() => !buttonSelected && handleElementChange(element)}
             >
-              {element.title}
+              <span
+                style={{
+                  zIndex: 10,
+                  color: buttonSelected
+                    ? currentTheme.palette.primary.main
+                    : "white",
+                }}
+              >
+                {element.title}
+              </span>
             </ElementTitleButton>
           );
         })}

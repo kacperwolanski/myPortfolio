@@ -43,12 +43,12 @@ const useSpringsAndRefs = () => {
 
   const descSpring = useSpring({
     from: {
-      y: 50,
+      y: 70,
       opacity: 0,
       zIndex: 10,
     },
     to: {
-      y: 0,
+      y: 20,
       opacity: 1,
       zIndex: 10,
     },
@@ -59,12 +59,12 @@ const useSpringsAndRefs = () => {
 
   const buttonSpring = useSpring({
     from: {
-      y: 100,
+      y: 110,
       opacity: 0,
       zIndex: 10,
     },
     to: {
-      y: 0,
+      y: 10,
       opacity: 1,
       zIndex: 10,
     },

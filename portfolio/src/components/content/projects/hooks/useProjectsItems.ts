@@ -66,7 +66,6 @@ const useProjectsItems = () => {
   const projectItems = [
     faceRecognitionProject,
     splitterProject,
-
     portfolioProject,
     carpoolingProject,
     dottvProject,

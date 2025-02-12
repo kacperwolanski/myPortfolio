@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import EducationSkeleton from "shared/components/skeletons/SectionSkeleton";
 
-const EducationContent = lazy(() => import("./EducationContent"));
+const EducationContent = lazy(() => import("./components/EducationContent"));
 
 const Education = () => {
   return (

@@ -29,7 +29,14 @@ const CircledButton = forwardRef<HTMLButtonElement, Props>(
         currentTheme={currentTheme}
         isActive={isActive}
       >
-        <span style={{ zIndex: 10 }}>{title}</span>
+        <span
+          style={{
+            zIndex: 10,
+            color: isActive ? currentTheme.palette.primary.main : "#e4eaed",
+          }}
+        >
+          {title}
+        </span>
       </Container>
     );
   }
