@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Description,
   FirstName,
@@ -15,15 +15,11 @@ import ContactMeButton from "components/topMenu/ContactMeButton";
 import ProfileImage from "./ProfileImage";
 import { animated } from "@react-spring/web";
 import useSpringsAndRefs from "./hooks/useSpringsAndRefs";
-import useWavedLetters from "shared/hooks/useWavedLetters";
 
 const Introduction = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
-  const splitName = "Kacper Wolański".split("");
-  const { setHoveredIndex } = useWavedLetters(splitName);
-  const [waveDelay, setWaveDelay] = useState<number>(500);
-
+  const { isMobile } = useThemeStore();
   const {
     firstNameSpring,
     surnameSpring,
@@ -34,29 +30,14 @@ const Introduction = () => {
 
   const { jobTitle } = introductionData;
 
-  useEffect(() => {
-    setTimeout(() => {
-      const nameCopy = [...splitName, null];
-      nameCopy.forEach((_, index) => {
-        setTimeout(() => {
-          setHoveredIndex(index);
-        }, index * 60);
-      });
-    }, waveDelay);
-  }, [currentTheme]);
-
-  useEffect(() => {
-    setWaveDelay(0);
-  }, []);
-
   return (
     <IntroductionContainer id={sectionIds.home}>
       <BlurredRectangle top={-100} left={-400} theme={currentTheme} />
       <ProfileImage />
 
       <animated.div style={firstNameSpring}>
-        <FirstName theme={currentTheme}>
-          {Array(20)
+        <FirstName theme={currentTheme} isMobile={isMobile}>
+          {Array(50)
             .fill("Kacper")
             .map((name, index) => (
               <span key={index}>{name}</span>
@@ -65,8 +46,8 @@ const Introduction = () => {
       </animated.div>
 
       <animated.div style={surnameSpring}>
-        <Surname theme={currentTheme}>
-          {Array(20)
+        <Surname theme={currentTheme} isMobile={isMobile}>
+          {Array(50)
             .fill("Wolański")
             .map((name, index) => (
               <span key={index}>{name}</span>

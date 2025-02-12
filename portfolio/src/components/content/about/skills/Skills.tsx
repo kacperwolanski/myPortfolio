@@ -18,7 +18,7 @@ const Skills = () => {
             key={skillSet.title}
             skillSet={skillSet}
             index={index}
-            marginBottom={index === 0 || index === 1}
+            marginBottom={[0, 1, 7].includes(index)}
             isVisible={isVisible}
           />
         ))}

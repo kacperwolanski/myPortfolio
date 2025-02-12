@@ -64,16 +64,16 @@ export const lightTheme = createTheme({
       main: "#245974",
     },
     secondary: {
-      main: "#050505",
+      main: "#273038",
     },
 
     custom: {
-      background: "224,232,246",
+      background: "116,140,148",
       darkGray: "##fffff9",
       lightGray: "#6B7280",
       borderGray: " #484E53",
-      header: "#484E53",
-      blurredBackground: "140,168,184",
+      header: "rgb(236,242,232,255)",
+      blurredBackground: "220,222,209",
     },
   },
   typography: {

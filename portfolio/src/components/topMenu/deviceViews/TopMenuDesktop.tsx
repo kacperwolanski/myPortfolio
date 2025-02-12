@@ -13,7 +13,7 @@ const TopMenuDesktop = () => {
       <SubContainer>
         <ContactMeButton />
         <LanguageSwitcher />
-        {/* <ThemeSwitcher /> */}
+        <ThemeSwitcher />
       </SubContainer>
     </>
   );

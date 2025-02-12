@@ -43,4 +43,5 @@ export const Container = styled.button<Props>`
     font-size: 15px;
   }
   transition: background 0.3s, color 0.2s, transform 0.3s;
+  z-index: 10;
 `;

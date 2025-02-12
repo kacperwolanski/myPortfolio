@@ -21,7 +21,6 @@ const SkillWrapper = ({ skillSet, isVisible, marginBottom, index }: Props) => {
     config: { duration: 2000 },
     delay: (0.8 + 0.1 * index) * 1000,
   });
-  console.log(1 + 0.2 * index);
   return (
     <animated.div style={styleSpring}>
       <SkillsSet skillSet={skillSet} />

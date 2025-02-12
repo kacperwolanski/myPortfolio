@@ -72,6 +72,7 @@ export const Title = styled.p<{ theme: Theme }>`
 
 export const MyTechnologiesSection = styled.div`
   position: relative;
+  overflow: hidden;
   top: 70px;
 `;
 
