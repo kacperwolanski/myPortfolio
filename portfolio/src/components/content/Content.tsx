@@ -11,7 +11,6 @@ import TopMenu from "../topMenu/TopMenu";
 import { useSideMenuStore } from "components/topMenu/hooks/useSideMenuStore";
 import { useThemeStore } from "theme/useThemeStore";
 import Technologies from "./technologies/Technologies";
-import FloatingMac from "shared/components/animatedElements/FloatingMac";
 
 const Content = () => {
   const { isMobile } = useThemeStore();
@@ -23,7 +22,7 @@ const Content = () => {
       <ContentWrapper blurredContent={blurredContent}>
         <Introduction />
         {/* <MyService /> */}
-        <FloatingMac />
+
         <About />
         <Experience />
         <Projects />

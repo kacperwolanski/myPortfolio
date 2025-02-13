@@ -95,5 +95,8 @@
 
   "All": "All",
   "Personal": "Private",
-  "Commercial": "Commercial"
+  "Commercial": "Commercial",
+
+  "clickToOpen": "Click to open",
+  "clickToClose": "Click to close"
 }

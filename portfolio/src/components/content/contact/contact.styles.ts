@@ -15,13 +15,14 @@ export const EmailContainer = styled.div<{ theme: Theme }>`
   border: 2px solid ${(props) => props.theme.palette.custom.darkGray};
   padding: 20px 10px;
   border-radius: 15px;
+
   &:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);
   }
 `;
 export const Email = styled.span<{ theme: Theme }>`
-  color: ${(props) => props.theme.palette.secondary.main};
+  color: ${(props) => props.theme.palette.secondary.dark};
   font-size: 14px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
     font-size: 14px;
@@ -44,4 +45,8 @@ export const Email = styled.span<{ theme: Theme }>`
 `;
 export const MainLink = styled.a`
   text-decoration: none;
+`;
+
+export const PhoneNumber = styled.span<{ theme: Theme }>`
+  color: ${(props) => props.theme.palette.custom.header};
 `;

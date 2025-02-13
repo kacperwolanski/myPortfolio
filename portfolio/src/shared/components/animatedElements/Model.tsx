@@ -8,6 +8,7 @@ import { Group, Mesh, Material } from "three";
 interface ModelProps {
   open: boolean;
   hinge: Interpolation<number, 1.575 | -0.425>;
+  htmlPageContent: JSX.Element;
 }
 
 interface GLTFResult {
@@ -23,22 +24,26 @@ interface GLTFResult {
   materials: {
     aluminium: Material;
     "matte.001": Material;
+    "screen.001": Material;
     keys: Material;
     trackpad: Material;
     touchbar: Material;
   };
 }
 
-const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
+const Model: React.FC<ModelProps> = ({
+  open,
+  hinge,
+  htmlPageContent,
+  ...props
+}) => {
   const group = useRef<Group>(null);
   const lidRef = useRef<Group>(null);
 
-  // Load model
   const { nodes, materials } = useGLTF(
     process.env.PUBLIC_URL + "/mac-draco.glb"
   ) as unknown as GLTFResult;
 
-  // Handle cursor state
   const [hovered, setHovered] = useState(false);
   useEffect(() => {
     document.body.style.cursor = hovered ? "pointer" : "auto";
@@ -88,6 +93,18 @@ const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
       0.05
     );
   });
+  const pageContent = (
+    <Html
+      className="content"
+      rotation-x={-Math.PI / 2}
+      position={[0, 0.05, -0.09]}
+      transform
+      occlude
+      style={{ position: "relative", top: 0, left: 0 }}
+    >
+      {htmlPageContent}
+    </Html>
+  );
   return (
     <group
       ref={group}
@@ -111,17 +128,8 @@ const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
             geometry={nodes.Cube008_1.geometry}
             material={materials["matte.001"]}
           />
-          <Html
-            className="content"
-            rotation-x={-Math.PI / 2}
-            position={[0, 0.05, -0.09]}
-            transform
-            occlude
-          >
-            <div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
-              Kacper Wolanski
-            </div>
-          </Html>
+
+          {pageContent}
         </group>
       </group>
       <mesh
