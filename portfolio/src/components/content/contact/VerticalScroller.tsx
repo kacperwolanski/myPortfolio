@@ -11,7 +11,7 @@ const VerticalScroller = forwardRef<HTMLDivElement, {}>((_, ref) => {
 
   const [textStyles, textApi] = useSpring(() => ({
     y: "100%",
-    config: { tension: 120, friction: 14 }, // Smooth transition
+    config: { tension: 120, friction: 14 },
   }));
 
   const { scrollYProgress } = useScroll({
@@ -84,15 +84,15 @@ const AnimatedDot = styled(animated.div)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden; // Prevents sudden jumps
-  transition: clip-path 0.3s ease-out; // Smooth transition
+  overflow: hidden;
+  transition: clip-path 0.3s ease-out;
 `;
 
 const Title = styled.h1`
   color: rgb(5, 74, 238);
   font-size: 8vw;
   padding-left: 8vw;
-  overflow: hidden; // Prevents text from jumping
+  overflow: hidden;
 
   & > span {
     display: block;

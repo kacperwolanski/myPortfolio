@@ -94,5 +94,8 @@
 
   "All": "Wszystkie",
   "Personal": "Prywatne",
-  "Commercial": "Komercyjne"
+  "Commercial": "Komercyjne",
+
+  "clickToOpen": "Kliknij komputer aby otworzyć",
+  "clickToClose": "Kliknij komputer aby zamknąć"
 }

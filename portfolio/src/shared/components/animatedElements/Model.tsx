@@ -8,6 +8,7 @@ import { Group, Mesh, Material } from "three";
 interface ModelProps {
   open: boolean;
   hinge: Interpolation<number, 1.575 | -0.425>;
+  htmlPageContent: JSX.Element;
 }
 
 interface GLTFResult {
@@ -30,70 +31,90 @@ interface GLTFResult {
   };
 }
 
-const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
+const Model: React.FC<ModelProps> = ({
+  open,
+  hinge,
+  htmlPageContent,
+  ...props
+}) => {
   const group = useRef<Group>(null);
   const lidRef = useRef<Group>(null);
 
-  // Load model
   const { nodes, materials } = useGLTF(
     process.env.PUBLIC_URL + "/mac-draco.glb"
   ) as unknown as GLTFResult;
 
-  // Handle cursor state
   const [hovered, setHovered] = useState(false);
   useEffect(() => {
     document.body.style.cursor = hovered ? "pointer" : "auto";
   }, [hovered]);
 
-  // Apply hinge rotation
-  useEffect(() => {
-    if (lidRef.current) {
-      lidRef.current.rotation.x = hinge.get();
-    }
-  }, [hinge]);
+  useFrame((state) => {
+    if (!lidRef.current) return;
+    const t = state.clock.getElapsedTime();
+    const openRotation = THREE.MathUtils.lerp(
+      lidRef.current.rotation.x,
+      1.575,
+      (Math.cos(t) + 1) / 20
+    );
+    const closingRotation = THREE.MathUtils.lerp(
+      lidRef.current.rotation.x,
+      -0.425,
+      (Math.cos(t) + 1) / 20
+    );
 
-  // Make it float in the air when opened
+    const targetRotation = open ? openRotation : closingRotation;
+
+    lidRef.current.rotation.x = targetRotation;
+  });
+
   useFrame((state) => {
     if (!group.current) return;
+
     const t = state.clock.getElapsedTime();
     group.current.rotation.x = THREE.MathUtils.lerp(
       group.current.rotation.x,
       open ? Math.cos(t / 10) / 10 + 0.25 : 0,
-      0.1
+      0.05
     );
     group.current.rotation.y = THREE.MathUtils.lerp(
       group.current.rotation.y,
       open ? Math.sin(t / 10) / 4 : 0,
-      0.1
+      0.05
     );
     group.current.rotation.z = THREE.MathUtils.lerp(
       group.current.rotation.z,
       open ? Math.sin(t / 10) / 10 : 0,
-      0.1
+      0.05
     );
     group.current.position.y = THREE.MathUtils.lerp(
       group.current.position.y,
       open ? (-2 + Math.sin(t)) / 3 : -4.3,
-      0.1
+      0.05
     );
   });
+  const pageContent = (
+    <Html
+      className="content"
+      rotation-x={-Math.PI / 2}
+      position={[0, 0.05, -0.09]}
+      transform
+      occlude
+      style={{ position: "relative", top: 0, left: 0 }}
+    >
+      {htmlPageContent}
+    </Html>
+  );
   return (
     <group
       ref={group}
       {...props}
       position={[0, -1.5, 0]}
-      onPointerOver={(e) => {
-        e.stopPropagation();
-        setHovered(true);
-      }}
+      onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
       onPointerOut={() => setHovered(false)}
       dispose={null}
     >
-      <group
-        ref={lidRef}
-        position={[0, -0.04, 0.41]}
-        rotation-x={[hinge.get(), 0, 0]}
-      >
+      <group dispose={null} ref={lidRef} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.965, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
@@ -107,17 +128,8 @@ const Model: React.FC<ModelProps> = ({ open, hinge, ...props }) => {
             geometry={nodes.Cube008_1.geometry}
             material={materials["matte.001"]}
           />
-          <Html
-            className="content"
-            rotation-x={-Math.PI / 2}
-            position={[0, 0.05, -0.09]}
-            transform
-            occlude
-          >
-            <div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
-              werciaaaa
-            </div>
-          </Html>
+
+          {pageContent}
         </group>
       </group>
       <mesh

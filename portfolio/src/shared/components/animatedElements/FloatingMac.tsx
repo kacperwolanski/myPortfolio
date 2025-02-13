@@ -1,30 +1,31 @@
 import { useSpring } from "@react-spring/web";
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense, useState } from "react";
 import { a as three } from "@react-spring/three";
-import { a as web } from "@react-spring/web";
 import { Canvas } from "@react-three/fiber";
 import { Environment, ContactShadows } from "@react-three/drei";
 import Model from "./Model";
+import { useTranslation } from "react-i18next";
+import { useThemeStore } from "theme/useThemeStore";
+import { MainContainer, ResponsiveTitle } from "./floatingMac.styles";
 
-const FloatingMac = () => {
+interface Props {
+  htmlPageContent: JSX.Element;
+}
+const FloatingMac = ({ htmlPageContent }: Props) => {
   const [open, setOpen] = useState(true);
-
+  const { currentTheme } = useThemeStore();
+  const { t: translate } = useTranslation();
   const props = useSpring({
-    open: open ? 1 : 0,
-    config: { mass: 5, tension: 200, friction: 30 },
+    open: open ? 0 : 1,
+    config: { mass: 2, tension: 170, friction: 26 },
   });
 
   return (
-    <web.main
-      style={{
-        width: "100vw",
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 35 }}>
+    <MainContainer theme={currentTheme}>
+      <ResponsiveTitle theme={currentTheme}>
+        {open ? translate("clickToOpen") : translate("clickToClose")}
+      </ResponsiveTitle>
+      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 28 }}>
         <three.pointLight
           position={[10, 10, 10]}
           intensity={1.5}
@@ -35,7 +36,11 @@ const FloatingMac = () => {
             rotation={[0, Math.PI, 0]}
             onClick={(e) => (e.stopPropagation(), setOpen(!open))}
           >
-            <Model open={open} hinge={props.open.to([1, 0], [1.575, -0.425])} />
+            <Model
+              open={open}
+              hinge={props.open.to([0, 1], [-0.425, 1.575])}
+              htmlPageContent={htmlPageContent}
+            />
           </group>
           <Environment preset="city" />
         </Suspense>
@@ -47,7 +52,7 @@ const FloatingMac = () => {
           far={4.5}
         />
       </Canvas>
-    </web.main>
+    </MainContainer>
   );
 };
 
