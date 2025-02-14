@@ -21,6 +21,16 @@ export const EmailContainer = styled.div<{ theme: Theme }>`
     background: rgba(255, 255, 255, 0.2);
   }
 `;
+
+export const PageContainer = styled.div<{ theme: Theme }>`
+  background: ${(props) => `rgba(${props.theme.palette.custom.background})`};
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-top: -20px;
+`;
+
 export const Email = styled.span<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.secondary.dark};
   font-size: 14px;
@@ -49,4 +59,33 @@ export const MainLink = styled.a`
 
 export const PhoneNumber = styled.span<{ theme: Theme }>`
   color: ${(props) => props.theme.palette.custom.header};
+`;
+
+export const PhoneNumberContainer = styled.div<{ theme: Theme }>`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 20px;
+  &:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  border: 2px solid ${(props) => props.theme.palette.custom.darkGray};
+`;
+
+export const CopyButton = styled.button<{ theme: Theme }>`
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+`;
+
+export const CopyInfo = styled.span<{ isVisible: boolean }>`
+  opacity: ${(props) => (props.isVisible ? 1 : 0)};
+  color: white;
+  transition: opacity 0.3s;
+  padding: 5px;
 `;

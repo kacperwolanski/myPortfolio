@@ -1,3 +1,4 @@
+import { Theme } from "@mui/material";
 import styled from "styled-components";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   onClick?: () => void;
   minWidth?: number;
   isActive?: boolean;
-  currentTheme: any;
+  currentTheme: Theme;
 }
 
 export const Container = styled.button<Props>`
