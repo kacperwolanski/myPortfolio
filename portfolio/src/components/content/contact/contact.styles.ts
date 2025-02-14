@@ -27,8 +27,7 @@ export const PageContainer = styled.div<{ theme: Theme }>`
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  margin-top: -20px;
+  padding: 2px;
 `;
 
 export const Email = styled.span<{ theme: Theme }>`
@@ -88,4 +87,5 @@ export const CopyInfo = styled.span<{ isVisible: boolean }>`
   color: white;
   transition: opacity 0.3s;
   padding: 5px;
+  font-size: 12px;
 `;
