@@ -1,5 +1,5 @@
 import { GmailIcon } from "shared/assets/icons/Icons";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import ContentSection from "shared/components/contentSection/ContentSection";
 import {
   EmailContainer,
@@ -7,6 +7,10 @@ import {
   Container,
   MainLink,
   PhoneNumber,
+  PageContainer,
+  CopyButton,
+  PhoneNumberContainer,
+  CopyInfo,
 } from "./contact.styles";
 import { BlurredRectangle } from "shared/components/BlurredRectangle";
 import { introductionData } from "shared/constants/introduction";
@@ -16,37 +20,56 @@ import { useTranslation } from "react-i18next";
 import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 import FloatingMac from "shared/components/animatedElements/FloatingMac";
 
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+
 const Contact = () => {
-  const { email } = introductionData;
+  const { email, phoneNumber } = introductionData;
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
+  const [displayCopyInfo, setDisplayCopyInfo] = useState(false);
+
   const contactRef = useRef(null);
   const { isVisible } = useIntersectionObserver(contactRef);
 
-  const htmlPageContent = (
-    <div
-      style={{
-        background: `rgba(${currentTheme.palette.custom.background})`,
-        borderRadius: "20px",
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
 
-        padding: "5px",
-      }}
-    >
+    setDisplayCopyInfo(true);
+    setTimeout(() => {
+      setDisplayCopyInfo(false);
+    }, 3000);
+  };
+
+  const htmlPageContent = (
+    <PageContainer theme={currentTheme}>
       <MainLink href={`mailto:${email}`}>
         <EmailContainer theme={currentTheme}>
           <GmailIcon />
           <Email theme={currentTheme}>{email}</Email>
         </EmailContainer>
       </MainLink>
-      <PhoneNumber theme={currentTheme}>+48 796 082 796</PhoneNumber>
-    </div>
+      <PhoneNumberContainer
+        theme={currentTheme}
+        onClick={() => copyToClipboard(phoneNumber)}
+      >
+        <PhoneNumber theme={currentTheme}>{phoneNumber}</PhoneNumber>
+        <CopyButton theme={currentTheme}>
+          <ContentCopyIcon />
+        </CopyButton>
+      </PhoneNumberContainer>
+      <CopyInfo isVisible={displayCopyInfo}>
+        Numer skopiowano do schowka
+      </CopyInfo>
+    </PageContainer>
   );
+
   return (
     <ContentSection
       isVisible={isVisible}
       ref={contactRef}
       title={translate("contactTitle")}
       subTitle={translate("contactSubtitle")}
+      contentWidth={95}
     >
       <Container id={sectionIds.contact}>
         <BlurredRectangle top={100} left={-500} theme={currentTheme} />

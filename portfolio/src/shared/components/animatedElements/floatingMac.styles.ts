@@ -12,12 +12,12 @@ export const MainContainer = styled(web.main)`
   z-index: 100;
   flex-direction: column;
   padding: 10px;
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 350px;
+  max-width: 350px;
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    max-height: 450px;
-    max-width: 450px;
+    max-height: 420px;
+    max-width: 420px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
     max-height: 600px;
