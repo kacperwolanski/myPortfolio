@@ -100,7 +100,6 @@ const Model: React.FC<ModelProps> = ({
       position={[0, 0.05, -0.09]}
       transform
       occlude
-      style={{ position: "relative", top: 0, left: 0 }}
     >
       {htmlPageContent}
     </Html>
