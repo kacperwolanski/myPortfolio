@@ -97,23 +97,36 @@ const Model: React.FC<ModelProps> = ({
     <Html
       className="content"
       rotation-x={-Math.PI / 2}
-      position={[0, 0.05, -0.09]}
+      position={[0, 0.04, -0.09]}
       transform
       occlude
+      style={{
+        marginLeft: "auto",
+        marginRight: "auto",
+        width: "100%",
+        maxWidth: "500px",
+        padding: "0px",
+      }}
     >
-      {htmlPageContent}
+      <div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
+        <main>{htmlPageContent}</main>
+      </div>
     </Html>
   );
   return (
     <group
       ref={group}
       {...props}
-      position={[0, -1.5, 0]}
       onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
       onPointerOut={() => setHovered(false)}
       dispose={null}
     >
-      <group dispose={null} ref={lidRef} position={[0, -0.04, 0.41]}>
+      <group
+        dispose={null}
+        ref={lidRef}
+        rotation-x={-0.425}
+        position={[0, -0.04, 0.41]}
+      >
         <group position={[0, 2.965, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
@@ -127,8 +140,7 @@ const Model: React.FC<ModelProps> = ({
             geometry={nodes.Cube008_1.geometry}
             material={materials["matte.001"]}
           />
-
-          {pageContent}
+          <mesh geometry={nodes["Cube008_2"].geometry}>{pageContent}</mesh>
         </group>
       </group>
       <mesh

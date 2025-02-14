@@ -28,6 +28,22 @@ export const PageContainer = styled.div<{ theme: Theme }>`
   display: flex;
   flex-direction: column;
   padding: 2px;
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    padding: 4px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    padding: 5px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    padding: 5px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    padding: 10px;
+  }
 `;
 
 export const Email = styled.span<{ theme: Theme }>`
@@ -67,7 +83,22 @@ export const PhoneNumberContainer = styled.div<{ theme: Theme }>`
   gap: 10px;
   padding: 10px;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
+    margin-top: 12px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    margin-top: 15px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    margin-top: 18px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    margin-top: 20px;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    margin-top: 20px;
+  }
   &:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);

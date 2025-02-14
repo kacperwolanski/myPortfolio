@@ -2,7 +2,7 @@ import { useSpring } from "@react-spring/web";
 import React, { Suspense, useState } from "react";
 import { a as three } from "@react-spring/three";
 import { Canvas } from "@react-three/fiber";
-import { Environment, ContactShadows } from "@react-three/drei";
+import { Environment, ContactShadows, OrbitControls } from "@react-three/drei";
 import Model from "./Model";
 import { useTranslation } from "react-i18next";
 import { useThemeStore } from "theme/useThemeStore";
@@ -25,7 +25,7 @@ const FloatingMac = ({ htmlPageContent }: Props) => {
       <ResponsiveTitle theme={currentTheme}>
         {open ? translate("clickToOpen") : translate("clickToClose")}
       </ResponsiveTitle>
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 28 }}>
+      <Canvas camera={{ position: [0, 0, -30], fov: 28 }}>
         <three.pointLight
           position={[10, 10, 10]}
           intensity={1.5}
@@ -33,6 +33,7 @@ const FloatingMac = ({ htmlPageContent }: Props) => {
         />
         <Suspense fallback={null}>
           <group
+            position={[0, 1, 0]}
             rotation={[0, Math.PI, 0]}
             onClick={(e) => (e.stopPropagation(), setOpen(!open))}
           >
@@ -50,6 +51,12 @@ const FloatingMac = ({ htmlPageContent }: Props) => {
           scale={20}
           blur={1.75}
           far={4.5}
+        />
+        <OrbitControls
+          enablePan={false}
+          enableZoom={false}
+          minPolarAngle={Math.PI / 2.1}
+          maxPolarAngle={Math.PI / 2.1}
         />
       </Canvas>
     </MainContainer>
