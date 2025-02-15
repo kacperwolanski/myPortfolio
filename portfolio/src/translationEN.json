@@ -7,8 +7,7 @@
   "contactMeButton": "Contact",
   "resumeButton": "Resume",
 
-  "introduction": "Hi, I'm passionate Web Developer specialized in creating web applications with React. I've worked on a variety of projects, from a full-stack carpooling service to a video streaming platform.",
-
+  "introduction": "Hi, I am a web developer specializing in React. I offer professional development of websites and web applications. I have worked on many projects, from a carpooling application, to business websites, to an online TV platform.",
   "aboutTitle": "About Me",
   "aboutSubtitle": "Get to know my skills",
   "aboutDescription": "While my main focus is on front-end development, I also have experience with back-end technologies like NestJs and Python language.",
