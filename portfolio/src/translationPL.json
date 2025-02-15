@@ -7,7 +7,7 @@
   "contactMeButton": "Kontakt",
   "resumeButton": "CV",
 
-  "introduction": "Hi, I am a web developer specializing in React. I offer professional development of websites and web applications. I have worked on many projects, from a carpooling application, through business showcase websites, to a video streaming platform.",
+  "introduction": "Cześć, jestem programistą webowym specjalizującym się w React. Oferuję profesjonalne tworzenie stron internetowych i aplikacji webowych. Pracowałem przy wielu projektach, od aplikacji carpoolingowej przez strony internetowe dla firm, po internetową platformę telewizyjną.",
   "aboutTitle": "O Mnie",
   "aboutSubtitle": "Moje umiejętności",
   "aboutDescription": "Chociaż moją specjalizacją są technologie front-endowe, mam również doświadczenie w pracy z technologiami back-endowymi takimi jak NestJs, przy implementacji API aplikacji backendowej.",
