@@ -100,13 +100,6 @@ const Model: React.FC<ModelProps> = ({
       position={[0, 0.04, -0.09]}
       transform
       occlude
-      style={{
-        marginLeft: "auto",
-        marginRight: "auto",
-        width: "100%",
-        maxWidth: "500px",
-        padding: "0px",
-      }}
     >
       <div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
         <main>{htmlPageContent}</main>
@@ -140,7 +133,7 @@ const Model: React.FC<ModelProps> = ({
             geometry={nodes.Cube008_1.geometry}
             material={materials["matte.001"]}
           />
-          <mesh geometry={nodes["Cube008_2"].geometry}>{pageContent}</mesh>
+          <mesh geometry={nodes["Cube008_2"].geometry} /> {pageContent}
         </group>
       </group>
       <mesh

@@ -5,6 +5,7 @@
   "experienceButton": "Doświadczenie",
   "projectsButton": "Projekty",
   "contactMeButton": "Kontakt",
+  "serviceButton": "Współpraca",
   "resumeButton": "CV",
 
   "introduction": "Cześć, jestem programistą webowym specjalizującym się w React. Oferuję profesjonalne tworzenie stron internetowych i aplikacji webowych. Pracowałem przy wielu projektach, od aplikacji carpoolingowej przez strony internetowe dla firm, po internetową platformę telewizyjną.",
@@ -96,6 +97,16 @@
   "Personal": "Prywatne",
   "Commercial": "Komercyjne",
 
-  "clickToOpen": "Kliknij komputer aby otworzyć",
-  "clickToClose": "Kliknij komputer aby zamknąć"
+  "clickToOpen": "Kliknij komputer by wyświetlić kontakt",
+  "clickToClose": "Kliknij ponownie by zamknąć",
+
+  "serviceDescription": "Realizuję projekty od zera oraz pomagam w rozwoju już istniejących stron lub aplikacji. Każdy projekt rozpoczynam od bezpłatnej konsultacji i wyceny, co pozwala na doprecyzowanie oczekiwań i ustalenie zakresu prac. Po zakończeniu realizacji zapewniam pełne wsparcie techniczne oraz możliwość dalszych konsultacji w razie potrzeby.",
+  "appointmentTitle": "Konsultacja i analiza",
+  "appointmentDescription": "Dokładnie omówimy cele, potrzeby oraz oczekiwania względem projektu, tj. przeznaczenie strony, technologia wykonania lub dodatkowe funkcje.",
+  "pricingTitle": "Darmowa wycena i propozycja",
+  "pricingDescription": "Przedstawię koncepcję na zrealizowanie strony oraz darmowy kosztorys całkowitego jej wykonania i wdrożenia.",
+  "implementTitle": "Projektowanie i rozwój",
+  "implementDescription": "Wykonam projekt graficzny strony lub skorzystamy z dostępnego szablonu zgodnie z naszymi ustaleniami. Po jego zaakceptowaniu przejdę do realizacji projektu wybraną technologią.",
+  "deployTitle": "Wdrożenie i wsparcie",
+  "deployDescription": "Wykonam stronę internetową z uwzględnieniem wszystkich ustaleń. Zapewnię jej bezpieczne wdrożenie, aby mogła być widoczna w internecie. Po zakończeniu projektu gwarantuję wsparcie techniczne."
 }

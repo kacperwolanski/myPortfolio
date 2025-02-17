@@ -52,7 +52,7 @@ export const SocialMediasWrapper = styled.div<{ theme: Theme }>`
     gap: 40px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    gap: 50px;
+    gap: 30px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
     gap: 50px;

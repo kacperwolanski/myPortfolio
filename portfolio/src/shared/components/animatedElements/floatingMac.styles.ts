@@ -38,30 +38,30 @@ export const MainContainer = styled(web.main)`
 `;
 
 export const ResponsiveTitle = styled(web.h1)<{ theme: Theme }>`
-  opacity: 0.6;
+  opacity: 0.2;
 
   color: ${({ theme }) => theme.palette.secondary.main};
   font-size: 12px;
   margin-bottom: 0px;
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: -50px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: -70px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: -80px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: -120px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: -120px;
   }
 `;

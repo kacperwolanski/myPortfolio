@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import ProjectsSkeleton from "shared/components/skeletons/SectionSkeleton";
+import ProjectsSkeleton from "shared/components/skeletons/ProjectsSkeleton";
 
 const ProjectsContent = lazy(() => import("./ProjectsContent"));
 

@@ -1,7 +1,8 @@
 import { Skeleton } from "@mui/material";
 import React from "react";
+import SectionSkeleton from "./SectionSkeleton";
 
-const SectionSkeleton = () => {
+const ExperienceSkeleton = () => {
   return (
     <div
       style={{
@@ -12,28 +13,23 @@ const SectionSkeleton = () => {
         alignItems: "center",
       }}
     >
+      <SectionSkeleton />
       <Skeleton
         variant="rectangular"
         sx={{
           bgcolor: "grey.500",
-          width: "400px",
-          height: "50px",
+          width: "100%",
+          minWidth: "200px",
+          textAlign: "center",
+          marginTop: "30px",
+          height: "200px",
+          padding: "20px",
           borderRadius: "15px",
         }}
         animation="wave"
-      />
-      <Skeleton
-        variant="rectangular"
-        sx={{
-          bgcolor: "grey.500",
-          width: "200px",
-          height: "30px",
-          borderRadius: "15px",
-        }}
-        animation="wave"
-      />
+      ></Skeleton>
     </div>
   );
 };
 
-export default SectionSkeleton;
+export default ExperienceSkeleton;

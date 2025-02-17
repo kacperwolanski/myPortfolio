@@ -11,6 +11,7 @@ import TopMenu from "../topMenu/TopMenu";
 import { useSideMenuStore } from "components/topMenu/hooks/useSideMenuStore";
 import { useThemeStore } from "theme/useThemeStore";
 import Technologies from "./technologies/Technologies";
+import MyService from "./myService/components/MyService";
 
 const Content = () => {
   const { isMobile } = useThemeStore();
@@ -21,13 +22,12 @@ const Content = () => {
       <TopMenu />
       <ContentWrapper blurredContent={blurredContent}>
         <Introduction />
-        {/* <MyService /> */}
-
         <About />
         <Experience />
         <Projects />
         <Technologies />
         <Education />
+        <MyService />
         <Contact />
         <Footer />
       </ContentWrapper>

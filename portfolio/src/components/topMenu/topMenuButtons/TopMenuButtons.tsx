@@ -7,6 +7,7 @@ import ProjectsButton from "../topMenuButtons/ProjectsButton";
 import HomeButton from "../topMenuButtons/HomeButton";
 import Resume from "../../../shared/components/Resume";
 import { useThemeStore } from "theme/useThemeStore";
+import ServiceButton from "./ServiceButton";
 
 interface Props {
   vertical?: boolean;
@@ -24,6 +25,7 @@ const TopMenuButtons = ({ vertical }: Props) => {
       <ExperienceButton />
       <ProjectsButton />
       <EducationButton />
+      <ServiceButton />
       <Resume />
     </TopMenuButtonsContainer>
   );
