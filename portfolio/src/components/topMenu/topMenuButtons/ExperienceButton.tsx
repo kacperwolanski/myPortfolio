@@ -8,6 +8,7 @@ const ExperienceButton = () => {
     <TopMenuButton
       title={translate("experienceButton")}
       sectionId={sectionIds.experience}
+      extraScrollOffset
     />
   );
 };

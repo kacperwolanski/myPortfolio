@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import EducationSkeleton from "shared/components/skeletons/SectionSkeleton";
+import EducationSkeleton from "shared/components/skeletons/EducationSkeleton";
 
 const EducationContent = lazy(() => import("./components/EducationContent"));
 

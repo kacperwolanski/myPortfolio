@@ -2,7 +2,7 @@ import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import SocialMediaIcon from "./socialMediaIcon/SocialMediaIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import ChatIcon from "@mui/icons-material/Chat";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { socialMedias } from "../../shared/constants/socialMedias";
 
@@ -18,8 +18,8 @@ const SocialMediasElements = () => {
       <SocialMediaIcon url={socialMedias.linkedin}>
         <LinkedInIcon />
       </SocialMediaIcon>
-      <SocialMediaIcon url={socialMedias.instagram}>
-        <InstagramIcon />
+      <SocialMediaIcon url={socialMedias.gmail}>
+        <ChatIcon />
       </SocialMediaIcon>
     </>
   );

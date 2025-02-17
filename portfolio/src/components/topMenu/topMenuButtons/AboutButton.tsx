@@ -8,6 +8,7 @@ const AboutButton = () => {
     <TopMenuButton
       title={translate("aboutButton")}
       sectionId={sectionIds.about}
+      extraScrollOffset
     />
   );
 };

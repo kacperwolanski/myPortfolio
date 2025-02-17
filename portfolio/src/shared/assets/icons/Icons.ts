@@ -20,3 +20,9 @@ export { ReactComponent as NextJSIcon } from "./techIcons/NextJS.svg";
 export { ReactComponent as FigmaIcon } from "./techIcons/Figma.svg";
 export { ReactComponent as TailwindIcon } from "./techIcons/Tailwind.svg";
 export { ReactComponent as MaterialUIIcon } from "./techIcons/MaterialUI.svg";
+
+// service icons
+export { ReactComponent as Appointment } from "./serviceIcons/AppointmentIcon.svg";
+export { ReactComponent as CloudIcon } from "./serviceIcons/CloudIcon.svg";
+export { ReactComponent as CodeIcon } from "./serviceIcons/CodeIcon.svg";
+export { ReactComponent as CoinIcon } from "./serviceIcons/CoinIcon.svg";

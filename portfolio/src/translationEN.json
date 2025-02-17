@@ -5,6 +5,7 @@
   "experienceButton": "Experience",
   "projectsButton": "Projects",
   "contactMeButton": "Contact",
+  "serviceButton": "Collaboration",
   "resumeButton": "Resume",
 
   "introduction": "Hi, I am a web developer specializing in React. I offer professional development of websites and web applications. I have worked on many projects, from a carpooling application, to business websites, to an online TV platform.",
@@ -96,6 +97,16 @@
   "Personal": "Private",
   "Commercial": "Commercial",
 
-  "clickToOpen": "Click to open",
-  "clickToClose": "Click to close"
+  "clickToOpen": "Click computer to see contact",
+  "clickToClose": "Click again to close it",
+
+  "serviceDescription": "I create projects from scratch and help develop existing websites or applications. Each project begins with a free consultation and estimate, allowing us to clarify expectations and define the scope of work. After the project is completed, I provide full technical support and the possibility of further consultations if needed.",
+  "appointmentTitle": "Consultation and Analysis",
+  "appointmentDescription": "We will thoroughly discuss the goals, needs, and expectations for the project, such as the purpose of the website, technology choice, or additional features.",
+  "pricingTitle": "Free Estimate and Proposal",
+  "pricingDescription": "I will present a concept for implementing the website and provide a free estimate for the complete development and deployment.",
+  "implementTitle": "Design and Development",
+  "implementDescription": "I will create a custom design for the website or use an available template according to our agreements. Once approved, I will proceed with the development using the chosen technology.",
+  "deployTitle": "Deployment and Support",
+  "deployDescription": "I will build the website with all the required functionalities and specifications. I will ensure a secure deployment, making it visible on the internet. After the project is completed, I guarantee technical support."
 }

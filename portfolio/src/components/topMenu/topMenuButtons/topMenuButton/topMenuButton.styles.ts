@@ -27,7 +27,7 @@ export const TMButtonContainer = styled.div<{ theme: Theme }>`
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {

@@ -1,7 +1,10 @@
-export const scrollToSection = (sectionId: string) => {
+export const scrollToSection = (
+  sectionId: string,
+  extraScrollOffset?: boolean
+) => {
   const sectionElement = document.getElementById(sectionId);
   if (sectionElement) {
-    const yOffset = -250;
+    const yOffset = extraScrollOffset ? -450 : -250;
     const yPosition =
       sectionElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
 

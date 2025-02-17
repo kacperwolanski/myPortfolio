@@ -7,7 +7,7 @@ export const breakpointsValues = {
   sm: 600,
   xs: 375,
   xxs: 200,
-  mobile: 1070,
+  mobile: 1170,
 };
 export const darkTheme = createTheme({
   breakpoints: {

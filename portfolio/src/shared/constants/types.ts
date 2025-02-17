@@ -16,3 +16,9 @@ export interface Project {
 export type ProjectLabel = "All" | "Personal" | "Commercial";
 
 export type Language = typeof plLanguageKeyword | typeof engLanguageKeyword;
+
+export interface Service {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}

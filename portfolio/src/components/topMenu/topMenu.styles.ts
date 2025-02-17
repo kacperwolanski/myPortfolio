@@ -55,7 +55,7 @@ export const TopMenuButtonsContainer = styled.div<{
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
-    gap: 20px;
+    gap: 10px;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
@@ -68,8 +68,26 @@ export const TopMenuButtonsContainer = styled.div<{
   align-items: center;
 `;
 
-export const SubContainer = styled.div`
+export const SubContainer = styled.div<{
+  theme: Theme;
+}>`
   display: flex;
-  gap: 30px;
+  gap: 12px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.sm}px) {
+    gap: 10px;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
+    gap: 20px;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
+    gap: 30px;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.values.xl}px) {
+    gap: 30px;
+  }
   align-items: center;
 `;
