@@ -32,7 +32,6 @@ export const ServicesContainer = styled.div<{ theme: Theme }>`
 
 export const SingleServiceContainer = styled.div<{ theme: Theme }>`
   font-family: Inter;
-
   border-radius: 20px;
   display: flex;
   gap: 30px;
@@ -40,7 +39,7 @@ export const SingleServiceContainer = styled.div<{ theme: Theme }>`
   padding: 20px;
   width: 100%;
   z-index: 10;
-  max-width: 400px;
+  max-width: 800px;
   background: rgba(256, 256, 256, 0.1);
   backdrop-filter: blur(10px);
   &:hover {

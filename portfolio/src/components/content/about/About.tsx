@@ -9,12 +9,28 @@ import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
 import { openResume } from "shared/helpers/openResume";
 import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
+import { useSpring, animated } from "@react-spring/web";
 
 const About = () => {
   const { currentTheme } = useThemeStore();
   const { t: translate } = useTranslation();
   const aboutRef = useRef(null);
   const { isVisible } = useIntersectionObserver(aboutRef);
+
+  const springStyle = useSpring({
+    from: {
+      y: 130,
+      opacity: 0,
+      zIndex: 10,
+    },
+    to: {
+      y: isVisible ? 40 : 130,
+      opacity: isVisible ? 1 : 0,
+      zIndex: 10,
+    },
+    config: { duration: 1200 },
+    delay: 1200,
+  });
 
   return (
     <ContentSection
@@ -30,11 +46,13 @@ const About = () => {
         </Description>
 
         <Skills />
-        <CircledButton
-          onClick={openResume}
-          title={translate("downloadResume")}
-          strokeColor={currentTheme.palette.primary.main}
-        />
+        <animated.div style={springStyle}>
+          <CircledButton
+            onClick={openResume}
+            title={translate("downloadResume")}
+            strokeColor={currentTheme.palette.primary.main}
+          />
+        </animated.div>
       </Container>
     </ContentSection>
   );

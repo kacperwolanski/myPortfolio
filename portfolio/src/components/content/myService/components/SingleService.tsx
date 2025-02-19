@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next";
 import { scrollToSection } from "shared/helpers/scrollToSection";
 import { sectionIds } from "shared/constants/sectionsIds";
 import { animated, useSpring } from "@react-spring/web";
-import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 
 interface Props {
   service: Service;
