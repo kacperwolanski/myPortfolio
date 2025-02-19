@@ -11,9 +11,9 @@ export const MainContainer = styled(web.main)`
   justify-content: center;
   z-index: 100;
   flex-direction: column;
-  padding: 10px;
   max-height: 350px;
   max-width: 350px;
+  overflow: auto;
 
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
     max-height: 420px;
@@ -39,7 +39,6 @@ export const MainContainer = styled(web.main)`
 
 export const ResponsiveTitle = styled(web.h1)<{ theme: Theme }>`
   opacity: 0.2;
-
   color: ${({ theme }) => theme.palette.secondary.main};
   font-size: 12px;
   margin-bottom: 0px;

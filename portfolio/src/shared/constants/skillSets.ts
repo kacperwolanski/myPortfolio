@@ -1,6 +1,6 @@
 export const programmingLanguages = {
   title: "programmingLanguages",
-  skills: ["Typescript", "Javascript", "Python", "C"],
+  skills: ["Typescript", "Javascript", "Python"],
 };
 
 export const frontend = {
@@ -16,7 +16,6 @@ export const frontend = {
     "Styled Components",
     "React Spring",
     "React Three Fiber",
-    "Pixel Perfect",
     "i18n",
   ],
 };
@@ -33,7 +32,7 @@ export const testing = {
 
 export const uiDesign = {
   title: "UI Design",
-  skills: ["Figma", "Canva"],
+  skills: ["Figma"],
 };
 
 export const automation = {

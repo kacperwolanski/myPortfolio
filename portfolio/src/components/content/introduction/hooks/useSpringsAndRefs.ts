@@ -64,7 +64,7 @@ const useSpringsAndRefs = () => {
       zIndex: 10,
     },
     to: {
-      y: 10,
+      y: 20,
       opacity: 1,
       zIndex: 10,
     },

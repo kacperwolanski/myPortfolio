@@ -12,6 +12,7 @@ export { ReactComponent as ENGflagIcon } from "./ENGflagIcon.svg";
 export { ReactComponent as JavascriptIcon } from "./techIcons/JavaScript.svg";
 export { ReactComponent as TypescriptIcon } from "./techIcons/Typescript.svg";
 export { ReactComponent as ReactIcon } from "./techIcons/React.svg";
+export { ReactComponent as React2Icon } from "./techIcons/React2Icon.svg";
 export { ReactComponent as NestJSIcon } from "./techIcons/NestJS.svg";
 export { ReactComponent as PostgreSQLIcon } from "./techIcons/Postgresql.svg";
 export { ReactComponent as WordPressIcon } from "./techIcons/Wordpress.svg";
@@ -24,5 +25,7 @@ export { ReactComponent as MaterialUIIcon } from "./techIcons/MaterialUI.svg";
 // service icons
 export { ReactComponent as Appointment } from "./serviceIcons/AppointmentIcon.svg";
 export { ReactComponent as CloudIcon } from "./serviceIcons/CloudIcon.svg";
+export { ReactComponent as ImageIcon } from "./serviceIcons/ImageIcon.svg";
 export { ReactComponent as CodeIcon } from "./serviceIcons/CodeIcon.svg";
 export { ReactComponent as CoinIcon } from "./serviceIcons/CoinIcon.svg";
+export { ReactComponent as StarsIcon } from "./serviceIcons/StarsIcon.svg";
