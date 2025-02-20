@@ -47,7 +47,6 @@ export const websitesDetails = {
       "addTranslations",
       "addAnimations",
       "time7to14days",
-      "time7to14days",
       "add3D",
     ],
 

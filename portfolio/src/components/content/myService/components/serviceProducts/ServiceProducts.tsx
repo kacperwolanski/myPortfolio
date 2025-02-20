@@ -2,8 +2,6 @@ import React, { useRef } from "react";
 import WebsitesTypes from "../websiteTypes/WebsitesTypes";
 import SingleDetails from "../websiteTypes/details/SingleDetails";
 import { websitesDetails } from "../websiteTypes/websiteTypesData";
-import { useSpring, animated } from "@react-spring/web";
-import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 import useIsMobile from "shared/hooks/useIsMobile";
 
 const ServiceProducts = () => {
@@ -26,11 +24,6 @@ const ServiceProducts = () => {
           flexDirection: "column",
         }}
       >
-        {/* <ServiceHeader
-          header="Stworzę od podstaw lub rozbuduję Twoją istniejącą"
-          focusedPart="stronę internetową"
-        /> */}
-
         <WebsitesTypes />
 
         <SingleDetails details={websitesDetails.basicDetails} />
