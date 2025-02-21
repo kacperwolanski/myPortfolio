@@ -4,10 +4,10 @@ export const breakpointsValues = {
   xl: 1920,
   lg: 1440,
   md: 1200,
+  mobile: 1170,
   sm: 600,
   xs: 375,
   xxs: 200,
-  mobile: 1170,
 };
 export const darkTheme = createTheme({
   breakpoints: {

@@ -31,7 +31,7 @@ export const websitesDetails = {
       "contactForm",
     ],
     example:
-      "https://github.com/user-attachments/assets/f8c2407c-eab8-404a-a5f1-7173803c5f79",
+      "https://github.com/user-attachments/assets/3eb20c46-c057-4718-837d-f873b61cf517",
     hoverTitle: "basicHoverTitle",
     linkToPage: "https://kiliauto.pl/",
   },
@@ -51,7 +51,7 @@ export const websitesDetails = {
     ],
 
     example:
-      "https://github.com/user-attachments/assets/a4b642b6-e7b6-43e5-a8bd-9fc5e6b26b1a",
+      "https://github.com/user-attachments/assets/e16e5e37-3ded-4534-92f2-8349d3ad749b",
     hoverTitle: "advancedHoverTitle",
     linkToPage: "https://kacperwolanski.github.io/myPortfolio/",
   },
@@ -70,7 +70,7 @@ export const websitesDetails = {
       "time14daysPlus",
     ],
     example:
-      "https://github.com/user-attachments/assets/36d30db2-d42a-4e40-a81b-06fdf3764bb7",
+      "https://github.com/user-attachments/assets/81d1b570-5efb-41e1-a3b4-bb2e41b0350f",
     hoverTitle: "reactHoverTitle",
     linkToPage: "https://www.turmsride.com/",
   },

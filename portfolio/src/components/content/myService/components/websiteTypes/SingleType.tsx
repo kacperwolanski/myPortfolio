@@ -25,7 +25,7 @@ const SingleType = ({ type, index }: Props) => {
     from: { opacity: 0 },
     to: { opacity: isVisible ? 1 : 0 },
     config: { duration: 1700 },
-    delay: 400 + 400 * index,
+    delay: 400 + 200 * index,
   });
   const handleMouseEnter = () => setHoverStyle({ scale: 1.2 });
   const handleMouseLeave = () => setHoverStyle({ scale: 1 });

@@ -2,7 +2,10 @@ import React, { useRef, useEffect } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import { WebsitesDetails } from "../websiteTypesData";
-import { DetailsContainer } from "../websiteTypes.styles";
+import {
+  DescriptionImageContainer,
+  DetailsContainer,
+} from "../websiteTypes.styles";
 import SubHeader from "./SubHeader";
 import FeaturesTable from "../../serviceProducts/FeaturesTable";
 import TitleDescription from "./TitleDescription";
@@ -64,13 +67,7 @@ const SingleDetails = ({ details, isFeaturesFirst }: Props) => {
                 animationFromLeft={isFeaturesFirst}
               />
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "30px",
-              }}
-            >
+            <DescriptionImageContainer>
               <TitleDescription title={title} description={description} />
               <>
                 <SubHeader title={translate("productExample")} />
@@ -80,13 +77,11 @@ const SingleDetails = ({ details, isFeaturesFirst }: Props) => {
                   hoverTitle={hoverTitle}
                 />
               </>
-            </div>
+            </DescriptionImageContainer>
           </>
         ) : (
           <>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "30px" }}
-            >
+            <DescriptionImageContainer>
               <TitleDescription title={title} description={description} />
               <div style={{ maxWidth: "800px" }}>
                 <SubHeader title={translate("productExample")} />
@@ -96,7 +91,7 @@ const SingleDetails = ({ details, isFeaturesFirst }: Props) => {
                   hoverTitle={hoverTitle}
                 />
               </div>
-            </div>
+            </DescriptionImageContainer>
             <div>
               <SubHeader title={translate("productFeatures")} />
               <FeaturesTable
