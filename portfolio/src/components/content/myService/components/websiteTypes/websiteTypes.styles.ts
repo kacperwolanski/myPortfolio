@@ -61,17 +61,17 @@ export const DetailsContainer = styled.div<{ theme: Theme }>`
   flex-direction: column;
   gap: 50px;
   @media (min-width: ${(props) => props.theme.breakpoints.values.xxs}px) {
-    padding: 150px 20px;
+    padding: 100px 20px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.xs}px) {
-    padding: 150px 35px;
+    padding: 100px 45px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.mobile}px) {
-    padding: 150px 50px;
+    padding: 100px 50px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.md}px) {
     gap: 100px;
-    padding: 150px 80px;
+    padding: 120px 80px;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.values.lg}px) {
     flex-direction: row;
@@ -83,6 +83,12 @@ export const DetailsContainer = styled.div<{ theme: Theme }>`
     gap: 200px;
     padding: 150px 100px;
   }
+`;
+
+export const DescriptionImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;
 
 export const DetailsDescription = styled.p<{ theme: Theme }>`

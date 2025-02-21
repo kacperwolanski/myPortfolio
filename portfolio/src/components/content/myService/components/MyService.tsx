@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from "react";
-import ProjectsSkeleton from "shared/components/skeletons/SectionSkeleton";
+import MyServiceSkeleton from "shared/components/skeletons/MyServiceSkeleton";
 
 const MyServiceContent = lazy(() => import("../MyServiceContent"));
 
 const MyService = () => {
   return (
-    <Suspense fallback={<ProjectsSkeleton />}>
+    <Suspense fallback={<MyServiceSkeleton />}>
       <MyServiceContent />
     </Suspense>
   );

@@ -19,6 +19,7 @@ import { useThemeStore } from "theme/useThemeStore";
 import { useTranslation } from "react-i18next";
 import useIntersectionObserver from "shared/hooks/useIntrsectionObserver";
 import FloatingMac from "shared/components/animatedElements/FloatingMac";
+import ErrorBoundary from "shared/components/ErrorBoundary";
 
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
@@ -33,11 +34,8 @@ const ContactContent = () => {
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-
     setDisplayCopyInfo(true);
-    setTimeout(() => {
-      setDisplayCopyInfo(false);
-    }, 3000);
+    setTimeout(() => setDisplayCopyInfo(false), 3000);
   };
 
   const htmlPageContent = (
@@ -48,6 +46,7 @@ const ContactContent = () => {
           <Email theme={currentTheme}>{email}</Email>
         </EmailContainer>
       </MainLink>
+
       <PhoneNumberContainer
         theme={currentTheme}
         onClick={() => copyToClipboard(phoneNumber)}
@@ -57,8 +56,9 @@ const ContactContent = () => {
           <ContentCopyIcon />
         </CopyButton>
       </PhoneNumberContainer>
+
       <CopyInfo isVisible={displayCopyInfo}>
-        Numer skopiowano do schowka
+        {translate("numberCopied")}
       </CopyInfo>
     </PageContainer>
   );
@@ -73,7 +73,14 @@ const ContactContent = () => {
     >
       <Container id={sectionIds.contact}>
         <BlurredRectangle top={100} left={-500} theme={currentTheme} />
-        <FloatingMac htmlPageContent={htmlPageContent} />
+
+        <ErrorBoundary
+          fallback={
+            <div style={{ textAlign: "center" }}>{htmlPageContent}</div>
+          }
+        >
+          <FloatingMac htmlPageContent={htmlPageContent} />
+        </ErrorBoundary>
       </Container>
     </ContentSection>
   );

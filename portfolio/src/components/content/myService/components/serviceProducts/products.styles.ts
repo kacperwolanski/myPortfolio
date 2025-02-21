@@ -8,7 +8,7 @@ export const FeatureContainer = styled.div<{
 }>`
   color: ${({ theme }) => theme.palette.custom.header};
   display: flex;
-  opacity: 0.9;
+  opacity: 0.8;
   gap: 25px;
   width: 100%;
   font-size: 16px;
